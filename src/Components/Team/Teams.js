@@ -1,11 +1,10 @@
-
-
 import React, { useEffect } from "react";
 import FacultyAdvisors from "../Home/FacultyAdvisors/FacultyAdvisors.jsx";
 import "./Teams.css";
 import { finalYear } from "./Assets/finalYear.js";
 import { thirdYear } from "./Assets/thirdYear.js";
 import { secondYear } from "./Assets/secondYear.js";
+import BeamsDemo from "./Assets/Beams.jsx";
 
 const GridLayout = ({ members }) => {
   return (
@@ -16,8 +15,10 @@ const GridLayout = ({ members }) => {
             <div className="card-content">
               <img className="card-image" src={member.url} alt={member.name} />
               <div className="card-overlay">
-                <h3 className="card-name">{member.name}</h3>
-                <p className="card-designation">{member.position}</p>
+                <div className="card-text">
+                  <h3 className="card-name">{member.name}</h3>
+                  <p className="card-designation">{member.position}</p>
+                </div>
                 <div className="social-icons">
                   <a
                     href={member.instaLink}
@@ -69,11 +70,11 @@ const Teams = () => {
 
   return (
     <>
+    <BeamsDemo/>
     <br/><br/>
     <h1 className="teams-heading">Our Team</h1>
     <FacultyAdvisors/>
     <div className="teams-page">
-
       <section className="section">
         <h2 className="sub-heading">Office Bearers</h2>
         <hr className="section-divider" />
