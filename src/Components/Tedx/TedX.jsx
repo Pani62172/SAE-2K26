@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import HeaderImg from './HeaderImg/HeaderImg';
 import Speakers from './Speakers/Speakers';
-import Organisers from './Organisers/Organisers';
+// import Organisers from './Organisers/Organisers';
 import ImageCarousel from './ImageCarousel/ImageCarousel';
 // import Navbar from './Navbar/Navbar';  
 import About from './About/About';
