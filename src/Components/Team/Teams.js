@@ -72,7 +72,7 @@ const Teams = () => {
     <>
     <BeamsDemo/>
     <br/><br/>
-    <h1 className="teams-heading">Our Team</h1>
+    
     <FacultyAdvisors/>
     <div className="teams-page">
       <section className="section">
