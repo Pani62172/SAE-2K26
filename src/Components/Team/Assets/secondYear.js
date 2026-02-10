@@ -23,6 +23,13 @@ export const secondYear = [
         "linkedinLink": "https://www.linkedin.com/in/atrayee-de",
     },
     {
+        "url": require('../Assets/2ndYearImg/Siddhardha.jpg'),
+        "name": " Banavath Siddardha",
+        "position": "Junior Coordinator",
+        "instaLink": "https://www.instagram.com/__sidhardha__83?igsh=MTdoMGJ3c252Nnlpcg==",
+        "linkedinLink": "https://www.linkedin.com/in/banavath-sidhardha-098557365?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    },
+    {
         "url": require('../Assets/2ndYearImg/Dawlat_Kanungo.jpg'),
         "name": "Dawlat Kumar Kanungo",
         "position": "Junior Coordinator",
@@ -30,7 +37,7 @@ export const secondYear = [
         "linkedinLink": "",
     },
     {
-        "url": require('../Assets/2ndYearImg/Manoj_Veturi.jpg'),
+        "url": require('../Assets/2ndYearImg/Manoj.jpg'),
         "name": "Manoj Veturi",
         "position": "Junior Coordinator",
         "instaLink": "https://www.instagram.com/manoj_veturi",
@@ -61,12 +68,6 @@ export const secondYear = [
         "position": "Junior Coordinator",
         "instaLink": "https://www.instagram.com/sayantika_.__?igsh=ZzdpdTUxMHFyNTZn",
         "linkedinLink": "https://www.linkedin.com/in/sayantika-shome-3a91ba335?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    },{
-        "url": require('../Assets/2ndYearImg/Siddhardha.jpg'),
-        "name": "Siddardha",
-        "position": "Junior Coordinator",
-        "instaLink": "https://www.instagram.com/__sidhardha__83?igsh=MTdoMGJ3c252Nnlpcg==",
-        "linkedinLink": "https://www.linkedin.com/in/banavath-sidhardha-098557365?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     },
     {
         "url": require('../Assets/2ndYearImg/Subham_Prasad.jpg'),
@@ -95,6 +96,13 @@ export const secondYear = [
         "position": "Junior Coordinator",
         "instaLink": "https://www.instagram.com/pani62172/?__pwa=1#",
         "linkedinLink": "https://www.linkedin.com/in/sai-sree-prasad-pani-7746b1324/overlay/about-this-profile/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BvuFGP%2BmiTFyvGIfGPNDe3Q%3D%3D",
+    },
+    {
+        "url": require('../Assets/2ndYearImg/SHREYA DWIVEDI.jpg'),
+        "name": "Shreya Dwivedi",
+        "position": "Junior Coordinator",
+        "instaLink": "",
+        "linkedinLink": "",
     },
 
 

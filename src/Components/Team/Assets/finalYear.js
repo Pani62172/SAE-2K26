@@ -38,7 +38,7 @@ export const finalYear = [
     {
         "url": require("./FinalYearImg/Tanmay Bandhu Jaiswal.png"),
         "name": "Tanmay Bandhu Jaiswal",
-        "position": "Vice President & BAJA Head",
+        "position": "Vice President, BAJA Head",
         "instaLink": "https://instagram.com/t.a.n.m.a.y._.j.a.i.s.w.a.l?igshid=MzNlNGNkZWQ4Mg==",
         "linkedinLink": "https://www.linkedin.com/in/tanmay-bandhu-jaiswal-552b31229",
     },

@@ -12,32 +12,18 @@ const GridLayout = ({ members }) => {
       {members.map((member, index) => (
         <div key={index} className="grid-item">
           <div className="card">
-            <div className="card-content">
-              <img className="card-image" src={member.url} alt={member.name} />
-              <div className="card-overlay">
-                <div className="card-text">
-                  <h3 className="card-name">{member.name}</h3>
-                  <p className="card-designation">{member.position}</p>
-                </div>
-                <div className="social-icons">
-                  <a
-                    href={member.instaLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="social-icon"
-                  >
-                    <i className="fab fa-instagram"></i>
-                  </a>
-                  <a
-                    href={member.linkedinLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="social-icon"
-                  >
-                    <i className="fab fa-linkedin-in"></i>
-                  </a>
-                </div>
-              </div>
+            <img className="card-image" src={member.url} alt={member.name} />
+            <div className="card-text">
+              <h3 className="card-name">{member.name}</h3>
+              <p className="card-designation">{member.position}</p>
+            </div>
+            <div className="social-icons">
+              <a href={member.instaLink} target="_blank" rel="noopener noreferrer" className="social-icon">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href={member.linkedinLink} target="_blank" rel="noopener noreferrer" className="social-icon">
+                <i className="fab fa-linkedin-in"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -45,8 +31,6 @@ const GridLayout = ({ members }) => {
     </div>
   );
 };
-
-
 
 const Teams = () => {
   useEffect(() => {
