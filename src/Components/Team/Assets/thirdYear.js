@@ -69,7 +69,7 @@ export const thirdYear = [
         "linkedinLink": "h",
     },*/
     {
-        "url": require('../Assets/3rdYearImg/Durga Sagar .jpg'),
+        "url": require('../Assets/3rdYearImg/Durga Sagar.jpg'),
         "name": "Durga Sagar",
         "position": "Senior Coordinator",
         "instaLink": "",
@@ -158,13 +158,13 @@ export const thirdYear = [
         "instaLink": "https://www.instagram.com/_rohandey78?r=nametag",
         "linkedinLink": "https://www.linkedin.com/in/rohan-dey-5a68b2307?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
-    {
+    /*{
         "url": require('../Assets/3rdYearImg/Rohit Singh .jpg'),
         "name": "Rohit Singh",
         "position": "Senior Coordinator",
         "instaLink": "https://www.instagram.com/_.rohit_321?r=nametag",
         "linkedinLink": "https://www.linkedin.com/in/rohit-singh-6993b1277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    },
+    },*/
     {
         "url": require('../Assets/3rdYearImg/Sachin Kumar Yadav .jpg'),
         "name": "Sachin Kumar Yadav",
