@@ -35,7 +35,7 @@ function Footer() {
 
             {/* Contact Info: President */}
             <div className="footer-col">
-              <h5 className="footer-head">Siddharth Khandelwal</h5>
+              <h5 className="footer-head">Debjit Banerjee</h5>
               <p className="footer-contact">President</p>
               <div className="footer-contact flex-item">
                 <FaEnvelope />
@@ -44,13 +44,13 @@ function Footer() {
               </div>
               <div className="footer-contact flex-item">
                 <FaPhoneAlt />
-                <Link to="tel:+916371657152" className='text-md anchor'>+91 6371657152</Link>
+                <Link to="tel:+91 91430 34962" className='text-md anchor'>+91 91430 34962 </Link>
               </div>
             </div>
 
             {/* Contact Info: Vice President */}
             <div className="footer-col">
-              <h5 className="footer-head">Prasant Sahu</h5>
+              <h5 className="footer-head">Chandan Kumar Roy</h5>
               <p className="footer-contact">Head of Corporate Communication</p>
               <div className="footer-contact flex-item">
                 <FaEnvelope />
@@ -58,7 +58,7 @@ function Footer() {
               </div>
               <div className="footer-contact flex-item">
                 <FaPhoneAlt />
-                <Link to="tel:+917908622520" className='text-md anchor'>+91 7908622520</Link>
+                <Link to="tel:+91 7439778324" className='text-md anchor'>+91 7439778324</Link>
               </div>
             </div>
           </div>

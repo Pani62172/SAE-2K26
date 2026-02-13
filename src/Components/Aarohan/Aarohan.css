@@ -7,112 +7,250 @@ body {
   display: block;
   justify-content: center;
   align-items: center;
-  background-color: #15171A;
+  background-color: transparent;
+  color: #ffffff;
   overflow-x: hidden;
+  /* background-image:
+    linear-gradient(rgba(255, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.05) 1px transparent 1px);
+  background-size: 40px 40px; */
+  /* background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center center; */
 }
 
+body::after {
+  /* content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: radial-gradient(circle at 50% 50%, transparent 0%, #000000 90%); */
+  /* background: radial-gradient(circle at center, transparent 0%, #000000 100%); 
+  pointer-events: none;
+  z-index: -1; */
+  display: none;
+}
 
 .arhn-c-img {
   height: 100%;
   width: 100%;
-  object-fit: center;
+  object-fit: cover;
+  animation: slowZoom 6s ease-in-out infinite;
 }
-
 
 .about-arhn-heading {
   color: #ff0000;
   font-size: 30px;
   line-height: 62px;
-
 }
 
 p {
-  line-height: 27px;
-  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
   color: #9ca9b3;
   letter-spacing: -0.1px;
-
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
 }
 
 /* Event arhn-card */
 
-
-
 .arhn-card {
   position: relative;
-  /* width: 400px; */
-  /* height: 450px; */
+  transform-style: preserve-3d;
+  width: 400px;
+  height: 450px;
 
-  border-radius: 10px;
-  border: 1px solid white;
+  border-radius: 24px;
+  border: 1px solid rgb(21, 20, 20);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  /* transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); */
+  /* transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease; */
+  transition:
+    transform 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 0.6s ease;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    rgba(26, 29, 36, 0.6),
+    rgba(21, 23, 26, 0.4)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  will-change: transform;
+}
+
+.arhn-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 1ch;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(81, 77, 77, 0.1),
+    transparent
+  );
+  transition: left 0.5s;
+  z-index: 1;
+}
+
+.arhn-card:hover::before {
+  left: 100%;
 }
 
 .arhn-card img {
   width: 100%;
-  object-fit: center;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  height: 100%;
+  object-fit: cover;
+  /* transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);*/
+  /* transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); */
+  transition: transform 0.7s ease;
+  filter: brightness(1.1) contrast(1.1);
+  border-radius: 24px;
+  transform: scale(1.1) translateY(-5px);
 }
 
 .arhn-card:hover {
-  transform: rotate(-5deg) scale(1.1);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* transform: rotate(-5deg) scale(1.1); */
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+  /* transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); */
+  /* backdrop-filter: blur(10px) brightness(0.6); */
+  transform: translateY(-12px) scale(1.02);
+  z-index: 10;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(255, 0, 0, 0.1),
+    inset 0 0 20px rgba(255, 0, 0, 0.05);
+  border-color: rgba(255, 0, 0, 0.4);
+  transition:
+    transform 0.1s ease-out,
+    box-shadow 0.1s ease-out;
 }
 
+.arhn-card:hover img {
+  transform: scale(1.1) translateY(-10px);
+  /* filter: brightness(0.7) saturate(1.2); */
+  filter: brightness(1.1) contrast(1.1);
+}
 .arhn-card-content {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
+  display: flex;
+  bottom: 0;
+  flex-direction: column;
+  /* justify-content: center; */
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: left;
+  inset: 0;
+  z-index: 2;
+  /* transform: translate(-50%, -50%) rotate(-45deg); */
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 30px;
   padding-top: 40px;
   box-sizing: border-box;
-  background-color: #15171A;
+  /* background-color: #15171a; */
+  background: linear-gradient(
+    to top,
+    rgba(20, 0, 0, 0.95) 10%,
+    transparent 80%
+  );
+  backdrop-filter: blur(4px);
   opacity: 0;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  /* pointer-events: none; */
+  /* transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); */
+  transition:
+    opacity 0.3s ease-out,
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  opacity: 0;
+  transform: translateY(40px) translateZ(20px);
+}
+
+.arhn-card-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  transform: translateZ(30px);
 }
 
 .arhn-card:hover .arhn-card-content {
-  transform: translate(-50%, -50%) rotate(0deg);
+  /* transform: translate(-50%, -50%) rotate(0deg); */
   opacity: 1;
+  /* transform: translateY(-10px); */
+  /* pointer-events: auto; */
+  transform: translateY(0);
 }
-
 
 .arhn-card-description {
-  margin: 20px 0 0;
-  
-  color: #777;
-  line-height: 1.4;
+  /* margin: 20px 0 0; */
+  font-size: 0.95rem;
+  color: #b4bcd0;
+  line-height: 1.6;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
-
 
 /* AAROHAN GALLERY */
 
 .arhn-slider {
-  height: 300px;
-  
+  height: auto;
+  min-height: 250px;
   margin: 50px auto;
   position: relative;
-  width: 90%;
-  display: flex;
+  width: 95%;
+  display: grid;
   place-items: center;
   overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
 
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
 }
 
 .arhn-slide-track {
   display: flex;
 
-  animation: scroll 40s linear infinite;
+  /* animation: scroll 40s linear infinite; */
+  width: max-content;
+  gap: 20px;
+  animation: scrollGallery 40s linear infinite;
 }
-
+@keyframes scrollGallery {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  } /* Moves half the duplicated list */
+}
 .arhn-slider:hover .arhn-slide-track {
   animation-play-state: paused;
 }
@@ -128,21 +266,33 @@ p {
 }
 
 .arhn-single-slide {
-  border-radius: 5%;
+  width: clamp(250px, 30vw, 400px);
+  height: clamp(150px, 20vw, 250px);
+  border-radius: 16px;
   display: flex;
   align-items: center;
   padding: 15px;
   perspective: 100px;
-  
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
 }
 
-.arhn-single-slide img{
+.arhn-single-slide img {
   width: 100%;
   height: 150%;
-  transition: transform 1s;
-  border-radius: 5%;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  filter: greyscale(20%) brightness(0.9);
 }
 
+.arhn-single-slide:hover img {
+  transform: scale(1.05) translateZ(20px);
+  filter: grayscale(0%) brightness(1.1);
+  box-shadow: 0 16px 48px rgba(255, 0, 0, 0.3);
+  border: 1px solid rgba(255, 0, 0, 0.5);
+}
 .arhn-single-slide:hover img:hover {
   transform: translateZ(10px);
   border-radius: 5%;
@@ -150,12 +300,37 @@ p {
 
 .arhn-slider::before,
 .arhn-slider::after {
-  background: linear-gradient(to right, #15171A 0%, rgba(255, 255, 255, 0) 100%);
-  content: '';
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    /* Changed from #15171a */ rgba(0, 0, 0, 0) 100%
+  );
+  content: "";
   height: 100%;
   position: absolute;
   width: 15%;
   z-index: 2;
+}
+
+.py-20.bg-gradient-to-b {
+  background: linear-gradient(
+    to bottom,
+    rgba(5, 5, 5, 0.3) 0%,
+    /* Changed from #050505 */ rgba(10, 10, 10, 0.4) 100%
+      /* Changed from #0a0a0a */
+  ) !important;
+}
+
+.w-full.relative.z-10 {
+  background: transparent !important;
+}
+
+.flex.max-w-full {
+  background: rgba(0, 0, 0, 0.2); /* Very subtle dark overlay */
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  padding: 40px 20px;
+  margin: 40px auto !important;
 }
 
 .arhn-slider::before {
@@ -167,4 +342,609 @@ p {
   right: 0;
   top: 0;
   transform: rotate(180deg);
+}
+
+@keyframes slowZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
+
+.section-heading {
+  font-family: "Syncopate", sans-serif;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #ffffff 0%, #ff2222 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  text-shadow: none;
+  letter-spacing: -1px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-heading::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ff0000, transparent);
+  border-radius: 2px;
+}
+
+.carousel-item {
+  transition:
+    transform 1s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 1s ease;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(255, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.carousel-item-wrapper {
+  width: 300px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+*/ .carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: rgba(255, 0, 0, 0.9);
+  transform: scale(1.1);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff0000, #c00);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff0000;
+}
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Takes up 100% of the viewport height */
+  min-height: -webkit-fill-available;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background: transparent;
+}
+
+/* 1. Background Layer (Carousel) */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 0; /* Sits behind everything */
+}
+
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    /* Reduced opacity */ rgba(0, 0, 0, 0.4) 50%,
+    /* Reduced opacity */ rgba(0, 0, 0, 0.6) 100% /* Reduced opacity */
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Force Bootstrap carousel items to fill the screen */
+.hero-bg .carousel-inner,
+.hero-bg .carousel-item {
+  height: 100%;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images cover the screen without stretching */
+  filter: brightness(0.4) contrast(1.1); /* Darkens image so text pops */
+  transform: scale(1.1); /* Slight zoom for cinematic effect */
+  animation: breathe 10s infinite alternate ease-in-out; /* Optional movement */
+}
+
+@keyframes breathe {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1.15);
+  }
+}
+
+/* 2. Text Overlay Layer */
+.hero-overlay {
+  position: relative;
+  z-index: 10; /* Sits on top of the background */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  width: 50%;
+  height: 100%;
+}
+
+/* Main Title Styling */
+.main-title {
+  font-family: "Syncopate", sans-serif;
+  font-size: clamp(3rem, 10vw, 8rem); /* Huge text */
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+
+  /* Gradient Text Effect */
+  background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0.1));
+  background-size: 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: glitchText 3s infinite alternate;
+  filter: drop-shadow(0 0 30px rgba(255, 0, 0, 0.4));
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  letter-spacing: clamp(3px, 1vw, 8px);
+  color: #cccccc;
+  margin-top: 15px;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Scroll Down Indicator (Bouncing Arrow) */
+.scroll-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.9;
+  gap: 10px;
+  z-index: 20;
+  pointer-events: none;
+  mix-blend-mode: exclusion;
+}
+
+.scroll-indicator .arrow-scroll {
+  margin-top: 180px; /* Adjust this value to push arrows below the text */
+}
+
+.mouse {
+  width: 26px;
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  position: relative;
+  display: none;
+}
+
+.wheel {
+  width: 4px;
+  height: 8px;
+  background: #fff;
+  border-radius: 2px;
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scrollWheel 2s infinite;
+}
+
+@keyframes scrollWheel {
+  0% {
+    top: 6px;
+    opacity: 1;
+  }
+  100% {
+    top: 20px;
+    opacity: 0;
+  }
+}
+.scroll-indicator span {
+  width: 20px;
+  height: 20px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+  margin: -5px;
+  animation: scrollAnim 2s infinite;
+}
+
+.scroll-indicator span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.scroll-indicator span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes scrollAnim {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-10px, -10px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+}
+
+/* The Grain Texture */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  inset: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999; /* Sits on top of everything */
+  opacity: 0.07; /* Adjust visibility */
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+.glow-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 0, 0, 0.15) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  border-radius: 50%;
+  transform: translate(-50%, -50%); /* Centers the glow on mouse */
+  pointer-events: none; /* Allows clicking through it */
+  z-index: 9999;
+  mix-blend-mode: screen; /* Blends nicely with images */
+  transition:
+    width 0.2s,
+    height 0.2s; /* Optional pulse effect */
+}
+/* Container for the blobs */
+.blob-container {
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; 
+  overflow: hidden;
+  background: #050505; */
+  display: none;
+}
+/*
+.blob {
+   position: absolute;
+  filter: blur(80px);
+  opacity: 0.4;
+  animation: float 10s infinite ease-in-out;
+  border-radius: 50%;
+  display: none; 
+}
+*/
+.blob-1 {
+  top: 10%;
+  left: 20%;
+  width: 300px;
+  height: 300px;
+  background: #ff0000;
+  animation-delay: 0s;
+}
+
+.blob-2 {
+  bottom: 20%;
+  right: 10%;
+  width: 400px;
+  height: 400px;
+  background: #800080; /* Purple/Blue */
+  animation-delay: -5s;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@media (min-width: 1024px) {
+  .mouse {
+    display: block;
+  }
+  .glow-cursor {
+    display: block;
+  }
+
+  .arhn-card {
+    height: 450px;
+  }
+
+  /* Side-by-side layouts for About/SAE */
+  .flex-col-mobile {
+    flex-direction: row;
+  }
+
+  .blob-1 {
+    width: 300px;
+    height: 300px;
+  }
+  .blob-2 {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+/* TABLET: 768px - 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-section {
+    height: auto; /* Allow section to grow with content */
+    min-height: 100vh;
+    flex-direction: column; /* Stack vertically */
+  }
+
+  .hero-bg {
+    position: relative; /* Remove absolute positioning */
+    width: 100%; /* Full width instead of 50% */
+    height: 55vh; /* Carousel takes top portion */
+    z-index: 1;
+  }
+
+  .hero-bg img {
+    height: 100%;
+    object-fit: cover;
+    animation: none; /* Optional: disable zoom for performance */
+  }
+
+  .hero-overlay {
+    position: relative; /* Remove absolute positioning */
+    width: 100%; /* Full width instead of 50% */
+    height: auto; /* Auto height based on content */
+    padding: 60px 20px;
+    z-index: 2;
+    justify-content: center;
+  }
+
+  .main-title {
+    font-size: 3.5rem;
+    margin-top: 0;
+    line-height: 1.1;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+    margin-top: 15px;
+  }
+
+  .scroll-indicator {
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    margin-top: 40px;
+  }
+}
+
+/* MOBILE: < 768px */
+@media (max-width: 767px) {
+  .hero-section {
+    height: auto; /* Allow section to grow */
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    flex-direction: column; /* Stack vertically */
+  }
+
+  .hero-bg {
+    position: relative; /* Change from absolute */
+    width: 100%; /* Full width */
+    height: 50vh; /* Carousel takes top half */
+    z-index: 1;
+  }
+
+  .hero-bg img {
+    animation: breathe 10s infinite alternate ease-in-out;
+  }
+
+  .hero-overlay {
+    position: relative; /* Change from absolute */
+    width: 100%; /* Full width */
+    height: auto; /* Auto height */
+    padding: 40px 20px;
+    z-index: 10;
+    justify-content: center;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    margin-top: 10px;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .arhn-card {
+    height: 350px;
+    margin-bottom: 30px;
+  }
+
+  .arhn-card-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+  }
+
+  .arhn-card:active .arhn-card-content,
+  .arhn-card:focus-within .arhn-card-content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .arhn-card:active img,
+  .arhn-card:focus-within img {
+    transform: translateY(-10px) scale(1.1);
+    filter: brightness(1.1) contrast(1.1);
+  }
+
+  .blob {
+    opacity: 0.3;
+  }
+}
+
+/* --- REACT BITS CAROUSEL STYLES --- */
+/* Add this to the BOTTOM of your Aarohan.css */
+
+.react-bits-carousel {
+  position: relative;
+  overflow: hidden;
+  /* border: 1px solid #555; Remove border if you want a clean look */
+  /* border-radius: 24px; */
+  padding: 16px;
+  width: 100%;
+  height: 600px; /* Ensure container has height */
+  /* --outer-r: 24px;
+  --p-distance: 12px; */
+  perspective: 2000px;
+}
+
+.react-bits-track {
+  display: flex;
+  align-items: center; /* Center items vertically in track */
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.react-bits-item {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Removed background color so your card style takes over */
+  background-color: transparent;
+  overflow: visible; /* Important for your 3D tilt to show */
+  cursor: grab;
+  border: none; /* Remove default border */
+}
+
+.react-bits-item:active {
+  cursor: grabbing;
+}
+
+/* Indicators */
+.react-bits-indicators {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  z-index: 10;
+}
+
+.react-bits-dots {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.react-bits-dot {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #555;
+}
+
+.react-bits-dot.active {
+  background-color: #ff0000; /* Aarohan Red */
+  transform: scale(1.3);
 }
