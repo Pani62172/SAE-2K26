@@ -2,7 +2,7 @@ import React from 'react';
 import './cardalumni.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-/*import { faFacebook } from "@fortawesome/free-brands-svg-icons";*/
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const Cardalumni = (props) => {
@@ -13,9 +13,6 @@ const Cardalumni = (props) => {
         <div className="bottom-Alumni">
             <div className="items-Alumni">
               <div className="icons-Alumni">
-                {/*<a href={props.facebooklink} target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon className="delay1" icon={faFacebook} color='white' />
-                </a>*/}
                 <a href={props.instalink} target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon className="delay2" icon={faInstagram} color='white'/>
                 </a>
@@ -24,7 +21,7 @@ const Cardalumni = (props) => {
                 </a>
               </div>
             </div>
-            <div className="button-Alumni"><button id='alumni-button'></button></div>
+            <di className="button-Alumni"><button id='alumni-button'></button></di>
         </div>
     </div>
 
