@@ -381,14 +381,14 @@ const Alumni = () => {
                 className={activeYear === "2024" ? "active-btn" : ""}
                 onClick={() => setActiveYear("2024")}
               >
-                2024 PassOut
+                2024
               </button>
 
               <button 
                 className={activeYear === "2025" ? "active-btn" : ""}
                 onClick={() => setActiveYear("2025")}
               >
-                2025 PassOut
+                2025
               </button>
             </div>
             <div className="cards-Alumni">
