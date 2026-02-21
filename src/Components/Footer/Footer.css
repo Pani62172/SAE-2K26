@@ -10,6 +10,9 @@ body {
     position: relative;
     z-index: 2;
     overflow: hidden;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
     color: #ffffff;
     padding: 25px 0;
     text-align: left;
@@ -252,6 +255,7 @@ body {
 
 .footer-contact {
     margin-bottom: 10px;
+    font-family: sans-serif;
     font-size: 1.2em;
     display: flex;
     align-items: center;
@@ -269,6 +273,8 @@ body {
 
 .footer-copy {
     background: rgb(15, 16, 18);
+    position: relative;
+    z-index: 2;
     color: #ffffff;
     text-align: center;
     padding: 20px 0;
