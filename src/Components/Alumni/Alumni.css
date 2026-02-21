@@ -30,6 +30,7 @@
     color: rgb(255, 0, 0);
   }
 }
+
 .content-alumni {
   color: white;
   z-index: 1;
@@ -73,9 +74,50 @@
   width: 80vw;
 }
 
+.cards-Alumni h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  color: rgba(224, 64, 64, 0.721);
+  z-index: 2;
+  font-size: 3rem;
+  width: 100%;
+}
+
 .cards-Alumni:last-child {
   margin-bottom: 5vh;
 }
+
+.year-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.year-buttons button {
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 2px solid #ff4d4d;
+  background: transparent;
+  color: rgb(215, 195, 195);
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.year-buttons button:hover {
+  background: #cd5151;
+  color: black;
+}
+
+.active-btn {
+  background: #ff4d4d;
+}
+
 @media screen and (max-width: 1180px) {
   .container-alumni {
     row-gap: 0vh;
