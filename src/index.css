@@ -1,0 +1,218 @@
+@import "tailwindcss";
+@import "@fontsource/inter/400.css";   /* regular */
+@import "@fontsource/inter/500.css";   /* medium */
+@import "@fontsource/syne/500.css";    /* medium headings */
+@import "@fontsource/syne/600.css";    /* semibold headings */
+@import "@fontsource/syne/700.css";    /* bold headings */
+
+@font-face {
+  font-family: 'NB ';
+  src: url('.assets/very-vogue-font/NBInternationalProBoo.woff2');
+}
+@font-face {
+  font-family: 'vogue';
+  src: url('./assets/very-vogue-font/nicky-laatz-very-vogue-text.otf');
+}
+
+@font-face {
+  font-family: 'vogueIt';
+  src: url('./assets/very-vogue-font/nicky-laatz-very-vogue-text-italic.otf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/very-vogue-font/Montserrat-Bold.otf');
+}
+@theme {
+  --font-NB : "NB" , sans-serif;
+  --font-vogue:"vogue", sans-serif ;
+  --font-vogueIt:"vogueIt", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-heading: "Syne", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --color-gradient:  linear-gradient(90deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+}
+
+@layer base {
+
+  body {
+    @apply bg-black text-white antialiased font-body text-xl overflow-x-clip;
+  }
+
+  h3 {
+    @apply font-heading font-medium uppercase text-2xl
+  }
+
+}
+
+@layer components {
+
+  .main-container {
+    @apply w-full max-w-[1600px] m-auto px-4 lg:px-12;
+  }
+
+  h1 {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 12px;
+      width: 99%;
+      height: clamp(2px, 1vh, 12px);
+      background: var(--color-gradient);
+      z-index: -1;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 6px;
+      width: 99%;
+      height: 2px;
+      background: var(--color-gradient);
+      z-index: -1;
+    }
+  }
+
+  .text-stroke {
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+  }
+
+  .btn {
+    background: linear-gradient(#000, #000) padding-box,
+        var(--color-gradient) border-box;
+  }
+
+  .btn:hover {
+    background: var(--color-gradient) padding-box,
+        var(--color-gradient) border-box;
+    color: #fff;
+  }
+
+  .btn-light {
+    background: linear-gradient(#fff, #fff) padding-box,
+        var(--color-gradient) border-box;
+    color: black;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 15s linear infinite;
+  }
+
+  .animate-marquee-reverse{
+    animation: marquee 15s linear infinite reverse;
+  }
+
+  @keyframes rotate360 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .marquee-star1 {
+    animation: rotate360 10s linear infinite;
+    transform-origin: center;
+  }
+
+  .marquee-star2 {
+    animation: rotate360 10s linear infinite reverse;
+    transform-origin: center;
+  }
+
+  .menu-link {
+    @apply text-[10vw] lg:text-[6vw] font-heading font-medium uppercase lg:opacity-60 hover:opacity-100;
+  }
+
+  .underline-hover-effect-black{
+    position: relative;
+    display: inline-block;
+   
+ }
+
+ .underline-hover-effect-black::before{
+   position: absolute;
+   top: 80%;
+   left: 0;
+   content: '';
+   height: 2px ;
+   width: 100%;
+   transform: scaleX(0);
+  
+   background: black;
+   transform-origin: bottom right;
+   transition: transform 0.25s ease-out;
+   mix-blend-mode: difference;
+ }
+ 
+
+ .underline-hover-effect-black:hover::before{
+   transform: scaleX(1);
+   transform-origin: bottom left;
+ }
+
+}
+
+@media (max-width: 1023px) {
+
+  h1::before {
+    bottom: 4px;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .mySwiper {
+    height: 40vh;
+    margin-top: -5%; 
+  }
+  
+.slide{
+  display: flex;
+  align-content: end;
+   user-select: none;
+   width: 60vw !important; 
+ }
+
+  .slide img {
+    
+    height: auto;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .mySwiper {
+    height: 30vh;
+    margin-top: -4%; 
+    
+  }
+    
+.slide{
+ 
+  
+ 
+  display: flex;
+  align-content: end;
+   user-select: none;
+   width: 60vw !important;
+ }
+
+  .slide img {
+ 
+    height: auto;
+  }
+}
