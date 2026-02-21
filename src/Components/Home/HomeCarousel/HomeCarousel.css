@@ -1,0 +1,227 @@
+.hom-carousel-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hom-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateX(-100%);
+}
+
+.hom-slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 1;
+}
+
+.hom-slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers the entire area */
+  opacity: 0.8;
+  filter: blur(0.2px);
+}
+
+/* Adjustments for smaller screens to ensure full-height display */
+@media (max-width: 768px) {
+  .hom-slide-image {
+    height: 100vh; /* Forces full viewport height on smaller devices */
+  }
+}
+
+/* Overlay text styling */
+.hom-text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  z-index: 2;
+  animation: textFadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes textFadeIn {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.top-heading {
+  font-size: 4rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  transition: color 0.3s ease;
+}
+
+.hom-carousel-description {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 15px;
+  color: rgb(238, 231, 231);
+}
+
+.hom-highlight {
+  color: red;
+}
+
+/* Navigation button styling */
+.hom-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  color: gray;
+  border: none;
+  border-radius: 50%;
+  padding: 1rem;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+  z-index: 3;
+}
+
+.hom-nav-button:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: black;
+  transform: scale(1.15);
+}
+
+.hom-prev-button {
+  left: 2rem;
+}
+
+.hom-next-button {
+  right: 2rem;
+}
+
+/* Responsive adjustments for text and navigation buttons */
+@media (max-width: 768px) {
+  .top-heading {
+    font-size: 3rem;
+  }
+  .hom-carousel-description {
+    font-size: 2rem;
+  }
+  .hom-nav-button {
+    padding: 0.8rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-heading {
+    font-size: 2rem;
+  }
+  .hom-carousel-description {
+    font-size: 1.5rem;
+  }
+  .hom-nav-button {
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hom-carousel-description {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* .carousel-background {
+  background-image: url('https://scontent.fdbd3-1.fna.fbcdn.net/v/t1.6435-9/50783929_1130583590443787_1844865350450020352_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=t3uOjUDv4OoQ7kNvgFzRk3a&_nc_zt=23&_nc_ht=scontent.fdbd3-1.fna&_nc_gid=Aheq_Gigc7kpzgQ-vxr7uYs&oh=00_AYBHIdfLRArwvbeYnyeeI8224RhoVrVn9HMZj2tbE2gVww&oe=674D5F74');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.carousel-background p {
+  color: rgb(255, 255, 255);
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  z-index: 1;
+  margin-top: 15px;
+  position: relative;
+  top: 35px;
+}
+
+.carousel-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.top-heading {
+  position: relative;
+  color: white;
+  font-size: 4rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  z-index: 1;
+  top: 55px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+@media (max-width: 768px) {
+  .top-heading {
+    font-size: 3rem;
+  }
+  .carousel-background p {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-heading {
+    font-size: 2.5rem;
+  }
+  .carousel-background p {
+    font-size: 1.5rem;
+  }
+}
+.line-color{
+  color: red;
+  font-weight: bolder;
+}
+@media (max-width: 400px) {
+
+  .carousel-background p {
+    font-size: 1.2rem;
+  }
+} */

@@ -1,0 +1,101 @@
+/* Center and style the Events section heading */
+.homhlo-sae {
+  text-align: center;
+  padding: 2em;
+}
+
+.homhlo-sae h1 {
+  font-family: 'Poppins', sans-serif;
+  color: rgb(235, 21, 21);
+  font-size: 3.5rem;
+  text-shadow: 1px 1px 0 rgb(0, 0, 0), 2px 2px 0 rgb(148, 31, 31);
+}
+
+/* Container styling with max width and center alignment */
+.homcontainer-fluid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px; /* Add padding for inner spacing */
+}
+
+/* Event content layout */
+.homevent-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px; /* Space between events */
+}
+
+/* Image container styles */
+.homfist-image, .hombaja-image, .homaiml-image {
+  width: 450px;
+  flex-shrink: 0;
+}
+
+.homfist-image img, .hombaja-image img, .homaiml-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Event text container */
+.homabout-fist, .homabout-baja, .homabout-aiml {
+  max-width: 50%;
+  text-align: left;
+  margin: 20px;
+}
+
+.homabout-fist h1, .homabout-baja h1, .homabout-aiml h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  color: rgb(235, 8, 8);
+  font-size: 36px;
+  text-shadow: 1px 1px 0 rgb(0, 0, 0), 2px 2px 0 rgb(211, 21, 21);
+}
+
+.homabout-fist p, .homabout-baja p, .homabout-aiml p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #b8bec4;
+}
+
+@media (max-width: 768px) {
+  .homevent-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .homabout-fist, .homabout-baja, .homabout-aiml {
+    max-width: 100%;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .homabout-fist h1, .homabout-baja h1, .homabout-aiml h1 {
+    font-size: 30px;
+  }
+
+  .homabout-fist p, .homabout-baja p, .homabout-aiml p {
+    font-size: 18px;
+    margin: 10px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .homfist-image, .hombaja-image, .homaiml-image {
+    width: 100%;
+  }
+
+  .homabout-fist h1, .homabout-baja h1, .homabout-aiml h1 {
+    font-size: 26px;
+  }
+
+  .homabout-fist p, .homabout-baja p, .homabout-aiml p {
+    font-size: 16px;
+    margin: 10px;
+  }
+}

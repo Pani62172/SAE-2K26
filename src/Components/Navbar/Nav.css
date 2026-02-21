@@ -1,0 +1,42 @@
+.nav-link {
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff0000;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-overlay.active {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+}
+
+.nav-menu {
+  background-color: #000;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 1rem;
+  }
+}
