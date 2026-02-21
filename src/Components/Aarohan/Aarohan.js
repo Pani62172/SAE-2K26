@@ -2,9 +2,10 @@ import { useEffect } from "react";
 import "./Aarohan.css";
 import CardCarousel from "./Carousel.jsx";
 import { events, arhn_gallary } from "./AarohanData.js";
+import './DarkVeil.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import LiquidChrome from "./LiquidChrome.jsx";
+import DarkVeil from "./DarkVeil.js";
 // import AarohanOrg from "./AarohanOrg.js";
 // import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -61,7 +62,7 @@ const carouselElement = document.querySelector("#heroCarousel");
       card.addEventListener("mouseleave", handleMouseLeave);
     });
 
-    const cursor = document.querySelector(".glow-cursor"); // Ensure you add this div in JSX or create dynamically
+    const cursor = document.querySelector(".glow-cursor"); 
     const moveCursor = (e) => {
        if(cursor) {
          cursor.style.left = e.clientX + "px";
@@ -90,8 +91,6 @@ const handleCardMouseMove = (e) => {
     
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
-    
-    // Tilt intensity
     const rotateX = ((y - centerY) / centerY) * -25;
     const rotateY = ((x - centerX) / centerX) * 25;
 
@@ -104,18 +103,23 @@ const handleCardMouseMove = (e) => {
 
 return (
     <>
-     {/* LIQUID CHROME BACKGROUND */}
-      <LiquidChrome />
+    <div className="darkveil-wrapper">
+        <DarkVeil 
+          hueShift={0} 
+          noiseIntensity={0.03} 
+          scanlineIntensity={0.2} 
+          speed={0.5} 
+          scanlineFrequency={0.05} 
+          warpAmount={0.5} 
+        />
+      </div>
     <div className="noise-overlay"></div>
     <div className="glow-cursor"></div>
     {/* <div className="blob-container">
   <div className="blob blob-1"></div>
   <div className="blob blob-2"></div>
 </div> */}
-      {/* --- 1. IMMERSIVE HERO SECTION --- */}
       <div className="hero-section">
-        
-        {/* Background Layer */}
         <div
           id="heroCarousel"
           className="carousel slide carousel-fade hero-bg"
@@ -139,7 +143,6 @@ return (
           </div>
         </div>
 
-        {/* Overlay Content Layer */}
         <div className="hero-overlay">
           <h1 className="main-title" data-aos="zoom-out" data-aos-duration="1500">
             AAROHAN
@@ -159,23 +162,21 @@ return (
         </div>
       </div>
 
-      {/* --- 2. MAIN CONTENT --- */}
-      <div className="w-full relative z-10 bg-[#050505] overflow-hidden">
+      <div className="w-full relative z-10 bg-transparent">
         
-        {/* About Section */}
-        <div className="flex max-w-full flex-col lg:flex-row mx-10 my-30 lg:mx-16 lg:my-32 lg:justify-between items-center">
+        <div className="flex max-w-full flex-col lg:flex-row mx-10 my-32 lg:mx-16 lg:my-32 lg:justify-between items-center">
           <div className="w-full lg:w-[50%] relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-red-600 to-violet-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
             <img
-              src="./AbtArhn.jpg"
+              src="./IMG_0406.JPG"
               alt="Aarohan"
               className="relative rounded-lg shadow-2xl w-full object-cover transform transition-transform duration-500 hover:scale-[1.01]"
               data-aos="fade-right"
             />
           </div>
 
-          <div className="lg:w-[45%] mt-12 lg:mt-0 lg:pl-10">
-            <h1 className="text-5xl font-black mb-6 section-heading" data-aos="fade-left">
+          <div className="lg:w-[45%] mt-12 lg:mt-0 lg:pl-10 flex flex-col justify-center">
+            <h1 className="text-5xl lg:text-6xl font-black mb-8 section-heading tracking-tighter" data-aos="fade-left" data-aos-delay="100">
               WHO WE ARE
             </h1>
             <p className="text-lg text-gray-400 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
@@ -187,8 +188,7 @@ return (
           </div>
         </div>
 
-        {/* SAE Section (Reverse Layout) */}
-        <div className="flex max-w-full flex-col lg:flex-row-reverse mx-10 my-80 lg:mx-16 lg:my-50 lg:justify-between items-center">
+        <div className="flex max-w-full flex-col lg:flex-row-reverse mx-10 my-32 lg:mx-16 lg:my-50 lg:justify-between items-center">
           <div className="w-full lg:w-[40%] relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
             <img
@@ -199,8 +199,8 @@ return (
             />
           </div>
 
-          <div className="lg:w-[45%] mt-12 lg:mt-0 lg:pr-10 text-right lg:text-left">
-            <h1 className="text-5xl font-black mb-6 section-heading" data-aos="fade-right">
+          <div className="lg:w-[45%] mt-12 lg:mt-0 lg:pl-10 lg:text-left flex flex-col justify-center">
+            <h1 className="text-5xl lg:text-6xl font-black mb-8 section-heading tracking-tighter" data-aos="fade-right" data-aos-delay="100">
               SAE x AAROHAN
             </h1>
             <p className="text-lg text-gray-400 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
@@ -211,7 +211,6 @@ return (
           </div>
         </div>
 
-        {/* --- 3. EVENTS GRID --- */}
         <div className="px-6 lg:px-32 py-20">
           <div className="mb-16 text-center" data-aos="fade-up">
             <h1 className="text-5xl font-black section-heading uppercase">
@@ -220,29 +219,24 @@ return (
             <p className="text-gray-500 mt-4 tracking-widest uppercase text-sm">Our Events and Workshops in AAROHAN</p>
           </div>
           <div style={{ height: '600px', width: '100%', position: 'relative' }}>
-          <CardCarousel baseWidth={350} autoplay={false} loop={true}>
+          <CardCarousel baseWidth={350} autoplay={true} loop={true}>
               {events.map((event) => {
                 let imgSrc = "";
                if (event.posters) {
     if (typeof event.posters === "string") {
-        // Handle case where posters is just a string path
         imgSrc = event.posters; 
     } else if (event.posters.src) {
-        // Handle New Format: Object { src: "..." }
         imgSrc = event.posters.src;
     } else if (Array.isArray(event.posters) && event.posters.length > 0) {
-        // Handle Old Format: Array [{ src: "..." }]
         imgSrc = event.posters[0].src;
     }
 } else {
-    // Fallback
     imgSrc = event.image || ""; 
 }
                 return (
                  <div key={event.id} className="carousel-item-wrapper">
                     <div 
                       className="arhn-card"
-                      // FIX: Attach Tilt Handlers Here
                       onMouseMove={handleCardMouseMove}
                       onMouseLeave={handleCardMouseLeave}
                     >
@@ -260,7 +254,7 @@ return (
               </div>
         </div>
         </div>
-        {/* --- 4. INFINITE GALLERY --- */}
+ 
         <div className="px-6 lg:px-32 py-20">
           <div className="mb-16 text-center" data-aos="fade-up">
             <h1 className="text-5xl font-black section-heading uppercase">
@@ -269,7 +263,6 @@ return (
           </div>
           <div className="arhn-slider">
             <div className="arhn-slide-track">
-              {/* Render twice for seamless loop */}
               {[...arhn_gallary, ...arhn_gallary].map((arhn_img, idx) => (
                 <div key={`${arhn_img.id}-${idx}`} className="arhn-single-slide w-[300px] h-[200px] mx-4">
                   <img src={arhn_img.posters} alt="gallery" className="w-full h-full object-cover rounded-xl" />

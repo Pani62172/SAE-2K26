@@ -3,17 +3,17 @@
   overflow: hidden;
   /* border: 1px solid #555; */
   /* border-radius: 24px; */
-  padding: 16px;
+  padding: 12px;
   --outer-r: 24px;
   --p-distance: 12px;
-  height: 600px; /* Ensure height fits the cards */
+  height: 600px;
   perspective: 2000px;
   width: 100%;
 }
 
 .rb-carousel-track {
   display: flex;
-  align-items: center; /* Center cards vertically */
+  align-items: center;
   height: 100%;
   transform-style: preserve-3d;
 }

@@ -28,7 +28,7 @@ import { v4 as uuidv4} from 'uuid'
        "In Death Note, a crime has been committed, and numerous suspects and pieces of evidence are gathered. Interrogations expose layers of deceit and truth. The challenge is to unravel the mystery, piecing together clues to identify the killer and uncover their motive.",
       posters: 
         // {src: "/assets/arhnDeathNote.jpg", label: 2024},
-        {src: "/assets/DEATH NOTE 7.png"}
+        {src: "/assets/DEATHNOTE7.png"}
    },
    {
      id: uuidv4(),
@@ -44,7 +44,7 @@ import { v4 as uuidv4} from 'uuid'
        "The workshop combined data science with Raspberry Pi, guided by experts. Participants learned data collection, processing, and analysis with Python, exploring IoT applications. They gained skills for impactful projects, suitable for all experience levels.",
       posters:
         // {src: "/assets/ArhnWorkshop.jpg", label: 2024},
-        {src: "/assets/AI ML WORKSHOP.png"}
+        {src: "AI ML WORSKHOP.png"}
       
    },
    {
@@ -83,7 +83,7 @@ import { v4 as uuidv4} from 'uuid'
      content:
        "In Crossword, participants united to tackle thrilling challenges, intricate puzzles, and quizzes, showcasing their skills. Running throughout AAROHAN, it was a dynamic experience filled with adrenaline-pumping puzzles and mind-bending riddles that tested wit and quick thinking at every turn.",
       posters: 
-        {src: "/assets/speedcubing.jpg"}
+        {src: "/assets/speedcubing.png"}
       
    },
     {
@@ -172,7 +172,6 @@ import { v4 as uuidv4} from 'uuid'
      id: uuidv4(),
       posters: "/assets/IMG_4746.jpg",
    },
-
    {
      id: uuidv4(),
       posters: "/assets/IMG_4764.jpg",

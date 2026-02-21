@@ -1,0 +1,20 @@
+.darkveil-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  object-fit: cover;
+}
+
+.darkveil-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10; /* Keeps it strictly behind all your content */
+  pointer-events: none; /* Prevents the background from blocking clicks */
+  background-color: #000;
+}

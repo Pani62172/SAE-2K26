@@ -56,8 +56,6 @@ p {
   font-size: clamp(0.9rem, 2vw, 1.1rem);
 }
 
-/* Event arhn-card */
-
 .arhn-card {
   position: relative;
   transform-style: preserve-3d;
@@ -71,6 +69,7 @@ p {
   justify-content: center;
   overflow: hidden;
 
+  object-fit: contain;
   /* transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); */
   /* transition:
     transform 0.4s ease,
@@ -207,8 +206,6 @@ p {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* AAROHAN GALLERY */
-
 .arhn-slider {
   height: auto;
   min-height: 250px;
@@ -249,7 +246,7 @@ p {
   }
   100% {
     transform: translateX(-50%);
-  } /* Moves half the duplicated list */
+  }
 }
 .arhn-slider:hover .arhn-slide-track {
   animation-play-state: paused;
@@ -300,11 +297,7 @@ p {
 
 .arhn-slider::before,
 .arhn-slider::after {
-  background: linear-gradient(
-    to right,
-    transparent 0%,
-    /* Changed from #15171a */ rgba(0, 0, 0, 0) 100%
-  );
+  background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0) 100%);
   content: "";
   height: 100%;
   position: absolute;
@@ -316,8 +309,7 @@ p {
   background: linear-gradient(
     to bottom,
     rgba(5, 5, 5, 0.3) 0%,
-    /* Changed from #050505 */ rgba(10, 10, 10, 0.4) 100%
-      /* Changed from #0a0a0a */
+    rgba(10, 10, 10, 0.4) 100%
   ) !important;
 }
 
@@ -326,7 +318,7 @@ p {
 }
 
 .flex.max-w-full {
-  background: rgba(0, 0, 0, 0.2); /* Very subtle dark overlay */
+  background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(2px);
   border-radius: 20px;
   padding: 40px 20px;
@@ -362,7 +354,7 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-size: clamp(5rem, 5vw, 3rem);
   text-shadow: none;
   letter-spacing: -1px;
   text-align: center;
@@ -383,8 +375,9 @@ p {
 
 .carousel-item {
   transition:
-    transform 1s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 1s cubic-bezier(0.6, 0, 0.2, 1),
     opacity 1s ease;
+  filter: brightness(0.4) contrast(1.1);
 }
 
 .carousel-control-prev-icon,
@@ -429,7 +422,7 @@ p {
 .hero-section {
   position: relative;
   width: 100%;
-  height: 100vh; /* Takes up 100% of the viewport height */
+  height: 100vh;
   min-height: -webkit-fill-available;
   overflow: hidden;
   display: flex;
@@ -439,14 +432,13 @@ p {
   background: transparent;
 }
 
-/* 1. Background Layer (Carousel) */
 .hero-bg {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
+  width: 100%;
   height: 100%;
-  z-index: 0; /* Sits behind everything */
+  z-index: 0;
 }
 
 .hero-bg::after {
@@ -458,15 +450,14 @@ p {
   height: 100%;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.2) 0%,
-    /* Reduced opacity */ rgba(0, 0, 0, 0.4) 50%,
-    /* Reduced opacity */ rgba(0, 0, 0, 0.6) 100% /* Reduced opacity */
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.5) 100%
   );
   z-index: 1;
   pointer-events: none;
 }
 
-/* Force Bootstrap carousel items to fill the screen */
 .hero-bg .carousel-inner,
 .hero-bg .carousel-item {
   height: 100%;
@@ -475,10 +466,10 @@ p {
 .hero-bg img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures images cover the screen without stretching */
-  filter: brightness(0.4) contrast(1.1); /* Darkens image so text pops */
-  transform: scale(1.1); /* Slight zoom for cinematic effect */
-  animation: breathe 10s infinite alternate ease-in-out; /* Optional movement */
+  object-fit: cover;
+  filter: brightness(0.75) contrast(1.1);
+  transform: scale(1.1);
+  animation: breathe 10s infinite alternate ease-in-out;
 }
 
 @keyframes breathe {
@@ -490,33 +481,31 @@ p {
   }
 }
 
-/* 2. Text Overlay Layer */
 .hero-overlay {
-  position: relative;
-  z-index: 10; /* Sits on top of the background */
+  position: absolute;
+  z-index: 10;
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   padding: 0 20px;
-  width: 50%;
+  width: 100%;
   height: 100%;
+  inset: 0;
+  pointer-events: none;
 }
 
-/* Main Title Styling */
 .main-title {
   font-family: "Syncopate", sans-serif;
-  font-size: clamp(3rem, 10vw, 8rem); /* Huge text */
+  font-size: clamp(5rem, 12vw, 13rem);
   font-weight: 700;
-  letter-spacing: -0.05em;
+  letter-spacing: 0 rem;
   text-transform: uppercase;
   margin: 0;
-  line-height: 1.1;
+  line-height: 1.8;
   color: transparent;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
-
-  /* Gradient Text Effect */
   background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0.1));
   background-size: 200%;
   -webkit-background-clip: text;
@@ -550,7 +539,6 @@ p {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* Scroll Down Indicator (Bouncing Arrow) */
 .scroll-indicator {
   position: absolute;
   top: 50%;
@@ -569,7 +557,7 @@ p {
 }
 
 .scroll-indicator .arrow-scroll {
-  margin-top: 180px; /* Adjust this value to push arrows below the text */
+  margin-top: 180px;
 }
 
 .mouse {
@@ -634,7 +622,6 @@ p {
   }
 }
 
-/* The Grain Texture */
 .noise-overlay {
   position: fixed;
   top: 0;
@@ -643,8 +630,8 @@ p {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 999; /* Sits on top of everything */
-  opacity: 0.07; /* Adjust visibility */
+  z-index: 999;
+  opacity: 0.07;
   background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 .glow-cursor {
@@ -659,15 +646,15 @@ p {
     rgba(0, 0, 0, 0) 70%
   );
   border-radius: 50%;
-  transform: translate(-50%, -50%); /* Centers the glow on mouse */
-  pointer-events: none; /* Allows clicking through it */
+  transform: translate(-50%, -50%);
+  pointer-events: none;
   z-index: 9999;
-  mix-blend-mode: screen; /* Blends nicely with images */
+  mix-blend-mode: screen;
   transition:
     width 0.2s,
-    height 0.2s; /* Optional pulse effect */
+    height 0.2s;
 }
-/* Container for the blobs */
+
 .blob-container {
   /* position: fixed;
   top: 0;
@@ -703,7 +690,7 @@ p {
   right: 10%;
   width: 400px;
   height: 400px;
-  background: #800080; /* Purple/Blue */
+  background: #800080;
   animation-delay: -5s;
 }
 
@@ -734,7 +721,6 @@ p {
     height: 450px;
   }
 
-  /* Side-by-side layouts for About/SAE */
   .flex-col-mobile {
     flex-direction: row;
   }
@@ -749,38 +735,37 @@ p {
   }
 }
 
-/* TABLET: 768px - 1023px */
 @media (min-width: 768px) and (max-width: 1023px) {
   .hero-section {
-    height: auto; /* Allow section to grow with content */
+    height: auto;
     min-height: 100vh;
-    flex-direction: column; /* Stack vertically */
+    flex-direction: column;
   }
 
   .hero-bg {
-    position: relative; /* Remove absolute positioning */
-    width: 100%; /* Full width instead of 50% */
-    height: 55vh; /* Carousel takes top portion */
+    position: relative;
+    width: 100%;
+    height: 55vh;
     z-index: 1;
   }
 
   .hero-bg img {
     height: 100%;
     object-fit: cover;
-    animation: none; /* Optional: disable zoom for performance */
+    animation: none;
   }
 
   .hero-overlay {
-    position: relative; /* Remove absolute positioning */
-    width: 100%; /* Full width instead of 50% */
-    height: auto; /* Auto height based on content */
+    position: absolute;
+    width: 100%;
+    height: auto;
     padding: 60px 20px;
     z-index: 2;
     justify-content: center;
   }
 
   .main-title {
-    font-size: 3.5rem;
+    font-size: 5rem;
     margin-top: 0;
     line-height: 1.1;
   }
@@ -799,21 +784,43 @@ p {
     transform: none;
     margin-top: 40px;
   }
+  .react-bits-dots {
+    display: flex;
+    gap: 12px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    margin-top: 30px;
+  }
+
+  .react-bits-dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #555;
+  }
+
+  .react-bits-dot.active {
+    background-color: #ff0000;
+    transform: scale(1.3);
+  }
 }
 
-/* MOBILE: < 768px */
 @media (max-width: 767px) {
   .hero-section {
-    height: auto; /* Allow section to grow */
+    height: auto;
     min-height: 100vh;
     min-height: -webkit-fill-available;
-    flex-direction: column; /* Stack vertically */
+    flex-direction: column;
   }
 
   .hero-bg {
-    position: relative; /* Change from absolute */
-    width: 100%; /* Full width */
-    height: 50vh; /* Carousel takes top half */
+    position: relative;
+    width: 100%;
+    height: 50vh;
     z-index: 1;
   }
 
@@ -822,16 +829,17 @@ p {
   }
 
   .hero-overlay {
-    position: relative; /* Change from absolute */
-    width: 100%; /* Full width */
-    height: auto; /* Auto height */
+    position: absolute;
+    width: 100%;
+    height: auto;
     padding: 40px 20px;
     z-index: 10;
     justify-content: center;
+    inset: 0;
   }
 
   .main-title {
-    font-size: 2.5rem;
+    font-size: 4rem;
     letter-spacing: 2px;
     line-height: 1.2;
   }
@@ -874,26 +882,21 @@ p {
   }
 }
 
-/* --- REACT BITS CAROUSEL STYLES --- */
-/* Add this to the BOTTOM of your Aarohan.css */
-
 .react-bits-carousel {
   position: relative;
   overflow: hidden;
-  /* border: 1px solid #555; Remove border if you want a clean look */
-  /* border-radius: 24px; */
   padding: 16px;
   width: 100%;
-  height: 600px; /* Ensure container has height */
   /* --outer-r: 24px;
   --p-distance: 12px; */
   perspective: 2000px;
 }
 
 .react-bits-track {
-  display: flex;
-  align-items: center; /* Center items vertically in track */
-  height: 100%;
+  display: flex-start;
+  align-items: center;
+  height: 90%;
+  padding-top: 20px;
   transform-style: preserve-3d;
 }
 
@@ -904,25 +907,24 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* Removed background color so your card style takes over */
   background-color: transparent;
-  overflow: visible; /* Important for your 3D tilt to show */
+  overflow: visible;
   cursor: grab;
-  border: none; /* Remove default border */
+  border: none;
 }
 
 .react-bits-item:active {
   cursor: grabbing;
 }
 
-/* Indicators */
 .react-bits-indicators {
   display: flex;
   width: 100%;
   justify-content: center;
-  position: absolute;
-  bottom: 20px;
-  left: 0;
+  position: relative;
+  /* bottom: 5px;
+  left: 0; */
+  margin-top: 30px;
   z-index: 10;
 }
 
@@ -933,6 +935,7 @@ p {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   backdrop-filter: blur(4px);
+  /* margin-top: 30px; */
 }
 
 .react-bits-dot {
@@ -945,6 +948,6 @@ p {
 }
 
 .react-bits-dot.active {
-  background-color: #ff0000; /* Aarohan Red */
+  background-color: #ff0000;
   transform: scale(1.3);
 }

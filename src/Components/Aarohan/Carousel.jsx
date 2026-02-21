@@ -1,13 +1,13 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { motion, useMotionValue,useTransform, animate } from 'framer-motion'; 
+import { useEffect, useMemo, useRef, useState } from "react";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 
-const DRAG_BUFFER = 0;
+const DRAG_BUFFER = 50;
 const VELOCITY_THRESHOLD = 500;
-const GAP = 32; // Increased gap for your cards
-const SPRING_OPTIONS = { type: 'spring', stiffness: 300, damping: 30 };
+const GAP = 32;
+const SPRING_OPTIONS = { type: "spring", stiffness: 300, damping: 30 };
 
 export default function Carousel({
-  children, // Accept children instead of items prop
+  children,
   baseWidth = 350,
   autoplay = true,
   autoplayDelay = 2000,
@@ -18,22 +18,23 @@ export default function Carousel({
   const itemWidth = baseWidth - containerPadding * 2;
   const trackItemOffset = itemWidth + GAP;
 
-  // Convert children to array for easier handling
-  const items = useMemo(() => (Array.isArray(children) ? children : [children]), [children]);
+  const items = useMemo(
+    () => (Array.isArray(children) ? children : [children]),
+    [children],
+  );
 
   const itemsForRender = useMemo(() => {
     if (!loop) return items;
     if (items.length === 0) return [];
-    // Clone logic for loop
     return [items[items.length - 1], ...items, items[0]];
   }, [items, loop]);
 
-  const [position, setPosition] = useState(loop ? 1 : 0);
+  const cloneOffset = loop ? 1 : 0;
+
+  const [position, setPosition] = useState(cloneOffset);
   const x = useMotionValue(0);
   const [isHovered, setIsHovered] = useState(false);
-  const [isJumping, setIsJumping] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false);
-
+  const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -41,11 +42,11 @@ export default function Carousel({
       const container = containerRef.current;
       const handleMouseEnter = () => setIsHovered(true);
       const handleMouseLeave = () => setIsHovered(false);
-      container.addEventListener('mouseenter', handleMouseEnter);
-      container.addEventListener('mouseleave', handleMouseLeave);
+      container.addEventListener("mouseenter", handleMouseEnter);
+      container.addEventListener("mouseleave", handleMouseLeave);
       return () => {
-        container.removeEventListener('mouseenter', handleMouseEnter);
-        container.removeEventListener('mouseleave', handleMouseLeave);
+        container.removeEventListener("mouseenter", handleMouseEnter);
+        container.removeEventListener("mouseleave", handleMouseLeave);
       };
     }
   }, [pauseOnHover]);
@@ -55,74 +56,119 @@ export default function Carousel({
     if (pauseOnHover && isHovered) return;
 
     const timer = setInterval(() => {
-      setPosition(prev => {
+      setPosition((prev) => {
+        if (loop) return prev + 1;
 
-         if (loop) return prev + 1;
-
-         return Math.min(prev + 1, itemsForRender.length - 1);
-    });
- }, autoplayDelay);
+        return prev === items.length - 1 ? 0 : prev + 1;
+      });
+    }, autoplayDelay);
 
     return () => clearInterval(timer);
-  }, [autoplay, autoplayDelay, isHovered, pauseOnHover, itemsForRender.length, loop]);
+  }, [
+    autoplay,
+    autoplayDelay,
+    isHovered,
+    pauseOnHover,
+    itemsForRender.length,
+    loop,
+  ]);
 
   useEffect(() => {
-    const startingPosition = loop ? 1 : 0;
-    // Only reset if items change drastically, otherwise keep position logic stable
-    // setPosition(startingPosition); 
-    // x.set(-startingPosition * trackItemOffset);
-  }, [items.length, loop, trackItemOffset, x]);
-  const handleDragEnd = (_, info) => {
-    const { offset, velocity } = info;
-    const direction = offset.x < -DRAG_BUFFER || velocity.x < -VELOCITY_THRESHOLD ? 1 : offset.x > DRAG_BUFFER || velocity.x > VELOCITY_THRESHOLD ? -1 : 0;
-    if (direction === 0) return;
+    const targetX = -(position * trackItemOffset);
+    animate(x, targetX, SPRING_OPTIONS);
+  }, [position, trackItemOffset, x]);
 
-    setPosition(prev => {
-      const next = prev + direction;
-      return next; 
-    });
+  useEffect(() => {
+    if (!loop) return;
+    if (position === itemsForRender.length - 1) {
+      const timeout = setTimeout(() => {
+        const realIndex = 1;
+        x.set(-(realIndex * trackItemOffset));
+        setPosition(realIndex);
+      }, 300);
+      return () => clearTimeout(timeout);
+    }
+
+    if (position === 0) {
+      const timeout = setTimeout(() => {
+        const realIndex = items.length;
+        x.set(-(realIndex * trackItemOffset));
+        setPosition(realIndex);
+      }, 300);
+      return () => clearTimeout(timeout);
+    }
+  }, [position, loop, itemsForRender.length, trackItemOffset, items.length, x]);
+
+  const handleDragEnd = (_, info) => {
+    setIsDragging(false);
+    const { offset, velocity } = info;
+    const swipe =
+      Math.abs(offset.x) > DRAG_BUFFER ||
+      Math.abs(velocity.x) > VELOCITY_THRESHOLD;
+
+    if (swipe) {
+      const direction = offset.x < 0 ? 1 : -1;
+      setPosition((prev) => prev + direction);
+    } else {
+      const targetX = -(position * trackItemOffset);
+      animate(x, targetX, SPRING_OPTIONS);
+    }
   };
 
   return (
     <div
       ref={containerRef}
-      className="react-bits-carousel" 
-      style={{ width: '100%' }}
+      className="react-bits-carousel"
+      style={{ width: "100%" }}
     >
       <motion.div
         className="react-bits-track"
         drag="x"
-        dragConstraints={{ left: -((items.length - 1) * trackItemOffset), right: 0 }}
-        style={{ x: useMotionValue(-(position * trackItemOffset)) }} 
+        dragConstraints={{ left: -10000, right: 10000 }}
+        style={{
+          display: "flex",
+          cursor: isDragging ? "grabbing" : "grab",
+          width: "max-content",
+          paddingLeft: containerPadding,
+        }}
+        onDragStart={() => setIsDragging(true)}
+        onDragEnd={handleDragEnd}
         animate={{ x: -(position * trackItemOffset) }}
         transition={SPRING_OPTIONS}
-        onDragEnd={handleDragEnd}
       >
-        {items.map((child, index) => (
+        {itemsForRender.map((child, index) => (
           <motion.div
             key={index}
-            className="react-bits-item" // UPDATED CLASS
+            className="react-bits-item"
             style={{
               width: itemWidth,
-              height: '100%',
+              height: "100%",
               marginRight: GAP,
+              flexShrink: 0,
             }}
           >
             {child}
           </motion.div>
         ))}
       </motion.div>
-      
-      {/* Indicators */}
+
       <div className="react-bits-indicators">
         <div className="react-bits-dots">
-          {items.map((_, index) => (
-            <div
-              key={index}
-              className={`react-bits-dot ${position === index ? 'active' : ''}`}
-              onClick={() => setPosition(index)}
-            />
-          ))}
+          {items.map((_, index) => {
+            let activeIndex = position - cloneOffset;
+            if (loop) {
+              if (activeIndex < 0) activeIndex = items.length - 1;
+              if (activeIndex >= items.length) activeIndex = 0;
+            }
+
+            return (
+              <div
+                key={index}
+                className={`react-bits-dot ${activeIndex === index ? "active" : ""}`}
+                onClick={() => setPosition(index + cloneOffset)}
+              />
+            );
+          })}
         </div>
       </div>
     </div>
