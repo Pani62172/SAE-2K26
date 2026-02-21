@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-//import React, { useEffect, useState, useRef } from "react";
-import Lottie from "lottie-react";
-//import { scroll, animate } from "https://cdn.skypack.dev/motion@10.13.1";
-=======
 import React, { useEffect, useState, useRef } from "react";
 import Lottie from "lottie-react";
 import { scroll, animate } from "https://cdn.skypack.dev/motion@10.13.1";
->>>>>>> 76911384ea5e3f8d30abc87f0bfbda428052590b
 import "./HomePage.css";
 import cloudAnimation from "../../Cloud.json";
 // import engineAnimation from '../../Engine1.json';
