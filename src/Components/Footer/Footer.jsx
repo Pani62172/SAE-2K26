@@ -68,7 +68,7 @@ function Footer() {
       {/* Copyright Section */}
       <section className="footer-copy">
         <div className="footer-copy-container font-medium">
-          Made By SAE-Dev Team @ 2024
+          Made By SAE-Dev Team @ 2026
           <Link to="/" className="footer-copy-link"> SAE </Link>. All rights reserved.
         </div>
       </section>

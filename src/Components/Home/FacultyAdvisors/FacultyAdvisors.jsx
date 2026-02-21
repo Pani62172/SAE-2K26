@@ -28,17 +28,19 @@ const CardSection = () => {
       <br />
       <h2 className="section-heading">Our Faculty Advisors</h2>
       <hr className="section-underline" />
-      <div className="faculty-card-section">
+      <div className="faculty-container">
         {cards.map((card, index) => (
-          <div className="faculty-card" key={index} data-aos={card.aos}>
-            <img
-              src={card.image}
-              alt={card.name}
-              className="faculty-card-image"
-            />
-            <div className="faculty-card-info">
-              <h3>{card.name}</h3>
-              <p>{card.department}</p>
+          <div className="faculty-cards" key={index} data-aos={card.aos}>
+            <div className="imgBx">
+              <img src={card.image} alt={card.name} />
+            </div>
+            <div className="content">
+              <div className="details">
+                <h2>
+                  {card.name} <br />
+                  <span>{card.department}</span>
+                </h2>
+              </div>
             </div>
           </div>
         ))}

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Poppins:700|Oswald:700&display=swap');
+
 body {
     background-color: rgb(21, 23, 26);
     font-family: 'Roboto', sans-serif;
@@ -20,7 +22,15 @@ body {
 }
 
 .sub-heading {
-    font-size: 2rem;
+    font-family: 'Montserrat','Roboto' ,sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, rgb(255, 46, 46), rgb(114, 5, 5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
     margin-bottom: 1rem;
     color: rgb(202, 52, 53);
     animation: fadeIn 2s ease-in-out;
@@ -39,110 +49,187 @@ body {
     margin: 0 2rem;
     padding: 2rem 4rem;
     margin-bottom: 2rem;
-    /* Prevent overlapping on mobile */
 }
 
 .grid-item {
     perspective: 1000px;
 }
 
+/* ── Card ───────────────────────────────────────────── */
 .card {
     background-color: rgb(30, 32, 34);
     border-radius: 15px;
     overflow: hidden;
     position: relative;
     box-shadow: 0 4px 10px rgba(250, 0, 0, 0.4);
-    transition: transform 1.2s ease-in-out, box-shadow 1.2s ease-in-out;
+    transition: transform 0.8s ease-in-out, box-shadow 0.8s ease-in-out;
     width: 100%;
     max-width: 240px;
     height: 240px;
     margin: 0 auto;
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
 }
 
 .card:hover {
     transform: scale(1.05) rotateX(4deg) translateY(-7px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+    box-shadow: 1px 1px 10px 0 rgba(250, 0, 0, 0.4);
 }
 
-.card-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    flex-grow: 1;
-}
-
+/* ── card-content — transparent full-size wrapper ──────── */
 .card-content {
-    padding: 0.75rem;
-    text-align: center;
-    position: relative;
-    flex-grow: 0;
-}
-
-.card-name {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    color: rgb(202, 52, 53);
-}
-
-.card-designation {
-    font-size: 0.875rem;
-    color: rgb(202, 52, 53);
-}
-
-.card-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    opacity: 0;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    padding: 0; margin: 0;
+}
+
+/* ── Image — full card, slight zoom on hover ────────────── */
+.card-image {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease-in-out;
+    z-index: 1;
+}
+
+.card:hover .card-image {
+    transform: scale(1.07);
+}
+
+/* ── Grey overlay — gone ────────────────────────────────── */
+.card-overlay {
+    display: none !important;
+}
+
+/* ── Name + Designation pill — slides up from bottom ─────── */
+.card-text {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%) translateY(calc(100% + 20px));
+    width: 85%;
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 50px;
+    border: 1px solid rgba(202, 52, 53, 0.35);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    padding: 1.5rem;
-    transition: opacity 0.5s ease-in-out;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+    z-index: 4;
     text-align: center;
 }
 
-.card:hover .card-overlay {
+.card:hover .card-text {
+    transform: translateX(-50%) translateY(0);
     opacity: 1;
 }
 
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
+.card-name {
+    font-size: 0.8rem;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    font-weight: 900;
+    color: rgb(220, 60, 60);
+    margin: 0 0 1px 0;
+    line-height: 1.3;
+    word-break: break-word;
+    white-space: normal;
+    text-align: center;
 }
 
+/* underline animation — 0.6s timing unchanged */
+.card:hover .card-name::after {
+    content: "";
+    display: block;
+    width: 100%;
+    margin: 2px auto 0;
+    border-bottom: 1.5px groove rgb(202, 52, 53);
+    animation: underline 0.6s ease-in-out forwards;
+}
+
+.card-designation {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    color: rgba(202, 52, 53, 0.85);
+    display: block;
+    margin: 0;
+    line-height: 1.3;
+    text-align: center;
+}
+
+/* ── Social icons pill — drops down from top right ──────── */
+.social-icons {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 50px;
+    border: 1px solid rgba(202, 52, 53, 0.35);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 0;
+    gap: 1rem;
+    transform: translateY(calc(-100% - 20px));
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    z-index: 4;
+    box-sizing: border-box;
+}
+
+.card:hover .social-icons {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* ── Social icons — float upward, 0.4s unchanged ────────── */
 .social-icon {
     color: rgb(202, 52, 53);
-    font-size: 1.5rem;
-    transition: transform 0.4s ease-in-out, color 0.4s ease-in-out;
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.4s ease-in-out, color 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    display: block;
+    line-height: 1;
 }
 
 .social-icon:hover {
-    transform: scale(1.2);
+    transform: scale(1.2) translateY(0) !important;
     color: white;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.card:hover .social-icon {
+    opacity: 1;
+    transform: translateY(0);
 }
 
+.card:hover .social-icon:nth-child(1) { transition-delay: 0.15s; }
+.card:hover .social-icon:nth-child(2) { transition-delay: 0.28s; }
+.card:hover .social-icon:nth-child(3) { transition-delay: 0.41s; }
+.card:hover .social-icon:nth-child(4) { transition-delay: 0.54s; }
+
+/* ── Animations ─────────────────────────────────────── */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes underline {
+    from { width: 0; }
+    to   { width: 100%; }
+}
+
+/* ── Section visibility ─────────────────────────────── */
 .section {
     opacity: 0;
     visibility: hidden;
@@ -157,108 +244,40 @@ body {
     transform: translateY(0);
 }
 
-/* Adjustments for various screen sizes */
-
+/* ── Responsive ─────────────────────────────────────── */
 @media (max-width: 1200px) {
-    .grid-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
+    .grid-container { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 992px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .grid-container { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
-    .teams-heading {
-        font-size: 2.5rem;
-        margin-top: 15px;
-    }
-
-    .sub-heading {
-        font-size: 2rem;
-    }
-
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 1rem 2rem;
-    }
-
-    .card {
-        max-width: 220px;
-        height: 220px;
-    }
-
-    .social-icon {
-        font-size: 1.3rem;
-    }
+    .teams-heading { font-size: 2.5rem; margin-top: 15px; }
+    .sub-heading { font-size: 2rem; }
+    .grid-container { grid-template-columns: repeat(2, 1fr); padding: 1rem 2rem; }
+    .card { max-width: 220px; height: 220px; }
+    .social-icon { font-size: 1.3rem; }
 }
 
 @media (max-width: 576px) {
-    .teams-heading {
-        font-size: 3.5rem;
-        margin-top: 5px;
-    }
-
-    .sub-heading {
-        font-size: 2.25rem;
-    }
-
-    .grid-container {
-        grid-template-columns: 1fr;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        /* Prevents overlapping with other sections */
-    }
-
-    .card {
-        max-width: 250px;
-        height: 250px;
-    }
-
-    .social-icon {
-        font-size: 1.2rem;
-    }
-
-    .section {
-        padding: 1rem 0;
-        /* Ensure sections have proper spacing */
-        opacity: 1;
-        visibility: visible;
-        height: auto;
-        transform: translateY(0);
-    }
+    .teams-heading { font-size: 3.5rem; margin-top: 5px; }
+    .sub-heading { font-size: 2.25rem; }
+    .grid-container { grid-template-columns: 1fr; padding: 1rem; margin-bottom: 1rem; }
+    .card { max-width: 250px; height: 250px; }
+    .social-icon { font-size: 1.2rem; }
+    .section { padding: 1rem 0; opacity: 1; visibility: visible; height: auto; transform: translateY(0); }
 }
 
 @media (max-width: 400px) {
-    .teams-heading {
-        font-size: 3.25rem;
-        margin-top: 8px;
-    }
-
-    .sub-heading {
-        font-size: 2rem;
-    }
-
-    .card {
-        max-width: 220px;
-        height: 220px;
-    }
-
-    .card-name,
-    .card-designation {
-        font-size: 0.875rem;
-    }
+    .teams-heading { font-size: 3.25rem; margin-top: 8px; }
+    .sub-heading { font-size: 2rem; }
+    .card { max-width: 220px; height: 220px; }
+    .card-name, .card-designation { font-size: 0.875rem; }
 }
 
 @media (max-width: 320px) {
-    .teams-heading {
-        font-size: 2.75rem;
-    }
-
-    .sub-heading {
-        font-size: 1.5rem;
-    }
+    .teams-heading { font-size: 2.75rem; }
+    .sub-heading { font-size: 1.5rem; }
 }
