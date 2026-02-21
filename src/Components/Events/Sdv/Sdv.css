@@ -7,6 +7,7 @@
 }
 
 .Sdv-heading {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: red;
     font-size: 3rem;
     margin: 50px 0;
@@ -22,7 +23,7 @@
 }
 
 .Sdv-paragraph {
-    color: rgb(144, 144, 144);
+    color: rgb(217, 210, 210);
     font-size: 1.2rem;
     margin-bottom: 30px;
     text-align: center;

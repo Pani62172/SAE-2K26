@@ -7,6 +7,7 @@
 }
 
 .aar-heading {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: red;
     font-size: 3rem;
     margin: 50px 0;
@@ -22,7 +23,7 @@
 }
 
 .aar-paragraph {
-    color: rgb(144, 144, 144);
+    color: rgb(217, 210, 210);
     font-size: 1.2rem;
     margin-bottom: 30px;
     text-align: center;
@@ -57,6 +58,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 20px;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.1);
     /* Glassmorphism effect */
