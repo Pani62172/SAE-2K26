@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './TedxSec.css';
-import asutosh from './Ashutosh.jpg'
-import sinjini from "./Sinjini.jpg"
-import yogendra from "./Yogendra.jpg"
-import prachi from './Prachi.jpg'
+import Jaskaran from './Jaskaran.png'
+import Preeti from "./Preeti.png"
+import Sourav from "./Sourav.png"
+
 
 const cardData = [
-  { id: 1, image: asutosh , description: 'Ashutosh Pratihast, the Founder and CEO of IDIGITALPRENEUR, is a well-known YouTuber, lyricist, singer, renowned speaker, and mentor to young people across the nation.' },
-  { id: 2, image: sinjini, description: 'An alumna of the Indian Statistical Institute, Sinjini Sengupta is a former actuary, author, columnist, professional speaker, and a distinguished Toastmaster.' },
-  { id: 3, image: yogendra, description: 'Yogendra Singh Rathore is one of India’s leading NLP experts, a mental wellness coach, the author of several bestsellers, and the founder of three multimillion-dollar companies.' },
-  { id: 4, image: prachi, description: 'Prachii Tehlan, known as the "Queen of the Court," led India to its first netball medal and has captivated audiences as an actress, style icon, and NGO founder' },
+  { id: 1, image: Jaskaran, description: 'Merchant Navy Officer,Naval Trainer,Marine Engineer and World Traveller , A graduate Mechanical Engineer who later specialized in Marine Technology & trained with survival skills for the toughest conditions at sea, Sourav Sarkar has spent the last 8 years navigating the world ocean.' },
+  { id: 2, image: Preeti, description: 'Actor, Content Creator, Designer and Founder @ Preetizen. Creative visionary and digital creator Preeti Sarkar, actor, designer, & founder of Preetizen, inspires millions through her art, authenticity, and innovation, redefining modern storytelling with purpose and passion.' },
+  { id: 3, image: Sourav, description: 'Merchant Navy Officer,Naval Trainer,Marine Engineer and World Traveller , A graduate Mechanical Engineer who later specialized in Marine Technology & trained with survival skills for the toughest conditions at sea, Sourav Sarkar has spent the last 8 years navigating the world ocean.' },
+ // { id: 4, image: prachi, description: 'Prachii Tehlan, known as the "Queen of the Court," led India to its first netball medal and has captivated audiences as an actress, style icon, and NGO founder' },
 ];
 
 const TedxSec = () => {
@@ -19,7 +19,7 @@ const TedxSec = () => {
 
   const headingRef = useRef(null);
   const paragraphRef = useRef(null);
-  const cardsRef = useRef(null);
+  const cardsRef = useRef(null)
 
   useEffect(() => {
     const observerOptions = {

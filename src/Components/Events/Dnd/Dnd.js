@@ -5,9 +5,21 @@ import Dnd2 from './Dnd2.jpg';
 import Dnd3 from './Dnd3.jpg';
 
 const cardData = [
-  { id: 1, image: Dnd1,},
-  { id: 2, image: Dnd3,},
-  { id: 3, image: Dnd2,},
+  { 
+    id: 1, 
+    image: Dnd1,
+    description: "Maze Navigation Challenge"
+  },
+  { 
+    id: 2, 
+    image: Dnd3,
+    description: "Obstacle Course Racing"
+  },
+  { 
+    id: 3, 
+    image: Dnd2,
+    description: "Precision Driving Skills"
+  },
 ];
 
 const Dnd = () => {

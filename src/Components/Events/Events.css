@@ -1,0 +1,101 @@
+/* Reset to prevent gaps */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Events Page Container */
+.events-page {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Header Section - No background effect */
+.header-section {
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  /* Header maintains its own background from Header.css */
+}
+
+/* Main Content Wrapper - Contains DarkVeil and content */
+.events-content-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #000; /* Fallback background color */
+}
+
+/* DarkVeil Background Layer */
+.darkveil-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none; /* Allows clicks to pass through to content */
+  overflow: hidden;
+}
+
+/* Content Layer - Sits above DarkVeil */
+.events-content {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  /* Content sections will scroll normally */
+}
+
+/* Optional: Add subtle backdrop for better text readability */
+.events-content > * {
+  position: relative;
+  background: rgba(0, 0, 0, 0.3); /* Subtle dark overlay on each section */
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  margin-bottom: 0;
+}
+
+/* Remove backdrop from first child if needed */
+.events-content > *:first-child {
+  margin-top: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .darkveil-background {
+    /* Reduce performance impact on mobile */
+    opacity: 0.8;
+  }
+  
+  .events-content > * {
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+
+@media (max-width: 480px) {
+  .darkveil-background {
+    opacity: 0.7;
+  }
+}
+
+/* Footer Section - No background effect, appears below DarkVeil */
+.footer-section {
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  background: inherit; /* Inherits footer's own background */
+  /* Footer maintains its own styling */
+}
+

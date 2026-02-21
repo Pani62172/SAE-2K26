@@ -7,6 +7,7 @@
   }
   
   .TedxSec-heading {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: red;
     font-size: 3rem;
     margin: 50px 0;
@@ -22,7 +23,7 @@
   }
   
   .TedxSec-paragraph {
-    color: rgb(144, 144, 144);
+    color: rgb(217, 210, 210);
     font-size: 1.2rem;
     margin-bottom: 30px;
     text-align: center;
@@ -75,6 +76,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
   
