@@ -68,5 +68,8 @@
    "fs": false,
    "path": false,
    "os": false
- }
+ },
+ "engines": {
+    "node": "18.x"
+  }
 }
