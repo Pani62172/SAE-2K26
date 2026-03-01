@@ -364,7 +364,7 @@ const Alumni = () => {
         },
       ]
 
-      const [activeYear, setActiveYear] = useState("2024");
+      const [activeYear, setActiveYear] = useState("2025");
       
     return (
       <>
@@ -390,17 +390,17 @@ const Alumni = () => {
             </div>
             <div className="year-buttons">
               <button 
-                className={activeYear === "2024" ? "active-btn" : ""}
-                onClick={() => setActiveYear("2024")}
-              >
-                2024
-              </button>
-
-              <button 
                 className={activeYear === "2025" ? "active-btn" : ""}
                 onClick={() => setActiveYear("2025")}
               >
                 2025
+              </button>
+
+              <button 
+                className={activeYear === "2024" ? "active-btn" : ""}
+                onClick={() => setActiveYear("2024")}
+              >
+                2024
               </button>
             </div>
             <div className="cards-Alumni">
