@@ -1,139 +1,206 @@
-
 .arhn-org-card {
-    position: relative;
-    width: 250px;
-    height: 250px;
-    background: #15171A;
-    border-radius: 30px;
-    overflow: hidden;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transition: all 1s ease-in-out;
-  
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background: #0a0a0a;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+@media (min-width: 1025px) {
+  .arhn-org-card {
+    width: 300px;
+    height: 400px;
   }
-  
-  @media (min-width: 1025px) {
-    .arhn-org-card {
-      width: 300px;
-      height: 300px;
-    }
-  }
-  
-  .background {
-    position: absolute;
-    inset: 0;
-  
-  }
-  
-  
-  
-  
-  .icon {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-  }
-  
-  .icon .svg {
-  
-    fill: #ff0000;
-    width: 100%;
-    transition: all 0.5s ease-in-out;
-  }
-  
-  .box {
-    position: absolute;
-    padding: 10px;
-    text-align: right;
-    background: rgba(255, 255, 255, 0.389);
-    border-top: 2px solid rgb(255, 255, 255);
-    border-right: 1px solid white;
-    border-radius: 10% 13% 42% 0%/10% 12% 75% 0%;
-    box-shadow: rgba(100, 100, 111, 0.364) -7px 7px 29px 0px;
-    transform-origin: bottom left;
-    transition: all 1s ease-in-out;
-  }
-  
-  .box::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-  }
-  
-  .box:hover .svg {
-    fill: #bec4da;
-    width: 40px;
-  }
-  
-  .box1 {
-    width: 70%;
-    height: 70%;
-    bottom: -70%;
-    left: -70%;
-  }
-  
-  
-  
-  .box1:hover::before {
-    opacity: 1;
-  }
-  
-  
-  .box2 {
-    width: 50%;
-    height: 50%;
-    bottom: -50%;
-    left: -50%;
-    transition-delay: 0.1s;
-  }
-  
-  
-  .box2:hover::before {
-    opacity: 1;
-  }
-  
-  
-  
-  .box3 {
-    width: 30%;
-    height: 30%;
-    bottom: -30%;
-    left: -30%;
-    transition-delay: 0.3s;
-  }
-  
-  
-  
-  .box3:hover::before {
-    opacity: 1;
-  }
-  
-  
-  
-  .box4 {
-    width: 10%;
-    height: 10%;
-    bottom: -10%;
-    left: -10%;
-    transition-delay: 0.5s;
-  }
-  
-  .arhn-org-card:hover {
-    transform: scale(1.1);
-  }
-  
-  .arhn-org-card:hover .box {
-    bottom: -1px;
-    left: -1px;
-  }
-  
-  .arhn-org-img {
-    transition-duration: 1s;
-  }
-  
-  .arhn-org-card:hover .arhn-org-img {
-    opacity: 0;
-  }
-  
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.icon .svg {
+  fill: #ff0000;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+/* --- CARD CONTAINER --- */
+.arhn-org-card {
+  position: relative;
+  width: 100%; /* Responsive to the grid */
+  height: 350px; /* Fixed height for uniformity */
+  background: #0a0a0a;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Hover: Glow Red */
+.arhn-org-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 0, 0, 0.5);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+/* --- IMAGE LAYER --- */
+.background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.arhn-org-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Start Grayscale like main events */
+  filter: grayscale(100%) brightness(0.7);
+  transition: all 0.7s ease;
+}
+
+.arhn-org-card:hover .arhn-org-img {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.1);
+}
+
+/* --- NAME TEXT LAYER --- */
+/* Targeting the text div based on structure */
+
+.box {
+  position: absolute;
+  padding: 10px;
+  text-align: right;
+  align-items: center;
+  z-index: 10;
+  justify-content: center;
+  background: rgba(20, 20, 20, 0.95);
+  border-top: 1px solid rgba(255, 0, 0, 0.5);
+  border-right: 1px solid rgba(255, 0, 0, 0.5);
+  border-radius: 10% 13% 42% 0% / 10% 12% 75% 0%;
+  box-shadow: r5px -5px 20px rgba(0, 0, 0, 0.5);
+  transform-origin: bottom left;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.box:hover {
+  background: #ff0000; /* Turn Red on Hover */
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+}
+
+.box:hover .svg {
+  fill: #ffffff;
+  width: 40px;
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+}
+
+.box1 {
+  width: 70%;
+  height: 70%;
+  bottom: -70%;
+  left: -70%;
+  z-index: 1;
+}
+
+.box1:hover::before {
+  opacity: 1;
+}
+
+.box2 {
+  width: 50%;
+  height: 50%;
+  bottom: -50%;
+  left: -50%;
+  z-index: 2;
+  transition-delay: 0.1s;
+}
+
+.box2:hover::before {
+  opacity: 1;
+}
+
+.box3 {
+  width: 30%;
+  height: 30%;
+  bottom: -30%;
+  left: -30%;
+  z-index: 3;
+  transition-delay: 0.3s;
+}
+
+.box3:hover::before {
+  opacity: 1;
+}
+
+.box4 {
+  width: 10%;
+  height: 10%;
+  bottom: -10%;
+  left: -10%;
+  transition-delay: 0.5s;
+  z-index: 4;
+  background: #ff0000;
+}
+
+.arhn-org-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 0, 0, 0.5);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+.arhn-org-card:hover .box {
+  bottom: -1px;
+  left: -1px;
+}
+
+.arhn-org-img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%) brightness(0.7);
+  transition: all 0.7s ease;
+}
+
+.arhn-org-card:hover .arhn-org-img {
+  /* opacity: 0; */
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.1);
+}
