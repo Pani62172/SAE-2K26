@@ -319,7 +319,7 @@ p {
   margin-bottom: 1.5rem;
 }
 
-.section-heading::after {
+/*.section-heading::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -329,7 +329,7 @@ p {
   height: 3px;
   background: linear-gradient(90deg, transparent, #ff0000, transparent);
   border-radius: 2px;
-}
+}*/
 
 .carousel-item {
   transition:

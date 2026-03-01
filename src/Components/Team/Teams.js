@@ -6,6 +6,7 @@ import { thirdYear } from "./Assets/thirdYear.js";
 import { secondYear } from "./Assets/secondYear.js";
 import BeamsDemo from "./Assets/Beams.jsx";
 
+
 const Card = ({ member }) => (
   <div className="grid-item">
     <div className="card">
