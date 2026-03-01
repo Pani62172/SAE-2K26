@@ -31,14 +31,14 @@
     "react-router-dom": "^6.26.1",
     "react-scripts": "^5.0.1",
     "swiper": "^12.1.2",
-    "three": "^0.150.1",
+    "three": "^0.166.0",
     "uuid": "^13.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -49,9 +49,10 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+      "last 3 chrome versions",
+      "last 3 firefox versions",
+      "last 3 safari versions",
+      "last 3 edge versions"
     ],
     "development": [
       "last 1 chrome version",
@@ -62,6 +63,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/plugin-transform-private-property-in-object": "^7.24.7",
+    "@craco/craco": "^7.1.0",
     "autoprefixer": "^10.4.20",
     "gh-pages": "^6.3.0",
     "postcss": "^8.4.41",

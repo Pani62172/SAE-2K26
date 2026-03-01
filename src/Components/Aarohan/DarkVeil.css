@@ -14,7 +14,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -10; /* Keeps it strictly behind all your content */
-  pointer-events: none; /* Prevents the background from blocking clicks */
+  z-index: -10;
+  pointer-events: none;
   background-color: #000;
 }
