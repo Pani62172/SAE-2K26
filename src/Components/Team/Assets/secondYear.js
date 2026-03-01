@@ -46,7 +46,7 @@ export const secondYear = [
     },
     {
         "url": require('../Assets/2ndYearImg/Bhaskar2.jpg'),
-        "name": "Koralla Bhaskar",
+        "name": "K V V Bhaskar",
         "instaLink": "https://www.instagram.com/bhaskar_koralla?igsh=ZHBsbzUzc2pnYnZo",
         "linkedinLink": "https://www.linkedin.com/in/koralla-veera-venkata-bhaskar",
     },
