@@ -114,7 +114,7 @@
 .year-buttons button {
   padding: 8px 20px;
   border-radius: 20px;
-  border: 2px solid #ff4d4d;
+  border: 2px solid #ff0000;
   background: transparent;
   color: rgb(215, 195, 195);
   cursor: pointer;
@@ -126,8 +126,8 @@
 }
 
 .year-buttons button:hover {
-  background: #cd5151;
-  color: black;
+  background: #c21818;
+  color: rgb(255, 255, 255);
 }
 
 .active-btn {
