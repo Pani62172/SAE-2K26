@@ -3,23 +3,23 @@ import "./FacultyAdvisors.css";
 
 const cards = [
   {
-    name: "Prof. Nilotpal Banerjee",
-    department: "Department of Mechanical Engineering",
-    image: require("../images/niloptal1.jpeg"),
+    name: "Prof. Sandeep Kumar Lahiri",
+    department: "Department of Chemical Engineering",
+    image: require("../images/SKL.jpg"),
     aos: "fade-right",
   },
   {
-    name: "Prof. Apurba Layek",
+    name: "Prof. Jayabrata Dhar",
     department: "Department of Mechanical Engineering",
-    image: require("../images/apurba1.jpeg"),
+    image: require("../images/JD.jpeg"),
     aos: "fade-up",
   },
-  {
+  /*{
     name: "Prof. Tapas Kumar Saha",
     department: "Department of Electrical Engineering",
     image: require("../images/tapas1.jpeg"),
     aos: "fade-left",
-  },
+  },*/
 ];
 
 const CardSection = () => {
