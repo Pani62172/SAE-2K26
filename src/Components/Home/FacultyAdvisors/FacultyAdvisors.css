@@ -261,7 +261,7 @@
 
   .section-heading {
     font-size: 2rem;
-    margin-left: 1rem;
+    padding-left: 0rem;
   }
 }
 
