@@ -100,6 +100,7 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 2rem;
+  z-index: 1;
 }
 
 .year-buttons button:hover {
