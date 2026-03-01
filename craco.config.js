@@ -1,7 +1,7 @@
 module.exports = {
   webpack: {
     configure: (webpackConfig) => {
-      // Keep your existing mjs rule (if you had one)
+      // Keeps your existing rules for modern 3D (.mjs) files
       webpackConfig.module.rules.push({
         test: /\.m?js$/,
         resolve: {
@@ -9,21 +9,10 @@ module.exports = {
         },
       });
 
-      // ←←← THE FIX: modify the existing minimizer (this always works)
-      const cssMinimizer = webpackConfig.optimization.minimizer.find(
-        (plugin) => plugin && plugin.constructor.name === 'CssMinimizerPlugin'
+      // THE FIX: Completely deletes the CSS Minimizer from the build pipeline
+      webpackConfig.optimization.minimizer = webpackConfig.optimization.minimizer.filter(
+        (plugin) => plugin && plugin.constructor.name !== 'CssMinimizerPlugin'
       );
-
-      if (cssMinimizer) {
-        cssMinimizer.options.minimizerOptions = {
-          preset: [
-            'default',
-            {
-              calc: false,   // stops the "Unexpected '/'" error on Tailwind arbitrary values
-            },
-          ],
-        };
-      }
 
       return webpackConfig;
     },
