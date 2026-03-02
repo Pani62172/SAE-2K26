@@ -44,11 +44,11 @@ const TedX = () => {
         <HeaderImg />
         <About />
         <div className="max-w-screen mx-auto">
-          <h1 className="text-[36px] md:text-[42px] font-bold text-custom-red text-center p-4">Gallery</h1>
+          <h1 className="tedx-heading">Gallery</h1>
           <ImageCarousel />
         </div>
         <div className="max-w-screen mx-auto p-4">
-          <h1 className="text-[36px] md:text-[42px] font-bold text-custom-red text-center pt-8 underline-red">SPEAKERS</h1>
+          <h1 className="tedx-heading">SPEAKERS</h1>
           <Speakers />
         </div>
       </div>
