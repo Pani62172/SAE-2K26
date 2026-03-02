@@ -229,7 +229,13 @@ export const thirdYear = [
     {
         "url": require('../Assets/3rdYearImg/Kritanu.jpeg'),
         "name": "Kritanu Chattopadhyay",
-        "instaLink": "https://www.instagram.com/_sm. stark_?r=nametag",
+        "instaLink": "",
+        "linkedinLink": "",
+    },
+    {
+        "url": require('../Assets/3rdYearImg/Shagupta-Paul.jpeg'),
+        "name": "Shagupta Paul",
+        "instaLink": "",
         "linkedinLink": "",
     },
     /*{
