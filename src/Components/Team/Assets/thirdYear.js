@@ -238,6 +238,12 @@ export const thirdYear = [
         "instaLink": "",
         "linkedinLink": "",
     },
+    {
+        "url": require('../Assets/3rdYearImg/Alok.jpeg'),
+        "name": "Alok Kumar",
+        "instaLink": "",
+        "linkedinLink": "",
+    },
     /*{
         "url": require('../Assets/3rdYearImg/Govardhan Reddy.png'),
         "name": "Govardhan Reddy",

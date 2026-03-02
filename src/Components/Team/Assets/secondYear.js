@@ -58,7 +58,7 @@ export const secondYear = [
     },
     {
         "url": require('../Assets/2ndYearImg/Karthik.jpg'),
-        "name": "Karthik",
+        "name": "Paila Purna Durga Karthik",
         "instaLink": "https://www.instagram.com/blush4_karthik?igsh=MW9uamZoaWZmOGZkeQ==",
         "linkedinLink": "https://www.linkedin.com/in/purna-durga-karthik-paila-262321343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
@@ -93,7 +93,7 @@ export const secondYear = [
         "linkedinLink": "",
     },
     {
-        "url": require('../Assets/2ndYearImg/Seepani Roshini.jpg'),
+        "url": require('../Assets/2ndYearImg/seepani.jpeg'),
         "name": "Seepani Roshini",
         "instaLink": "",
         "linkedinLink": "",
