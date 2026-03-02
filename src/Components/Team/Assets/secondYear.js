@@ -28,7 +28,7 @@ export const secondYear = [
     },
     {
         "url": require('../Assets/2ndYearImg/Siddhardha.jpg'),
-        "name": " Banavath Siddardha",
+        "name": " Banavath Sidardha",
         "instaLink": "https://www.instagram.com/__sidhardha__83?igsh=MTdoMGJ3c252Nnlpcg==",
         "linkedinLink": "https://www.linkedin.com/in/banavath-sidhardha-098557365?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     },
