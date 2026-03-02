@@ -28,7 +28,7 @@ export const secondYear = [
     },
     {
         "url": require('../Assets/2ndYearImg/Siddhardha.jpg'),
-        "name": " Banavath Sidardha",
+        "name": " Banavath Sidhardha",
         "instaLink": "https://www.instagram.com/__sidhardha__83?igsh=MTdoMGJ3c252Nnlpcg==",
         "linkedinLink": "https://www.linkedin.com/in/banavath-sidhardha-098557365?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     },
@@ -78,6 +78,12 @@ export const secondYear = [
         "url": require('../Assets/2ndYearImg/Prateek.jpg'),
         "name": "Prateek Pandey",
         "instaLink": "",
+        "linkedinLink": "",
+    },
+    {
+        "url": require('../Assets/2ndYearImg/Pravat.jpeg'),
+        "name": "Pravat Ranjan Naik",
+        "instaLink": "https://www.instagram.com/_.pravat_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
         "linkedinLink": "",
     },
     {
