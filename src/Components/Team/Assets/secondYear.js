@@ -5,8 +5,8 @@ export const secondYear = [
     {
         "url": require('../Assets/2ndYearImg/Anish_Kumar.jpg'),
         "name": "Anish Kumar",
-        "instaLink": "",
-        "linkedinLink": "",
+        "instaLink": "https://www.instagram.com/anish24640?igsh=cXQ5enN2aXgwNTdm",
+        "linkedinLink": "https://www.linkedin.com/in/anish-kumar-a6245a3b0?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     },
     {
         "url": require('../Assets/2ndYearImg/Amulya_Dadi2.jpg'),
@@ -35,7 +35,7 @@ export const secondYear = [
     {
         "url": require('../Assets/2ndYearImg/Dawlat_Kanungo.jpg'),
         "name": "Dawlat Kumar Kanungo",
-        "instaLink": "",
+        "instaLink": "https://www.instagram.com/dawla_tkanungo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
         "linkedinLink": "",
     },
     {
@@ -71,7 +71,7 @@ export const secondYear = [
     {
         "url": require('../Assets/2ndYearImg/Pradeepta.jpg'),
         "name": "Pradeepta Roy",
-        "instaLink": "",
+        "instaLink": "https://www.instagram.com/pradeepta__?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
         "linkedinLink": "",
     },
     {
@@ -89,7 +89,7 @@ export const secondYear = [
     {
         "url": require('../Assets/2ndYearImg/Rikhil.jpg'),
         "name": "Rikhil Kunta",
-        "instaLink": "",
+        "instaLink": "https://www.instagram.com/rikhil_06_08/?utm_source=ig_web_button_share_sheet",
         "linkedinLink": "",
     },
     {
@@ -113,7 +113,7 @@ export const secondYear = [
     {
         "url": require('../Assets/2ndYearImg/Sabitendra_Saha2.jpg'),
         "name": "Sabitendra Saha",
-        "instaLink": "",
+        "instaLink": "https://www.instagram.com/saha_sabitendra?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
         "linkedinLink": "",
     },
     {
@@ -161,13 +161,19 @@ export const secondYear = [
     {
         "url": require('../Assets/2ndYearImg/Sourav.jpg'),
         "name": "Sourav Sen",
-        "instaLink": "",
+        "instaLink": "https://www.instagram.com/soura.v2445/?utm_source=ig_web_button_share_sheet",
         "linkedinLink": "",
     },
     {
         "url": require('../Assets/2ndYearImg/Subham_Prasad.jpg'),
         "name": "Subham kumar Prasad",
-        "instaLink": "",
+        "instaLink": "https://www.instagram.com/_subham.prasad?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        "linkedinLink": "",
+    },
+    {
+        "url": require('../Assets/2ndYearImg/swarnabha.jpeg'),
+        "name": "Swarnabha Das",
+        "instaLink": "https://www.instagram.com/sw3rn1.gg?igsh=MXJkZzZhemU4c2p2eQ==",
         "linkedinLink": "",
     },
     {
@@ -179,7 +185,7 @@ export const secondYear = [
     {
         "url": require('../Assets/2ndYearImg/Uday.jpg'),
         "name": "Uday Islam",
-        "instaLink": "",
+        "instaLink": "https://www.instagram.com/uday.islam_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
         "linkedinLink": "",
     },
 
