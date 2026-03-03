@@ -1,9 +1,9 @@
 
 .wave-container-alumni {
   position: absolute;
-  height: 50%;
+  height: 22vh;
   width: 100%;
-  background: rgb(21,23,26);
+  background: rgb(0, 0, 0);
   overflow: hidden;
   z-index: 1;
 }

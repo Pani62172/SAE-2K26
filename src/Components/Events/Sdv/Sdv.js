@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Sdv.css';
-import sdv1 from './sdv1.jpg';
+import sdv1 from './sdv1.png';
 import sdv2 from './sdv2.jpg';
 import sdv3 from './sdv3.jpg';
 

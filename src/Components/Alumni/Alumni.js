@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './Alumni.css'
 import Cardalumni from './CardAlumni.js'
 import Wave from './Wave.js';
+import DarkVeil from '../Events/DarkVeil/DarkVeil.js';
 
 const Alumni = () => {
     const CardsData =[
@@ -57,7 +58,7 @@ const Alumni = () => {
         },
         {
           "image": "https://live.staticflickr.com/65535/52769989932_96e6a564c0_n.jpg",
-          "name": "Asutosh Kumar Singh Rathore",
+          "name": "Asutosh Kumar Singh",
           "instalink": "https://instagram.com/simp0la?igshid=YmMyMTA2M2Y=",
           "linkedinlink": "https://www.linkedin.com/in/ashutosh-rathore-133b58177",
           "facebooklink": "/"
@@ -363,11 +364,22 @@ const Alumni = () => {
         },
       ]
 
-      const [activeYear, setActiveYear] = useState("2024");
+      const [activeYear, setActiveYear] = useState("2025");
       
     return (
       <>
-      <Wave/>
+      <Wave />
+      <div className="alumni-background">
+        <DarkVeil
+          hueShift={240}
+          noiseIntensity={0.05}
+          scanlineIntensity={0.15}
+          speed={0.5}
+          scanlineFrequency={1}
+          warpAmount={3}
+          resolutionScale={2}
+        />
+      </div>
         <div class="container-alumni mt-4">
             <h1>Meet Our <span>Alumni</span></h1>
             <div className="content-alumni mt-6">
@@ -378,17 +390,17 @@ const Alumni = () => {
             </div>
             <div className="year-buttons">
               <button 
-                className={activeYear === "2024" ? "active-btn" : ""}
-                onClick={() => setActiveYear("2024")}
-              >
-                2024
-              </button>
-
-              <button 
                 className={activeYear === "2025" ? "active-btn" : ""}
                 onClick={() => setActiveYear("2025")}
               >
                 2025
+              </button>
+
+              <button 
+                className={activeYear === "2024" ? "active-btn" : ""}
+                onClick={() => setActiveYear("2024")}
+              >
+                2024
               </button>
             </div>
             <div className="cards-Alumni">

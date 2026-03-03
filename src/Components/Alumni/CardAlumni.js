@@ -1,23 +1,20 @@
 import React, { useRef, useState, useEffect, useId } from 'react';
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import './cardalumni.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
-const SPRING      = { stiffness: 300, damping: 25, mass: 0.5 };
-const TILT        = 15;   // max tilt degrees
-const STROKE_W    = 3;    // border line width px
-const TRAIL_PCT   = 0.15; // arc = 15% of perimeter
+const STROKE_W  = 3;
+const TRAIL_PCT = 0.15;
 
 const Cardalumni = (props) => {
-  const uid        = useId();                          // unique, safe id
-  const gradId     = `rg${uid.replace(/:/g, '')}`;   // strip colons for valid SVG id
-  const motionRef  = useRef(null);
+  const uid    = useId();
+  const gradId = `rg${uid.replace(/:/g, '')}`;
+  const motionRef = useRef(null);
   const [size, setSize]       = useState({ w: 0, h: 0 });
   const [hovered, setHovered] = useState(false);
 
-  // Measure the motion div directly (it has width/height 100%)
   useEffect(() => {
     const el = motionRef.current;
     if (!el) return;
@@ -25,45 +22,15 @@ const Cardalumni = (props) => {
       setSize({ w: el.offsetWidth, h: el.offsetHeight });
     });
     ro.observe(el);
-    // also set immediately
     setSize({ w: el.offsetWidth, h: el.offsetHeight });
     return () => ro.disconnect();
   }, []);
 
-  // ── Tilt ────────────────────────────────────────────
-  const mouseX = useMotionValue(0.5);
-  const mouseY = useMotionValue(0.5);
-
-  const rotateX = useSpring(
-    useTransform(mouseY, [0, 1], [TILT, -TILT]), SPRING
-  );
-  const rotateY = useSpring(
-    useTransform(mouseX, [0, 1], [-TILT, TILT]), SPRING
-  );
-  const shineX = useSpring(useTransform(mouseX, [0, 1], [-60, 60]), SPRING);
-  const shineY = useSpring(useTransform(mouseY, [0, 1], [-60, 60]), SPRING);
-
-  const onMove = (e) => {
-    const r = motionRef.current.getBoundingClientRect();
-    mouseX.set((e.clientX - r.left)  / r.width);
-    mouseY.set((e.clientY - r.top)   / r.height);
-  };
-  const onLeave = () => {
-    mouseX.set(0.5);
-    mouseY.set(0.5);
-    setHovered(false);
-  };
-  const onEnter = () => setHovered(true);
-
-  // ── SVG geometry ────────────────────────────────────
   const { w: W, h: H } = size;
-  const PAD = 3;                          // half-stroke bleeds outward
-  const rx  = 22;                         // border-radius px (≈2vw @1100px)
-  const perimeter = (W && H)
-    ? 2 * (W + H) - (8 - 2 * Math.PI) * rx
-    : 0;
-  const trail = perimeter * TRAIL_PCT;
-
+  const PAD = 3;
+  const rx  = 22;
+  const perimeter = (W && H) ? 2 * (W + H) - (8 - 2 * Math.PI) * rx : 0;
+  const trail  = perimeter * TRAIL_PCT;
   const hasSvg = perimeter > 0;
 
   return (
@@ -71,48 +38,37 @@ const Cardalumni = (props) => {
       <motion.div
         ref={motionRef}
         className="card-alumni"
-        onMouseMove={onMove}
-        onMouseLeave={onLeave}
-        onMouseEnter={onEnter}
-        style={{
-          rotateX,
-          rotateY,
-          transformStyle: 'preserve-3d',
-          transformOrigin: 'center center',
-        }}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
       >
-        {/* ── Photo + content (clipped) ── */}
         <div className="card-inner">
           <img src={props.image} alt={props.name} />
 
-          <motion.div
-            className="card-alumni-shine"
-            style={{
-              backgroundImage: useTransform(
-                [shineX, shineY],
-                ([x, y]) =>
-                  `radial-gradient(circle at ${50 + x}% ${50 + y}%,` +
-                  ` rgba(255,255,255,0.10) 0%, transparent 65%)`
-              ),
-            }}
-          />
+          {/* Name — only visible on hover, sits above the boxes */}
+          <div className="alumni-name-label">
+            <h2>{props.name}</h2>
+          </div>
 
-          <div className="bottom-Alumni">
-            <div className="items-Alumni">
-              <h2>{props.name}</h2>
-              <div className="icons-Alumni">
-                <a href={props.instalink} target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon className="delay3" icon={faInstagram} color="white" />
-                </a>
-                <a href={props.linkedinlink} target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon className="delay2" icon={faLinkedin} color="white" />
-                </a>
-              </div>
-            </div>
+          {/* Instagram — larger box */}
+          <div className="box box1">
+            <span className="icon">
+              <a href={props.instalink} target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faInstagram} className="box-icon-svg" />
+              </a>
+            </span>
+          </div>
+
+          {/* LinkedIn — smaller box */}
+          <div className="box box2">
+            <span className="icon">
+              <a href={props.linkedinlink} target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faLinkedin} className="box-icon-svg" />
+              </a>
+            </span>
           </div>
         </div>
 
-        {/* ── SVG border — rendered AFTER card-inner so it paints on top ── */}
+        {/* Travelling red SVG border */}
         {hasSvg && (
           <svg
             className="card-border-svg"
@@ -122,50 +78,28 @@ const Cardalumni = (props) => {
             aria-hidden="true"
           >
             <defs>
-              <linearGradient
-                id={gradId}
-                gradientUnits="userSpaceOnUse"
-                x1="0" y1="0" x2={W} y2="0"
-              >
+              <linearGradient id={gradId} gradientUnits="userSpaceOnUse" x1="0" y1="0" x2={W} y2="0">
                 <stop offset="0%"   stopColor="rgba(150,0,0,0)" />
                 <stop offset="50%"  stopColor="rgb(200,0,0)" />
                 <stop offset="100%" stopColor="rgb(255,0,0)" />
               </linearGradient>
             </defs>
-
-            {/* dim track so border path is always subtly visible */}
-            <rect
-              x={PAD} y={PAD}
-              width={W} height={H}
-              rx={rx} ry={rx}
-              fill="none"
-              stroke="rgba(100,100,100,0.5)"
-              strokeWidth="1"
-            />
-
-            {/* travelling red arc */}
+            <rect x={PAD} y={PAD} width={W} height={H} rx={rx} ry={rx}
+              fill="none" stroke="rgba(100,100,100,0.5)" strokeWidth="1" />
             <rect
               className="border-arc"
-              data-hovered={hovered}
-              x={PAD} y={PAD}
-              width={W} height={H}
-              rx={rx} ry={rx}
-              fill="none"
-              stroke={`url(#${gradId})`}
-              strokeWidth={STROKE_W}
-              strokeLinecap="round"
+              x={PAD} y={PAD} width={W} height={H} rx={rx} ry={rx}
+              fill="none" stroke={`url(#${gradId})`}
+              strokeWidth={STROKE_W} strokeLinecap="round"
               strokeDasharray={`${trail} ${perimeter - trail}`}
               style={{
                 '--perimeter': `${perimeter}`,
                 opacity: hovered ? 1 : 0,
-                animation: hovered
-                  ? 'travel-border 2.5s linear infinite'
-                  : 'none',
+                animation: hovered ? 'travel-border 2.5s linear infinite' : 'none',
               }}
             />
           </svg>
         )}
-
       </motion.div>
     </div>
   );

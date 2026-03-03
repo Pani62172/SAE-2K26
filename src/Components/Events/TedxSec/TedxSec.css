@@ -7,13 +7,19 @@
   }
   
   .TedxSec-heading {
-    color: red;
-    font-size: 3rem;
-    margin: 50px 0;
+    font-family: 'Montserrat','Roboto' ,sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, rgb(255, 46, 46), rgb(114, 5, 5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: rgb(202, 52, 53);
+    animation: fadeIn 2s ease-in-out;
     text-align: center;
-    opacity: 0;
-    transform: translateY(-50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
   }
   
   .TedxSec-heading.in-view {
@@ -22,7 +28,7 @@
   }
   
   .TedxSec-paragraph {
-    color: rgb(144, 144, 144);
+    color: rgb(217, 210, 210);
     font-size: 1.2rem;
     margin-bottom: 30px;
     text-align: center;
@@ -75,6 +81,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
   
@@ -93,6 +100,9 @@
     text-align: center;
   }
   
+  .TedxSec-card-back p{
+    font-size: 0.9rem;
+  }
   .TedxSec-card img {
     width: 100%;
     height: 100%;
@@ -123,7 +133,7 @@
     }
   
     .TedxSec-paragraph {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
     }
   
     .TedxSec-cards {
@@ -139,11 +149,11 @@
   
   @media (max-width: 768px) {
     .TedxSec-heading {
-      font-size: 2.6rem;
+      font-size: 2.3rem;
     }
   
     .TedxSec-paragraph {
-      font-size: 1.3rem;
+      font-size: 0.9rem;
     }
   
     .TedxSec-cards {
@@ -162,7 +172,7 @@
   }
 
   .TedxSec-paragraph {
-    font-size: 1.2rem; 
+    font-size: 0.9rem; 
   }
 
   .TedxSec-cards {
@@ -180,4 +190,18 @@
     height: 100%; 
     object-fit: cover; 
   }
+}
+@media (max-width: 576px) {
+    .TedxSec-heading { font-size: 2.25rem; }
+    .TedxSec-paragraph { font-size: 0.85rem; }
+}
+
+@media (max-width: 400px) {
+    .TedxSec-heading { font-size: 2.1rem; }
+    .TedxSec-paragraph { font-size: 0.9rem; }
+}
+
+@media (max-width: 320px) {
+    .TedxSec-heading { font-size: 1.7rem; }
+    .TedxSec-paragraph { font-size: 0.8rem; }
 }

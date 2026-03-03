@@ -1,22 +1,22 @@
 import React, { useState, useEffect, useRef } from 'react';
-import bidwit from './bidwit.jpg';
-import carauc from './carauc.jpg';
-import crossword from './crossword.jpg';
-import DN from './DN.jpg';
-import electra from './electra.jpg';
-import fluav from './fluav.jpg';
-import rasp from './rasp.jpg';
-import roboliga from './roboliga.jpg';
+import bidwit from './bidwit.png';
+import carauc from './car auction.png';
+import speedcubing from './speedcubing.png';
+import DN from './DN2.png';
+import Aquarace from './Aquarace.png';
+import crossverse from './crossverse.png';
+import cloud from './iot.png';
+import roboliga from './roboliga.png';
 import './Aar.css';
 
 const cardData = [
   { id: 1, image: bidwit },
   { id: 2, image: carauc },
-  { id: 3, image: crossword },
+  { id: 3, image: speedcubing },
   { id: 4, image: DN },
-  { id: 5, image: electra },
-  { id: 6, image: fluav },
-  { id: 7, image: rasp },
+  { id: 5, image: Aquarace },
+  { id: 6, image: crossverse },
+  { id: 7, image: cloud },
   { id: 8, image: roboliga },
 ];
 
