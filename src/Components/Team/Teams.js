@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-import FacultyAdvisors from "./FacultyAdvisors/FacultyAdvisors.jsx";
+import FacultyAdvisors from "./Assets/FacultyAdvisors/FacultyAdvisors.jsx";
 import "./Teams.css";
 import { finalYear } from "./Assets/finalYear.js";
 import { thirdYear } from "./Assets/thirdYear.js";
 import { secondYear } from "./Assets/secondYear.js";
-import BeamsDemo from "./Assets/Beams.jsx";
+//import BeamsDemo from "./Assets/Beams.jsx";
+import DarkVeil from "../Events/DarkVeil/DarkVeil.js";
+
 
 const Card = ({ member }) => (
   <div className="grid-item">
@@ -97,7 +99,17 @@ const Teams = () => {
 
   return (
     <>
-      <BeamsDemo />
+      <div className="darkveil-background">
+                <DarkVeil
+                  hueShift={240}
+                  noiseIntensity={0.05}
+                  scanlineIntensity={0.15}
+                  speed={0.5}
+                  scanlineFrequency={1}
+                  warpAmount={3}
+                  resolutionScale={2}
+                />
+      </div>
       <br /><br />
       <FacultyAdvisors />
       <div className="teams-page">

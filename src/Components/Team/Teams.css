@@ -13,6 +13,19 @@ body {
     text-align: center;
     padding: 2rem 0;
 }
+.darkveil-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none; /* Allows clicks to pass through to content */
+  overflow: hidden;
+  z-index: 0;
+}
 
 .teams-heading {
     text-align: center;
@@ -55,7 +68,6 @@ body {
     perspective: 1000px;
 }
 
-/* ── Card ───────────────────────────────────────────── */
 .card {
     background-color: rgb(30, 32, 34);
     border-radius: 15px;
@@ -75,7 +87,6 @@ body {
     box-shadow: 1px 1px 10px 0 rgba(250, 0, 0, 0.4);
 }
 
-/* ── card-content — transparent full-size wrapper ──────── */
 .card-content {
     position: absolute;
     top: 0; left: 0;
@@ -83,7 +94,6 @@ body {
     padding: 0; margin: 0;
 }
 
-/* ── Image — full card, slight zoom on hover ────────────── */
 .card-image {
     position: absolute;
     top: 0; left: 0;
@@ -97,12 +107,10 @@ body {
     transform: scale(1.07);
 }
 
-/* ── Grey overlay — gone ────────────────────────────────── */
 .card-overlay {
     display: none !important;
 }
 
-/* ── Name + Designation pill — slides up from bottom ─────── */
 .card-text {
     position: absolute;
     bottom: 12px;
@@ -110,8 +118,8 @@ body {
     transform: translateX(-50%) translateY(calc(100% + 20px));
     width: 85%;
     background: rgba(0, 0, 0, 0.72);
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     border-radius: 50px;
     border: 1px solid rgba(202, 52, 53, 0.35);
     display: flex;
@@ -143,7 +151,6 @@ body {
     text-align: center;
 }
 
-/* underline animation — 0.6s timing unchanged */
 .card:hover .card-name::after {
     content: "";
     display: block;
@@ -163,7 +170,6 @@ body {
     text-align: center;
 }
 
-/* ── Social icons pill — drops down from top right ──────── */
 .social-icons {
     position: absolute;
     top: 12px;
@@ -192,7 +198,6 @@ body {
     opacity: 1;
 }
 
-/* ── Social icons — float upward, 0.4s unchanged ────────── */
 .social-icon {
     color: rgb(202, 52, 53);
     font-size: 1.2rem;
@@ -274,7 +279,7 @@ body {
     .teams-heading { font-size: 3.25rem; margin-top: 8px; }
     .sub-heading { font-size: 2rem; }
     .card { max-width: 220px; height: 220px; }
-    .card-name, .card-designation { font-size: 0.875rem; }
+    .card-name, .card-designation { font-size: 0.75rem; }
 }
 
 @media (max-width: 320px) {

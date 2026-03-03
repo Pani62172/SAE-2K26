@@ -106,7 +106,7 @@ export const finalYear = [
         "linkedinLink": "https://www.linkedin.com/in/pothina-divya-venkata-durga-naga-sai-45610625a",
     },
     {
-        "url": "https://live.staticflickr.com/65535/53127098654_daac794073_m.jpg",
+        "url": require("../Assets/FinalYearImg/Aniruddha.jpg"),
         "name": "Aniruddha Roy",
         "position": "Automobile Head",
         "instaLink": "",
