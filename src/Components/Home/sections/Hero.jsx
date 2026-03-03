@@ -24,8 +24,8 @@ const Hero = () => {
       });
 
       // FIX: Removed 'mask' property which often causes the line issue
-      const splitH1 = new SplitText("h1", { type: "words,chars" });
-      const splitH2 = new SplitText("h2", { type: "lines" });
+      const splitH1 = new SplitText("h2", { type: "words,chars" });
+      const splitH2 = new SplitText("h6", { type: "lines" });
 
       gsap.from(splitH1.chars, {
         y: 80,
@@ -72,13 +72,13 @@ const Hero = () => {
           <span className="text-red-600">SAE</span>-NITD
         </h2>
 
-        <h2 className="max-w-5xl text-2xl lg:text-[2.8vw] font-light leading-[1.2] mt-2 text-white">
+        <h6 className="max-w-5xl text-2xl lg:text-[2.8vw] font-light leading-[1.2] mt-2 text-white">
           We are the Society of <br />
           Automotive Engineers Collegiate Club of <br />
           <span className="font-semibold text-white/90">
             National Institute of Technology Durgapur
           </span>
-        </h2>
+        </h6>
       </div>
     </div>
   );

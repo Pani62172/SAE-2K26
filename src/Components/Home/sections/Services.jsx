@@ -19,9 +19,9 @@ const Services = () => {
             {/* Left side */}
             <div className='flex gap-6 lg:gap-8'>
               <span className="text-gray-400 text-lg lg:text-2xl font-heading tracking-wide block mb-4">01</span>
-              <h2 className="text-[8vw] md:text-6xl font-heading font-bold leading-[1]">
+              <h6 className="text-[8vw] md:text-6xl font-heading font-bold leading-[1]">
                    FIST
-              </h2>
+              </h6>
             </div>
 
             {/* Right side */}
@@ -39,9 +39,9 @@ const Services = () => {
             {/* Left side */}
             <div className='flex gap-6 lg:gap-8'>
               <span className="text-gray-400 text-lg lg:text-2xl font-heading tracking-wide block mb-4">02</span>
-              <h2 className="text-[8vw] md:text-6xl font-heading font-bold leading-[1]">
+              <h6 className="text-[8vw] md:text-6xl font-heading font-bold leading-[1]">
                  BAJA SAENDIA
-              </h2>
+              </h6>
             </div>
 
             {/* Right side */}
@@ -59,9 +59,9 @@ const Services = () => {
             {/* Left side */}
             <div className='flex gap-6 lg:gap-8'>
               <span className="text-gray-400 text-lg lg:text-2xl font-heading tracking-wide block mb-4">03</span>
-              <h2 className="text-[8vw] md:text-6xl font-heading font-bold leading-[1]">
+              <h6 className="text-[8vw] md:text-6xl font-heading font-bold leading-[1]">
                      SDV WORKSHOP
-              </h2>
+              </h6>
             </div>
 
             {/* Right side */}
@@ -79,9 +79,9 @@ const Services = () => {
             {/* Left side */}
             <div className='flex gap-6 lg:gap-8'>
               <span className="text-gray-400 text-lg lg:text-2xl font-heading tracking-wide block mb-4">04</span>
-              <h2 className="text-[8vw] md:text-6xl font-heading font-bold leading-[1]">
+              <h6 className="text-[8vw] md:text-6xl font-heading font-bold leading-[1]">
                 AI/ML Workshop 
-              </h2>
+              </h6>
             </div>
 
             {/* Right side */}

@@ -54,7 +54,7 @@ const CTA = () => {
           - leading-[1.8] to leading-[2]: Dramatically separates the lines.
           - tracking-tighter: Keeps the large font looking professional.
         */}
-        <h2 
+        <h6 
           ref={textRef}
           className=" text-3xl md:text-5xl lg:text-[3vw] font-bold text-center leading-[1.8] lg:leading-[1.6] tracking-tighter text-white mix-blend-difference"
         >
@@ -62,7 +62,7 @@ const CTA = () => {
           competitions, and projects, fueled by boundless <br className="hidden lg:block" />
           enthusiasm and an unwavering ambition <br className="hidden lg:block" />
           to achieve great heights.
-        </h2>
+        </h6>
         
         {/* The relative z-10 ensures the button stays clickable over the blend mode */}
         <div className="relative z-10 scale-110 lg:scale-125">
