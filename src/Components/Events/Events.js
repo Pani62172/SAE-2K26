@@ -17,13 +17,8 @@ const Events = () => {
       <Dnd/>
       <Fist/>
       <TedxSec/>
-     
-  
-
     </div>
   )
 }
 
 export default Events
-
-*/
