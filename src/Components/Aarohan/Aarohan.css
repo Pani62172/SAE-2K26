@@ -374,7 +374,7 @@ p {
 }
 .whoweare {
   text-align: right;
-  font-family: 'Montserrat','Roboto' ,sans-serif;
+  font-family: "Montserrat", "Roboto", sans-serif;
   font-size: 4rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -387,9 +387,9 @@ p {
   color: rgb(202, 52, 53);
   animation: fadeIn 2s ease-in-out;
 }
-.saexaarohan{
+.saexaarohan {
   text-align: left;
-  font-family: 'Montserrat','Roboto' ,sans-serif;
+  font-family: "Montserrat", "Roboto", sans-serif;
   font-size: 4rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -402,9 +402,9 @@ p {
   color: rgb(202, 52, 53);
   animation: fadeIn 2s ease-in-out;
 }
-.thearena{
+.thearena {
   text-align: center;
-  font-family: 'Montserrat','Roboto' ,sans-serif;
+  font-family: "Montserrat", "Roboto", sans-serif;
   font-size: 4rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -415,7 +415,8 @@ p {
   line-height: 1.2;
   margin-bottom: 1rem;
   color: rgb(202, 52, 53);
-  animation: fadeIn 2s ease-in-out;}
+  animation: fadeIn 2s ease-in-out;
+}
 
 .py-20.bg-gradient-to-b {
   background: linear-gradient(
@@ -460,7 +461,8 @@ p {
 .section-heading {
   font-family: "Syncopate", sans-serif;
   position: relative;
-  display: inline-block;
+  display: block;
+  width: 100%;
   text-transform: uppercase;
   background: linear-gradient(135deg, #ffffff 0%, #ff2222 100%);
   -webkit-background-clip: text;
@@ -988,11 +990,6 @@ p {
   .blob {
     opacity: 0.3;
   }
-  .whoweare, .saexaarohan, .thearena {
-    font-size: 2.25rem;
-    text-align: center;
-  }
-  
 }
 
 .react-bits-carousel {

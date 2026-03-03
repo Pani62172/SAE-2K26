@@ -133,7 +133,7 @@ return (
               <img src="./IMG_0406.JPG" alt="Aarohan Who We Are" />
             </figure>
             <article className="parallax-content">
-              <h1 className="text-5xl lg:text-6xl font-black mb-8 section-heading tracking-tighter">
+              <h1 className="text-5xl lg:text-6xl font-black mb-8 section-heading tracking-tighter text-center w-full">
                 WHO WE ARE
               </h1>
               <p className="text-lg text-gray-300 leading-relaxed text-center">
@@ -144,50 +144,13 @@ return (
               </p>
             </article>
           </section>
-
-<<<<<<< Updated upstream
-          <div className="lg:w-[45%] mt-12 lg:mt-0 lg:pl-10 flex flex-col justify-center">
-            <h1 className="whoweare">
-              WHO WE ARE
-            </h1>
-            <p className="text-lg text-gray-400 leading-relaxed text-centre" data-aos="fade-up" data-aos-delay="200">
-              Aarohan is not just a fest; it is a legacy. As the second-largest techno-management 
-              fest in Eastern India, hosted by Team Aavishkar at NIT Durgapur, we have been 
-              curating the future for over 50 years. It is the convergence of code, creativity, 
-              and culture.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex max-w-full flex-col lg:flex-row-reverse mx-10 my-32 lg:mx-16 lg:my-50 lg:justify-between items-center">
-          <div className="w-full lg:w-[40%] relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-            <img
-              src="/assets/arhnFlying.jpg"
-              alt="SAE"
-              className="relative rounded-lg shadow-2xl w-full object-cover transform transition-transform duration-500 hover:scale-[1.01]"
-              data-aos="fade-left"
-            />
-          </div>
-
-          <div className="lg:w-[45%] mt-12 lg:mt-0 lg:pl-10 lg:text-left flex flex-col justify-center">
-            <h1 className="saexaarohan">
-              SAE x AAROHAN
-            </h1>
-            <p className="text-lg text-gray-400 leading-relaxed text-center" data-aos="fade-up" data-aos-delay="200">
-              The SAE India Collegiate Club of NIT Durgapur powers the mechanical heart of Aarohan. 
-              From the roar of engines in Car Auction to the precision of Flying UAVs, SAE brings 
-              engineering to life, transforming theoretical concepts into adrenaline-fueled reality.
-            </p>
-          </div>
-        </div>
-=======
+         
           <section className="parallax-section">
             <figure className="parallax-image-container">
               <img src="./Roboliga_Aarohan_25_verified.png" alt="SAE x Aarohan" />
             </figure>
             <article className="parallax-content">
-              <h1 className="text-5xl lg:text-6xl font-black mb-8 section-heading tracking-tighter">
+              <h1 className="text-5xl lg:text-6xl font-black mb-8 section-heading tracking-tighter text-center w-full">
                 SAE x AAROHAN
               </h1>
               <p className="text-lg text-gray-300 leading-relaxed text-center">
@@ -197,9 +160,9 @@ return (
               </p>
             </article>
           </section>
+          </main>
 
-        </main>
->>>>>>> Stashed changes
+        </div>
 
         <div className="px-6 lg:px-32 py-20">
           <div className="mb-16 text-center" data-aos="fade-up">
@@ -232,8 +195,8 @@ return (
                     >
                       <img src={imgSrc} alt={event.name} />
                       <div className="arhn-card-content">
-                        <h2 className="text-3xl font-bold text-white mb-2">{event.name}</h2>
-                        <div className="h-1 w-12 bg-red-600 mb-4 mx-auto rounded-full"></div>
+                        <h2 className="absolute top-6 w-full px-4 z-20 text-2xl lg:text-3xl font-bold text-white text-center drop-shadow-xl break-words leading-tight">{event.name}</h2>
+                        <div className="absolute top-25 left-1/2 -translate-x-1/2 h-1 w-12 bg-red-600 rounded-full z-20 drop-shadow-md"></div>
                         <p className="text-sm text-gray-300 px-4">{event.content}</p>
                       </div>
                     </div>
@@ -242,7 +205,6 @@ return (
               })}
             </CardCarousel>
               </div>
-        </div>
         </div>
  
         <div className="px-6 lg:px-32 py-20">
