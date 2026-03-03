@@ -6,7 +6,7 @@ import Sourav from "./Sourav.png"
 
 
 const cardData = [
-  { id: 1, image: Jaskaran, description: 'Merchant Navy Officer,Naval Trainer,Marine Engineer and World Traveller , A graduate Mechanical Engineer who later specialized in Marine Technology & trained with survival skills for the toughest conditions at sea, Sourav Sarkar has spent the last 8 years navigating the world ocean.' },
+  { id: 1, image: Jaskaran, description: 'ICPC World Finalist 2023 and Software Engineer at Google, Jaskaran Singh exemplifies innovation and perseverance, inspiring countless learners through his journey from competitive programming excellence to impactful leadership and mentorship.' },
   { id: 2, image: Preeti, description: 'Actor, Content Creator, Designer and Founder @ Preetizen. Creative visionary and digital creator Preeti Sarkar, actor, designer, & founder of Preetizen, inspires millions through her art, authenticity, and innovation, redefining modern storytelling with purpose and passion.' },
   { id: 3, image: Sourav, description: 'Merchant Navy Officer,Naval Trainer,Marine Engineer and World Traveller , A graduate Mechanical Engineer who later specialized in Marine Technology & trained with survival skills for the toughest conditions at sea, Sourav Sarkar has spent the last 8 years navigating the world ocean.' },
  // { id: 4, image: prachi, description: 'Prachii Tehlan, known as the "Queen of the Court," led India to its first netball medal and has captivated audiences as an actress, style icon, and NGO founder' },

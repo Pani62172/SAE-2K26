@@ -176,10 +176,10 @@ return (
           </div>
 
           <div className="lg:w-[45%] mt-12 lg:mt-0 lg:pl-10 flex flex-col justify-center">
-            <h1 className="text-5xl lg:text-6xl font-black mb-8 section-heading tracking-tighter" data-aos="fade-left" data-aos-delay="100">
+            <h1 className="whoweare">
               WHO WE ARE
             </h1>
-            <p className="text-lg text-gray-400 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+            <p className="text-lg text-gray-400 leading-relaxed text-centre" data-aos="fade-up" data-aos-delay="200">
               Aarohan is not just a fest; it is a legacy. As the second-largest techno-management 
               fest in Eastern India, hosted by Team Aavishkar at NIT Durgapur, we have been 
               curating the future for over 50 years. It is the convergence of code, creativity, 
@@ -200,10 +200,10 @@ return (
           </div>
 
           <div className="lg:w-[45%] mt-12 lg:mt-0 lg:pl-10 lg:text-left flex flex-col justify-center">
-            <h1 className="text-5xl lg:text-6xl font-black mb-8 section-heading tracking-tighter" data-aos="fade-right" data-aos-delay="100">
+            <h1 className="saexaarohan">
               SAE x AAROHAN
             </h1>
-            <p className="text-lg text-gray-400 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+            <p className="text-lg text-gray-400 leading-relaxed text-center" data-aos="fade-up" data-aos-delay="200">
               The SAE India Collegiate Club of NIT Durgapur powers the mechanical heart of Aarohan. 
               From the roar of engines in Car Auction to the precision of Flying UAVs, SAE brings 
               engineering to life, transforming theoretical concepts into adrenaline-fueled reality.
@@ -213,7 +213,7 @@ return (
 
         <div className="px-6 lg:px-32 py-20">
           <div className="mb-16 text-center" data-aos="fade-up">
-            <h1 className="text-5xl font-black section-heading uppercase">
+            <h1 className="thearena">
               The Arena
             </h1>
             <p className="text-gray-500 mt-4 tracking-widest uppercase text-sm">Our Events and Workshops in AAROHAN</p>
@@ -257,7 +257,7 @@ return (
  
         <div className="px-6 lg:px-32 py-20">
           <div className="mb-16 text-center" data-aos="fade-up">
-            <h1 className="text-5xl font-black section-heading uppercase">
+            <h1 className="thearena">
               AAROHAN GALLERY
             </h1>
           </div>
