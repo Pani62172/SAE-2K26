@@ -18,7 +18,6 @@ const Home = () => {
       <Work />
       <Marquee />
       <CTA />
-      <Footer />
     </>
   )
 }

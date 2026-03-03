@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <div className="bg-[#000000] text-white w-full font-sans">
+    <div className="bg-[#000000] text-white w-full font-sans relative z-10">
       {/* Top Divider */}
       <div className='max-w-[1500px] m-auto h-[1px] bg-white/10'></div>
       

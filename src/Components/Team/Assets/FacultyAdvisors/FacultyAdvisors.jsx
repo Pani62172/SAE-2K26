@@ -1,18 +1,20 @@
 import React from "react";
 import "./FacultyAdvisors.css";
+import SKL from "./images/SKL.jpg";
+import JD from "./images/JD.jpeg";
 
 const cards = [
   {
     name: "Prof. Sandeep Kumar Lahiri",
     department: "Department of Chemical Engineering",
-    image: require("../images/SKL.jpg"),
-    aos: "fade-right",
+    image: SKL,
+    //aos: "fade-right",
   },
   {
     name: "Prof. Jayabrata Dhar",
     department: "Department of Mechanical Engineering",
-    image: require("../images/JD.jpeg"),
-    aos: "fade-up",
+    image: JD,
+    //aos: "fade-up",
   },
   /*{
     name: "Prof. Tapas Kumar Saha",

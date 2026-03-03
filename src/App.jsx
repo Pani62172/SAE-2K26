@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Navbar from './Components/Home/comp/Navbar.jsx';
+import Footer from './Components/Home/comp/Footer.jsx';
 import Home from "./Components/Home/pages/Home.jsx";
 import Alumni from "./Components/Alumni/Alumni.js";
 import Aarohan from './Components/Aarohan/Aarohan.js';
@@ -21,7 +22,8 @@ const HomePage = () => {
             <Route path="/tedx" element={<TedX />} />
             <Route path="/alumni" element={<Alumni />} />
             {/* <Route path='/autopia' element={<Autopia />} /> */}
-          </Routes>
+        </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   )

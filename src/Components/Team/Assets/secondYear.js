@@ -93,7 +93,7 @@ export const secondYear = [
         "linkedinLink": "https://www.linkedin.com/in/praveen-kumar-vadlamuri-893989333?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     {
-        "url": require('../Assets/2ndYearImg/Rikhil.jpg'),
+        "url": require('../Assets/2ndYearImg/rikhil.jpeg'),
         "name": "Rikhil Kunta",
         "instaLink": "https://www.instagram.com/rikhil_06_08/?utm_source=ig_web_button_share_sheet",
         "linkedinLink": "",

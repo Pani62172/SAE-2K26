@@ -46,7 +46,7 @@ const Navbar = () => {
     }
   }, [menuOpen]);
 
-  const navLinks = ["HOME", "EVENTS", "TEAMS", "TED-X", "AAROHAN", "ALUMNI"];
+  const navLinks = ["HOME", "EVENTS", "TEAMS", "TEDX", "AAROHAN", "ALUMNI"];
 
   return (
     <>
