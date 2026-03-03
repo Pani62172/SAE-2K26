@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import FacultyAdvisors from "../Home/FacultyAdvisors/FacultyAdvisors.jsx";
+import FacultyAdvisors from "./FacultyAdvisors/FacultyAdvisors.jsx";
 import "./Teams.css";
 import { finalYear } from "./Assets/finalYear.js";
 import { thirdYear } from "./Assets/thirdYear.js";
