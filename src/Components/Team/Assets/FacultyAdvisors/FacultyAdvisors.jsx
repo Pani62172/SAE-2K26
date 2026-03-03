@@ -28,7 +28,7 @@ const CardSection = () => {
   return (
     <>
       <br />
-      <h2 className="section-heading">Our Faculty Advisors</h2>
+      <h1 className="section-heading">Our Faculty Advisors</h1>
       <hr className="section-underline" />
       <div className="faculty-container">
         {cards.map((card, index) => (
@@ -38,10 +38,10 @@ const CardSection = () => {
             </div>
             <div className="content">
               <div className="details">
-                <h2>
+                <h3>
                   {card.name} <br />
                   <span>{card.department}</span>
-                </h2>
+                </h3>
               </div>
             </div>
           </div>

@@ -42,7 +42,7 @@
 }
 
 /* Gradient underline for h1 */
-h1::before {
+h2::before {
   content: '';
   position: absolute;
   left: 0;
@@ -53,7 +53,7 @@ h1::before {
   z-index: -1;
 }
 
-h1::after {
+h2::after {
   content: '';
   position: absolute;
   left: 0;

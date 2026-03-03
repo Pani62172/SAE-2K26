@@ -62,10 +62,10 @@ h3 {
   }
 }
 
-h1 {
+h2 {
   position: relative;
 }
-h1::before {
+h2::before {
   content: '';
   position: absolute;
   left: 0;
@@ -75,7 +75,7 @@ h1::before {
   background: var(--color-gradient);
   z-index: -1;
 }
-h1::after {
+h2::after {
   content: '';
   position: absolute;
   left: 0;

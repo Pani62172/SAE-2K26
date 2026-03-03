@@ -114,19 +114,19 @@ const Teams = () => {
       <FacultyAdvisors />
       <div className="teams-page">
         <section className="section">
-          <h2 className="sub-heading">Office Bearers</h2>
+          <h3 className="sub-heading">Office Bearers</h3>
           <hr className="section-divider" />
           <GridLayout members={finalYear} />
         </section>
 
         <section className="section">
-          <h2 className="sub-heading">Senior Coordinators</h2>
+          <h1 className="sub-heading">Senior Coordinators</h1>
           <hr className="section-divider" />
           <GridLayout members={thirdYear} />
         </section>
 
         <section className="section">
-          <h2 className="sub-heading">Junior Coordinators</h2>
+          <h1 className="sub-heading">Junior Coordinators</h1>
           <hr className="section-divider" />
           <GridLayout members={secondYear} />
         </section>
