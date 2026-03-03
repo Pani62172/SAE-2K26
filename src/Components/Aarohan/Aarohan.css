@@ -1,15 +1,125 @@
 @import url("https://fonts.googleapis.com/css2?family=poppin:wght@400;500&display=swap");
 
+/* =========================================
+   3. STICKY PARALLAX EFFECT (Who We Are)
+   ========================================= */
+:root {
+  --parallax-scale: 0.1;
+  --parallax-space: 8vmin;
+}
+
+@media (prefers-reduced-motion) {
+  :root {
+    --parallax-scale: 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.parallax-main {
+  width: 100%;
+  position: relative;
+  /* Push it above the hero but below the cursor */
+  z-index: 10;
+  padding-bottom: 20vh;
+}
+
+.parallax-section {
+  position: relative;
+  transform-origin: center top;
+  /* This creates the slight "squeeze" depth effect */
+  transform: scaleY(calc(1 - var(--parallax-scale)));
+}
+
+.parallax-section > * {
+  transform-origin: center top;
+  /* Un-squeezes the inner content so text doesn't look stretched */
+  transform: scaleY(calc(1 / (1 - var(--parallax-scale))));
+}
+
+.parallax-image-container {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  margin: 0;
+  /* left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw; */
+}
+
+.parallax-image-container img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6) contrast(1.1);
+}
+
+/* The dark gradient overlay at the bottom of the image */
+.parallax-image-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0) 0%,
+    rgba(10, 10, 10, 0.4) 40%,
+    rgba(10, 10, 10, 0.8) 70%,
+    rgba(10, 10, 10, 1) 100%
+  );
+  pointer-events: none;
+}
+
+.parallax-content {
+  position: relative;
+  /* Pulls the text up so it overlaps the middle of the sticky image */
+  margin: -50vh auto 0;
+  padding: var(--parallax-space) 40px;
+  max-width: 950px;
+  width: calc(100% - var(--parallax-space));
+
+  /* Glassmorphism card effect matching your theme */
+  background: rgba(15, 15, 18, 0.4);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 -15px 40px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .parallax-content {
+    margin: -35vh auto 0;
+    padding: 30px 20px;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
   display: block;
   justify-content: center;
   align-items: center;
   background-color: transparent;
   color: #ffffff;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body::after {
@@ -40,8 +150,8 @@ p {
 .arhn-card {
   position: relative;
   transform-style: preserve-3d;
-  width: 400px;
-  height: 450px;
+  width: 100%;
+  height: 100%;
 
   border-radius: 24px;
   border: 1px solid rgb(21, 20, 20);
@@ -195,7 +305,7 @@ p {
 .arhn-slide-track {
   display: flex;
   width: max-content;
-  gap: 20px;
+  gap: 15px;
   animation: scrollGallery 40s linear infinite;
 }
 @keyframes scrollGallery {
@@ -221,12 +331,12 @@ p {
 }
 
 .arhn-single-slide {
-  width: clamp(250px, 30vw, 400px);
-  height: clamp(150px, 20vw, 250px);
+  width: clamp(300px, 35vw, 500px);
+  height: clamp(200px, 25vw, 350px);
   border-radius: 16px;
   display: flex;
   align-items: center;
-  padding: 15px;
+  padding: 10px;
   perspective: 100px;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -392,12 +502,14 @@ p {
 }
 
 .carousel-item-wrapper {
-  width: 300px;
+  width: min(85vw, 350px);
   height: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
   perspective: 1000px;
+  margin: 0 auto;
+  padding: 15px;
 }
 */ .carousel-control-prev-icon:hover,
 .carousel-control-next-icon:hover {
@@ -823,6 +935,17 @@ p {
     inset: 0;
   }
 
+  .carousel-item-wrapper {
+    width: 80vw;
+    max-width: 300px;
+    height: 400px;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .main-title {
     font-size: 4rem;
     letter-spacing: 2px;
@@ -840,8 +963,8 @@ p {
   }
 
   .arhn-card {
-    height: 350px;
-    margin-bottom: 30px;
+    width: 100%;
+    height: 100%;
   }
 
   .arhn-card-content {
@@ -878,10 +1001,25 @@ p {
   padding: 16px;
   width: 100%;
   perspective: 2000px;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
 }
 
 .react-bits-track {
-  display: flex-start;
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
   height: 90%;
   padding-top: 20px;

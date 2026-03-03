@@ -23,13 +23,6 @@ function Aarohan() {
       mirror: false,
       disable: window.innerWidth < 768? true : false,
 });
-const carouselElement = document.querySelector("#heroCarousel");
-    // const bootstrapCarousel = new Carousel(carouselElement, {
-    //   interval: 4000,
-    //   ride: "carousel",
-    //   pause: false, 
-    // });
-    // bootstrapCarousel.cycle();
 
     const heroCarouselElement = document.querySelector("#heroCarousel");
     let bootstrapCarouselInstance = null;
@@ -42,20 +35,10 @@ const carouselElement = document.querySelector("#heroCarousel");
     const cards = document.querySelectorAll(".arhn-card");
     
     const handleMouseMove = (e) => {
-      const card = e.currentTarget;
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const rotateX = ((y - centerY) / centerY) * -12; 
-      const rotateY = ((x - centerX) / centerX) * 12;
-
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+      
     };
     const handleMouseLeave = (e) => {
-      e.currentTarget.style.transform = "perspective(1000px) rotateX(0) rotateY(0) scale(1)";
+   
     };
     cards.forEach((card) => {
       card.addEventListener("mousemove", handleMouseMove);
@@ -72,11 +55,6 @@ const carouselElement = document.querySelector("#heroCarousel");
     window.addEventListener("mousemove", moveCursor);
 
     return () => {
-      // cards.forEach((card) => {
-      //   card.removeEventListener("mousemove", handleMouseMove);
-      //   card.removeEventListener("mouseleave", handleMouseLeave);
-      // });
-      // Fix: Use the instance we created earlier
       if (bootstrapCarouselInstance){ bootstrapCarouselInstance.dispose();
     }
       window.removeEventListener("mousemove", moveCursor);
@@ -115,10 +93,6 @@ return (
       </div>
     <div className="noise-overlay"></div>
     <div className="glow-cursor"></div>
-    {/* <div className="blob-container">
-  <div className="blob blob-1"></div>
-  <div className="blob blob-2"></div>
-</div> */}
       <div className="hero-section">
         <div
           id="heroCarousel"
@@ -147,34 +121,31 @@ return (
           <h1 className="main-title" data-aos="zoom-out" data-aos-duration="1500">
             AAROHAN
           </h1>
-
-          {/* Animated Scroll Indicator
-          <div className="scroll-indicator">
-            <div className="mouse">
-              <div className="wheel"></div>
-            </div>
-            <div className="arrow-scroll">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div> */}
         </div>
       </div>
 
       <div className="w-full relative z-10 bg-transparent">
         
-        <div className="flex max-w-full flex-col lg:flex-row mx-10 my-32 lg:mx-16 lg:my-32 lg:justify-between items-center">
-          <div className="w-full lg:w-[50%] relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-red-600 to-violet-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-            <img
-              src="./IMG_0406.JPG"
-              alt="Aarohan"
-              className="relative rounded-lg shadow-2xl w-full object-cover transform transition-transform duration-500 hover:scale-[1.01]"
-              data-aos="fade-right"
-            />
-          </div>
+        <main className="parallax-main">
+          
+          <section className="parallax-section">
+            <figure className="parallax-image-container">
+              <img src="./IMG_0406.JPG" alt="Aarohan Who We Are" />
+            </figure>
+            <article className="parallax-content">
+              <h1 className="text-5xl lg:text-6xl font-black mb-8 section-heading tracking-tighter">
+                WHO WE ARE
+              </h1>
+              <p className="text-lg text-gray-300 leading-relaxed text-center">
+                Aarohan is not just a fest; it is a legacy. As the second-largest techno-management 
+                fest in Eastern India, hosted by Team Aavishkar at NIT Durgapur, we have been 
+                curating the future for over 50 years. It is the convergence of code, creativity, 
+                and culture.
+              </p>
+            </article>
+          </section>
 
+<<<<<<< Updated upstream
           <div className="lg:w-[45%] mt-12 lg:mt-0 lg:pl-10 flex flex-col justify-center">
             <h1 className="whoweare">
               WHO WE ARE
@@ -210,13 +181,32 @@ return (
             </p>
           </div>
         </div>
+=======
+          <section className="parallax-section">
+            <figure className="parallax-image-container">
+              <img src="./Roboliga_Aarohan_25_verified.png" alt="SAE x Aarohan" />
+            </figure>
+            <article className="parallax-content">
+              <h1 className="text-5xl lg:text-6xl font-black mb-8 section-heading tracking-tighter">
+                SAE x AAROHAN
+              </h1>
+              <p className="text-lg text-gray-300 leading-relaxed text-center">
+                The SAE India Collegiate Club of NIT Durgapur powers the mechanical heart of Aarohan. 
+                From the roar of engines in Car Auction to the precision of Flying UAVs, SAE brings 
+                engineering to life, transforming theoretical concepts into adrenaline-fueled reality.
+              </p>
+            </article>
+          </section>
+
+        </main>
+>>>>>>> Stashed changes
 
         <div className="px-6 lg:px-32 py-20">
           <div className="mb-16 text-center" data-aos="fade-up">
             <h1 className="thearena">
               The Arena
             </h1>
-            <p className="text-gray-500 mt-4 tracking-widest uppercase text-sm">Our Events and Workshops in AAROHAN</p>
+            <p className="text-gray-500 mt-4 tracking-widest uppercase text-lg">Our Events and Workshops in AAROHAN</p>
           </div>
           <div style={{ height: '600px', width: '100%', position: 'relative' }}>
           <CardCarousel baseWidth={350} autoplay={true} loop={true}>
