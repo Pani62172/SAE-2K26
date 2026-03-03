@@ -1,9 +1,9 @@
-import Aar from "../Events/Aar/Aar.js"
-import Dnd from "../Events/Dnd/Dnd.js"
-import Fist from "../Events/Fist/Fist.js"
-import Header from "../Events/Header/Header.js"
-import Sdv from "../Events/Sdv/Sdv.js"
-import TedxSec from "../Events/TedxSec/TedxSec.js"
+import Aar from "./Aar/Aar.js"
+import Dnd from "./Dnd/Dnd.js"
+import Fist from "./Fist/Fist.js"
+import Header from "./Header/Header.js"
+import Sdv from "./Sdv/Sdv.js"
+import TedxSec from "./TedxSec/TedxSec.js"
 import React from 'react'
 import Mlw from "./Mlw/Mlw.js"
 

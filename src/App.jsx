@@ -1,12 +1,12 @@
 import React from 'react'
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import Navbar from './components/Home/comp/Navbar';
-import Home from "./components/Home/pages/Home";
-import Alumni from "./components/Alumni/Alumni.js";
-import Aarohan from './components/Aarohan/Aarohan.js';
-import Events from "./components/Events/Events.js";
-import Teams from "./components/Team/Teams.js";
-import TedX from "./components/Tedx/TedX.jsx";
+import Navbar from './Components/Home/comp/Navbar.jsx';
+import Home from "./Components/Home/pages/Home.jsx";
+import Alumni from "./Components/Alumni/Alumni.js";
+import Aarohan from './Components/Aarohan/Aarohan.js';
+import Events from "./Components/Events/Events.js";
+import Teams from "./Components/Team/Teams.js";
+import TedX from "./Components/Tedx/TedX.jsx";
 
 const HomePage = () => {
   return (
