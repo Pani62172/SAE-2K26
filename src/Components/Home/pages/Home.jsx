@@ -7,6 +7,7 @@ import Marquee from '../sections/Marquee'
 import CTA from '../comp/CTA'
 import Footer from '../comp/Footer'
 //import Navbar from '../comp/Navbar'
+import "./Home.css";
 
 const Home = () => {
   return (

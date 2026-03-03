@@ -2,7 +2,6 @@ import React from 'react'
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Navbar from './components/Home/comp/Navbar';
 import Home from "./components/Home/pages/Home";
-import './components/Home/HomePage.css'
 import Alumni from "./components/Alumni/Alumni.js";
 import Aarohan from './components/Aarohan/Aarohan.js';
 import Events from "./components/Events/Events.js";
