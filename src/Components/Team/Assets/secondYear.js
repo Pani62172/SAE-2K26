@@ -1,7 +1,12 @@
 
 export const secondYear = [
     
-
+    {
+        "url": require('../Assets/2ndYearImg/Alok.jpeg'),
+        "name": "Alok Das",
+        "instaLink": "",
+        "linkedinLink": "",
+    },
     {
         "url": require('../Assets/2ndYearImg/Anish_Kumar.jpg'),
         "name": "Anish Kumar",
@@ -105,7 +110,7 @@ export const secondYear = [
         "linkedinLink": "",
     },
     {
-        "url": require('../Assets/2ndYearImg/Pryanksu .jpg'),
+        "url": require('../Assets/2ndYearImg/Pryanksu.jpeg'),
         "name": "Pryanksu Chattopadhyay",
         "instaLink": "",
         "linkedinLink": "",
