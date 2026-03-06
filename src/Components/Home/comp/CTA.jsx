@@ -41,10 +41,10 @@ const CTA = () => {
   return (
     <section 
       ref={ctaRef} 
-      className="relative w-full bg-white transition-colors duration-500 overflow-hidden"
+      className="relative w-full bg-black transition-colors duration-500 overflow-hidden"
     >
       {/* 1. TOP GRADIENT BORDER */}
-      <div className="absolute top-0 left-0 w-full h-[5px] bg-gradient-to-r from-red-600 via-black to-pink-500 z-20" />
+      <div className="absolute top-0 left-0 w-full h-[5px] bg-gradient-to-r from-red-600 via-white to-pink-500 z-20" />
 
       {/* Increased py (padding-top/bottom) and gap-24 for the button separation */}
       <div className="max-w-screen-2xl mx-auto py-32 lg:py-60 px-8 flex flex-col gap-24 lg:gap-32 justify-center items-center">

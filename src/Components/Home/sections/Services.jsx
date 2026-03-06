@@ -8,10 +8,10 @@ const Services = () => {
       {/* Title Wrapper 
           FIX: Added 'relative z-20 pt-10' so it sits above the sticky sections and the About section 
       */}
-      <div className="bg-white text-black relative z-20 pt-10">
+      <div className="bg-black text-white relative z-20 pt-10">
         <div className='main-container flex overflow-hidden flex-col items-center justify-center pb-8 lg:pb-12'>
           {/* Tweak: Made the text a bit larger/bolder to match your About heading, and darkened the red border slightly */}
-          <h3 className='text-black text-2xl md:text-3xl font-bold tracking-widest px-3 py-1 group-hover:underline border-b-2 border-red-500 uppercase'>
+          <h3 className='text-white text-2xl md:text-3xl font-bold tracking-widest px-3 py-1 group-hover:underline border-b-2 border-red-500 uppercase'>
             EVENTS
           </h3>
         </div>
@@ -19,7 +19,7 @@ const Services = () => {
 
       {/* Services List */}
       <div className='relative z-10'>
-        <div className="bg-black text-white pt-16 lg:pt-20 pb-[20rem] sticky top-4">
+        <div className="bg-grey text-white pt-16 lg:pt-20 pb-[20rem] sticky top-4">
           <div className="main-container grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12 items-start">
               
             {/* Left side */}

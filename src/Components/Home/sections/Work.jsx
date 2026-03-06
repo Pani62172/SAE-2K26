@@ -37,13 +37,13 @@ const Work = () => {
   ];
 
   return (
-    <section ref={workRef} className="min-h-screen bg-white text-black py-20 lg:py-32 overflow-hidden">
+    <section ref={workRef} className="min-h-screen bg-black text-white py-20 lg:py-32 overflow-hidden">
       
       {/* Header Container - Matches Hero padding for consistency */}
       <div className='px-8 lg:px-16 pb-16 flex flex-col md:flex-row gap-10 justify-between items-start md:items-end'>
         <div className='max-w-2xl'>
           <h3 className='text-sm uppercase tracking-[0.4em] font-bold text-gray-400 mb-4'>Videos</h3>
-          <p className='text-3xl lg:text-[2.8vw] font-medium leading-[1.1] text-black'>
+          <p className='text-3xl lg:text-[2.8vw] font-medium leading-[1.1] text-white'>
             A showcase of our videos—designed to inspire, engage, and deliver real results.
           </p>
         </div>
