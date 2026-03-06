@@ -6,18 +6,18 @@ const ImageCarousel = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const images = [
-    'https://i.ibb.co/b1WQZDp/Screenshot-2024-08-22-100959.png',
-    'https://i.ibb.co/pnbMVyP/Screenshot-2024-08-22-095823.png',
+    'https://i.ibb.co/tTHc8cL1/IMG-7366.jpg',
+    'https://i.ibb.co/d4K6n96h/IMG-7658.jpg',
     'https://i.ibb.co/J7BmrG2/Screenshot-2024-08-22-102225.png',
     'https://i.ibb.co/hHhmGZx/Screenshot-2024-08-22-095724.png',
-    'https://i.ibb.co/R3HC7LF/Screenshot-2024-08-26-225939.png',
+    'https://i.ibb.co/XkpQjnGQ/IMG-7455.jpg',
     'https://i.ibb.co/LPJNw6t/Screenshot-2024-08-22-100019.png',
     'https://i.ibb.co/Z2sSXr6/Screenshot-2024-08-22-095218.png',
     'https://i.ibb.co/0r7cgnh/Screenshot-2024-08-22-102824.png',
+    'https://i.ibb.co/gbHJFF4Y/IMG-7310.jpg',
     'https://i.ibb.co/ySCDbNC/Screenshot-2024-08-22-095908.png',
     'https://i.ibb.co/R2PLhXY/Screenshot-2024-08-22-100914.png',
     'https://i.ibb.co/gSy7yxR/Screenshot-2024-08-22-095423.png',
-    'https://i.ibb.co/JFkQGNF/Screenshot-2024-08-22-102008.png',
   ];
 
   const handleClick = (imgSrc) => {
