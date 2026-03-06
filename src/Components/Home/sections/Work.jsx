@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import GradientButton from '../comp/GradientButton';
+import GradientButton from '../comp/GradientButton'; // Ensure this path is correct
 import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -11,16 +11,20 @@ const Work = () => {
   const projectsRef = useRef(null);
 
   useGSAP(() => {
-    const projectsWidth = projectsRef.current.scrollWidth;
-    const scrollDistance = projectsWidth - window.innerWidth;
+    // FIX 2: Wrapped the calculation in a function. 
+    // GSAP will recalculate this dynamically if images load late or the screen resizes,
+    // completely stopping the grey background jump/glitch.
+    const getScrollAmount = () => {
+      return projectsRef.current.scrollWidth - window.innerWidth;
+    };
 
     gsap.to(projectsRef.current, {
-      x: -scrollDistance,
+      x: () => -getScrollAmount(), // Use the dynamic function
       ease: "none",
       scrollTrigger: {
         trigger: workRef.current,
         start: "top top",
-        end: () => `+=${projectsWidth}`,
+        end: () => `+=${getScrollAmount()}`, // Use the dynamic function
         pin: true,
         scrub: 1,
         invalidateOnRefresh: true,
@@ -37,9 +41,10 @@ const Work = () => {
   ];
 
   return (
-    <section ref={workRef} className="min-h-screen bg-black text-white py-20 lg:py-32 overflow-hidden">
+    // FIX 1: Added 'relative z-30' here so it scrolls over the Services section normally
+    <section ref={workRef} className="relative z-30 min-h-screen bg-black text-white py-20 lg:py-32 overflow-hidden">
       
-      {/* Header Container - Matches Hero padding for consistency */}
+      {/* Header Container */}
       <div className='px-8 lg:px-16 pb-16 flex flex-col md:flex-row gap-10 justify-between items-start md:items-end'>
         <div className='max-w-2xl'>
           <h3 className='text-sm uppercase tracking-[0.4em] font-bold text-gray-400 mb-4'>Videos</h3>
@@ -62,7 +67,6 @@ const Work = () => {
             className='relative rounded-[2rem] min-w-[400px] lg:min-w-[750px] aspect-video overflow-hidden group cursor-pointer bg-gray-100 shadow-xl'
           >
             <img
-              // maxresdefault removes the black bars found in standard thumbnails
               src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
               alt="Work Thumbnail"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"

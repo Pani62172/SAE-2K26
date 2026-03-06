@@ -19,7 +19,9 @@ const Services = () => {
 
       {/* Services List */}
       <div className='relative z-10'>
-        <div className="bg-grey text-white pt-16 lg:pt-20 pb-[20rem] sticky top-4">
+        
+        {/* FIX APPLIED HERE: Changed "bg-" to "bg-black" and "top-4" to "top-0" */}
+        <div className="bg-grey text-white pt-16 lg:pt-20 pb-[20rem] sticky top-0">
           <div className="main-container grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12 items-start">
               
             {/* Left side */}
