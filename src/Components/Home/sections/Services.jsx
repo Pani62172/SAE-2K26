@@ -1,18 +1,24 @@
 import React from 'react'
 import { FaArrowTurnDown } from "react-icons/fa6";
+
 const Services = () => {
   
   return (
     <>
-      {/* Title Wrapper */}
-      <div className="bg-white text-black ">
-        <div className='main-container flex  overflow-hidden flex-col items-center justify-center  pb-8 lg:pb-12'>
-          <h3 className=' text-black px-3 py-1 group-hover:underline border-b-2 border-red-200 '>EVENTS</h3>
+      {/* Title Wrapper 
+          FIX: Added 'relative z-20 pt-10' so it sits above the sticky sections and the About section 
+      */}
+      <div className="bg-white text-black relative z-20 pt-10">
+        <div className='main-container flex overflow-hidden flex-col items-center justify-center pb-8 lg:pb-12'>
+          {/* Tweak: Made the text a bit larger/bolder to match your About heading, and darkened the red border slightly */}
+          <h3 className='text-black text-2xl md:text-3xl font-bold tracking-widest px-3 py-1 group-hover:underline border-b-2 border-red-500 uppercase'>
+            EVENTS
+          </h3>
         </div>
       </div>
 
       {/* Services List */}
-      <div className='relative'>
+      <div className='relative z-10'>
         <div className="bg-black text-white pt-16 lg:pt-20 pb-[20rem] sticky top-4">
           <div className="main-container grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12 items-start">
               
@@ -33,6 +39,7 @@ const Services = () => {
 
           </div>
         </div>
+        
         <div className="bg-red-600 text-black pt-30 lg:pt-10 pb-[40rem] sticky top-1/3">
           <div className="main-container grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12 items-start">
               
@@ -53,7 +60,8 @@ const Services = () => {
 
           </div>
         </div>
-        <div className="bg-white text-black pt-16 lt:pt-20 pb-[40rem] sticky top-2/3">
+        
+        <div className="bg-white text-black pt-16 lg:pt-20 pb-[40rem] sticky top-2/3">
           <div className="main-container grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12 items-start">
               
             {/* Left side */}
@@ -73,6 +81,7 @@ const Services = () => {
 
           </div>
         </div>
+        
         <div className="bg-[#E9E9F0] text-black pt-16 lg:pt-20 pb-[10rem] sticky top-1">
           <div className="main-container grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12 items-start">
               
