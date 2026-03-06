@@ -105,12 +105,13 @@ return (
     <>
     <div className="darkveil-wrapper">
         <DarkVeil 
-          hueShift={0} 
-          noiseIntensity={0.03} 
-          scanlineIntensity={0.2} 
-          speed={0.5} 
-          scanlineFrequency={0.05} 
-          warpAmount={0.5} 
+              hueShift={240}
+              noiseIntensity={0.05}
+              scanlineIntensity={0.15}
+              speed={0.5}
+              scanlineFrequency={1}
+              warpAmount={3}
+              resolutionScale={2}
         />
       </div>
     <div className="noise-overlay"></div>
