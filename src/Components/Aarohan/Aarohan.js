@@ -133,9 +133,35 @@ return (
               <img src="./IMG_0406.JPG" alt="Aarohan Who We Are" />
             </figure>
             <article className="parallax-content">
-              <h1 className="text-5xl lg:text-6xl font-black mb-8 section-heading tracking-tighter text-center w-full">
-                WHO WE ARE
-              </h1>
+              <h1 
+  className="w-full text-center"
+  style={{
+    /* --- THE CENTERING LOCKS --- */
+    display: "block",
+    margin: "0 auto",
+    textAlign: "center",
+    
+    /* --- THE ARENA TYPOGRAPHY --- */
+    fontFamily: '"Montserrat", "Roboto", sans-serif',
+    fontWeight: 900,
+    textTransform: "uppercase",
+    fontSize: "clamp(2.5rem, 8vw, 4rem)", /* Responsive so it doesn't break mobile! */
+    lineHeight: 1.2,
+    marginBottom: "1rem",
+    
+    /* --- THE RED GRADIENT MAGIC --- */
+    backgroundImage: "linear-gradient(to bottom, rgb(255, 46, 46), rgb(114, 5, 5))",
+    WebkitBackgroundClip: "text",
+    backgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    color: "rgb(202, 52, 53)", /* Fallback color */
+    
+    /* --- ANIMATION --- */
+    animation: "fadeIn 2s ease-in-out"
+  }}
+>
+  WHO WE ARE
+</h1>
               <p className="text-lg text-gray-300 leading-relaxed text-center">
                 Aarohan is not just a fest; it is a legacy. As the second-largest techno-management 
                 fest in Eastern India, hosted by Team Aavishkar at NIT Durgapur, we have been 
@@ -147,12 +173,38 @@ return (
          
           <section className="parallax-section">
             <figure className="parallax-image-container">
-              <img src="./Roboliga_Aarohan_25_verified.png" alt="SAE x Aarohan" />
+              <img src="./Roboliga_Aarohan_25_verified.png" alt="SAE X Aarohan" />
             </figure>
             <article className="parallax-content">
-              <h1 className="text-5xl lg:text-6xl font-black mb-8 section-heading tracking-tighter text-center w-full">
-                SAE x AAROHAN
-              </h1>
+             <h1 
+  className="w-full text-center"
+  style={{
+    /* --- THE CENTERING LOCKS --- */
+    display: "block",
+    margin: "0 auto",
+    textAlign: "center",
+    
+    /* --- THE ARENA TYPOGRAPHY --- */
+    fontFamily: '"Montserrat", "Roboto", sans-serif',
+    fontWeight: 900,
+    textTransform: "uppercase",
+    fontSize: "clamp(2.5rem, 8vw, 4rem)", /* Responsive so it doesn't break mobile! */
+    lineHeight: 1.2,
+    marginBottom: "1rem",
+    
+    /* --- THE RED GRADIENT MAGIC --- */
+    backgroundImage: "linear-gradient(to bottom, rgb(255, 46, 46), rgb(114, 5, 5))",
+    WebkitBackgroundClip: "text",
+    backgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    color: "rgb(202, 52, 53)", /* Fallback color */
+    
+    /* --- ANIMATION --- */
+    animation: "fadeIn 2s ease-in-out"
+  }}
+>
+  SAE X AAROHAN
+</h1>
               <p className="text-lg text-gray-300 leading-relaxed text-center">
                 The SAE India Collegiate Club of NIT Durgapur powers the mechanical heart of Aarohan. 
                 From the roar of engines in Car Auction to the precision of Flying UAVs, SAE brings 
