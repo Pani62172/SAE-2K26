@@ -8,7 +8,7 @@ export default function BeamsDemo() {
     beamWidth={2}
     beamHeight={15}
     beamNumber={12}
-    lightColor="rgba(111, 75, 75, 1)"
+    lightColor="rgba(226,80,80,0.8)"
     speed={2}
     noiseIntensity={1.75}
     scale={0.2}

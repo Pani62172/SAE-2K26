@@ -244,11 +244,11 @@ export const thirdYear = [
         "instaLink": "",
         "linkedinLink": "",
     },
-    /*{
+    {
         "url": require('../Assets/3rdYearImg/Govardhan Reddy.png'),
         "name": "Govardhan Reddy",
         "instaLink": "https://www.instagram.com/govardhan__023?r=nametag",
         "linkedinLink": "",
-    },*/
+    },
 
 ]

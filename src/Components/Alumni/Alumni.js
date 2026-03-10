@@ -368,6 +368,7 @@ const Alumni = () => {
       
     return (
       <>
+    <div className="alumni-container">
       <Wave />
       <div className="alumni-background">
         <DarkVeil
@@ -433,6 +434,7 @@ const Alumni = () => {
               )}
             </div>
         </div>
+      </div>
         </>
   );
 };

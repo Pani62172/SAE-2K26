@@ -46,7 +46,7 @@ const Cardalumni = (props) => {
 
           {/* Name — only visible on hover, sits above the boxes */}
           <div className="alumni-name-label">
-            <h2>{props.name}</h2>
+            <h3>{props.name}</h3>
           </div>
 
           {/* Instagram — larger box */}
