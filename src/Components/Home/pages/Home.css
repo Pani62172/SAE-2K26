@@ -41,7 +41,7 @@
   }
 }
 
-/* Gradient underline for h1 */
+/* Gradient underline for h2 */
 h2::before {
   content: '';
   position: absolute;
@@ -104,41 +104,67 @@ h2::after {
 
 }
 
-/* ================= ANIMATIONS ================= */
+/* ================= MARQUEE ANIMATIONS ================= */
 
 @keyframes marquee {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
 }
 
 .animate-marquee {
-  animation: marquee 15s linear infinite;
+  display: flex;
+  animation: marquee 22s linear infinite;
+  will-change: transform;
 }
 
 .animate-marquee-reverse {
-  animation: marquee 15s linear infinite reverse;
+  display: flex;
+  animation: marquee-reverse 22s linear infinite;
+  will-change: transform;
 }
 
-@keyframes rotate360 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+/* Pause on hover */
+.animate-marquee:hover,
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
 }
 
+/* ── Star spin ── */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes spin-slow-reverse {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+  transform-origin: center;
+  display: inline-block;
+}
+
+.animate-spin-slow-reverse {
+  animation: spin-slow-reverse 12s linear infinite;
+  transform-origin: center;
+  display: inline-block;
+}
+
+/* Legacy star classes kept for backward compat */
 .marquee-star1 {
-  animation: rotate360 10s linear infinite;
+  animation: spin-slow 10s linear infinite;
   transform-origin: center;
 }
 
 .marquee-star2 {
-  animation: rotate360 10s linear infinite reverse;
+  animation: spin-slow-reverse 10s linear infinite;
   transform-origin: center;
 }
 

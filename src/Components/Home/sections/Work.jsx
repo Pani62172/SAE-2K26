@@ -1,83 +1,174 @@
-import React, { useRef } from 'react';
-import GradientButton from '../comp/GradientButton'; // Ensure this path is correct
-import { gsap } from "gsap";
+import React, { useRef, useState } from 'react';
+import GradientButton from '../comp/GradientButton';
+import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Work = () => {
-  const workRef = useRef(null);
-  const projectsRef = useRef(null);
+const videos = [
+  { id: 'XhYBorFI3Tg', label: 'SAE Highlights' },
+  { id: 'j_6sNtASHgU', label: 'BAJA Recap' },
+  { id: 'o7fcf5chrTo', label: 'SDV Workshop' },
+  { id: 'JrXKyNwJAvQ', label: 'F.I.S.T. Event' },
+  { id: '-C2yRvTJ7Ss', label: 'AI/ML Session' },
+];
+
+const VideoCard = ({ video, index }) => {
+  const cardRef = useRef(null);
+  const imgRef = useRef(null);
+  const [hovered, setHovered] = useState(false);
 
   useGSAP(() => {
-    // FIX 2: Wrapped the calculation in a function. 
-    // GSAP will recalculate this dynamically if images load late or the screen resizes,
-    // completely stopping the grey background jump/glitch.
-    const getScrollAmount = () => {
-      return projectsRef.current.scrollWidth - window.innerWidth;
-    };
-
-    gsap.to(projectsRef.current, {
-      x: () => -getScrollAmount(), // Use the dynamic function
-      ease: "none",
+    // Staggered reveal: cards come up one-by-one as section scrolls into view
+    gsap.from(cardRef.current, {
+      y: 80,
+      opacity: 0,
+      duration: 0.85,
+      ease: 'power3.out',
+      delay: index * 0.12,
       scrollTrigger: {
-        trigger: workRef.current,
-        start: "top top",
-        end: () => `+=${getScrollAmount()}`, // Use the dynamic function
-        pin: true,
-        scrub: 1,
-        invalidateOnRefresh: true,
+        trigger: cardRef.current,
+        start: 'top 88%',
+        toggleActions: 'play none none none',
       },
     });
-  }, { scope: workRef });
 
-  const videos = [
-    "XhYBorFI3Tg",
-    "j_6sNtASHgU",
-    "o7fcf5chrTo",
-    "JrXKyNwJAvQ",
-    "-C2yRvTJ7Ss",
-  ];
+    // Hover-driven subtle image zoom handled via state + CSS transition
+  }, { scope: cardRef });
+
+  const handleOpen = () => {
+    window.open(`https://www.youtube.com/watch?v=${video.id}`, '_blank');
+  };
 
   return (
-    // FIX 1: Added 'relative z-30' here so it scrolls over the Services section normally
-    <section ref={workRef} className="relative z-30 min-h-screen bg-black text-white py-20 lg:py-32 overflow-hidden">
-      
-      {/* Header Container */}
-      <div className='px-8 lg:px-16 pb-16 flex flex-col md:flex-row gap-10 justify-between items-start md:items-end'>
-        <div className='max-w-2xl'>
-          <h3 className='text-sm uppercase tracking-[0.4em] font-bold text-gray-400 mb-4'>Videos</h3>
-          <p className='text-3xl lg:text-[2.8vw] font-medium leading-[1.1] text-white'>
-            A showcase of our videos—designed to inspire, engage, and deliver real results.
+    <div
+      ref={cardRef}
+      onClick={handleOpen}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className="group relative rounded-2xl overflow-hidden cursor-pointer bg-neutral-900"
+      style={{ aspectRatio: '16/9' }}
+    >
+      {/* Thumbnail */}
+      <img
+        ref={imgRef}
+        src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
+        alt={video.label}
+        className="w-full h-full object-cover transition-transform duration-700 ease-out"
+        style={{ transform: hovered ? 'scale(1.06)' : 'scale(1)' }}
+      />
+
+      {/* Dark overlay */}
+      <div
+        className="absolute inset-0 transition-opacity duration-500"
+        style={{
+          background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.1) 60%, transparent 100%)',
+          opacity: hovered ? 1 : 0.55,
+        }}
+      />
+
+      {/* Play button */}
+      <div
+        className="absolute inset-0 flex items-center justify-center transition-all duration-400"
+        style={{ opacity: hovered ? 1 : 0, transform: hovered ? 'scale(1)' : 'scale(0.8)' }}
+      >
+        <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-full bg-white/15 backdrop-blur-sm border border-white/30 flex items-center justify-center">
+          <svg viewBox="0 0 24 24" fill="white" className="w-6 h-6 ml-1">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </div>
+      </div>
+
+      {/* Label */}
+      <div className="absolute bottom-0 left-0 right-0 p-4 lg:p-5">
+        <span className="text-white/50 text-xs uppercase tracking-[0.25em] font-semibold">
+          {String(index + 1).padStart(2, '0')}
+        </span>
+        <p className="text-white font-heading font-semibold text-base lg:text-lg leading-tight mt-0.5">
+          {video.label}
+        </p>
+      </div>
+
+      {/* Red border accent on hover */}
+      <div
+        className="absolute inset-0 rounded-2xl border-2 border-red-500 transition-opacity duration-300 pointer-events-none"
+        style={{ opacity: hovered ? 1 : 0 }}
+      />
+    </div>
+  );
+};
+
+const Work = () => {
+  const sectionRef = useRef(null);
+  const headerRef = useRef(null);
+
+  useGSAP(() => {
+    gsap.from(headerRef.current.children, {
+      y: 50,
+      opacity: 0,
+      stagger: 0.15,
+      duration: 0.9,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: headerRef.current,
+        start: 'top 85%',
+        toggleActions: 'play none none none',
+      },
+    });
+  }, { scope: sectionRef });
+
+  return (
+    <section
+      ref={sectionRef}
+      className="relative z-30 bg-black text-white py-20 lg:py-32"
+    >
+      {/* ── Header ── */}
+      <div
+        ref={headerRef}
+        className="main-container flex flex-col md:flex-row gap-8 lg:gap-12 justify-between items-start md:items-end mb-12 lg:mb-16"
+      >
+        <div className="max-w-xl">
+          <span className="text-xs uppercase tracking-[0.35em] font-bold text-red-500 block mb-3">
+            Media
+          </span>
+          <h3 className="font-heading font-bold text-white leading-[1.05] tracking-tight
+            text-[9vw] sm:text-[6vw] md:text-[4.5vw] lg:text-[3.5vw]">
+            Our <span className="text-red-500">Videos</span>
+          </h3>
+          <p className="mt-4 text-white/50 text-sm lg:text-base leading-relaxed max-w-sm">
+            A showcase of our work — designed to inspire, engage, and deliver real results.
           </p>
         </div>
-        
+
         <div className="flex-shrink-0">
           <GradientButton text="Explore All" link="/projects" />
         </div>
       </div>
 
-      {/* Horizontal Scroll Content */}
-      <div ref={projectsRef} className="flex gap-8 px-8 lg:px-16">
-        {videos.map((videoId, index) => (
-          <div 
-            key={index}
-            onClick={() => window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank')}
-            className='relative rounded-[2rem] min-w-[400px] lg:min-w-[750px] aspect-video overflow-hidden group cursor-pointer bg-gray-100 shadow-xl'
-          >
-            <img
-              src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
-              alt="Work Thumbnail"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-            />
-            {/* Subtle Overlay */}
-            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500" />
+      {/* ── Grid: 1 large + 2 small on first row, then 2 on second row ── */}
+      <div className="main-container">
+        {/* Row 1: Featured (large) + 2 side cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-5 mb-4 lg:mb-5">
+          {/* Featured — spans 2 cols */}
+          <div className="lg:col-span-2">
+            <VideoCard video={videos[0]} index={0} />
           </div>
-        ))}
+          {/* Side stack */}
+          <div className="grid grid-cols-1 gap-4 lg:gap-5">
+            <VideoCard video={videos[1]} index={1} />
+            <VideoCard video={videos[2]} index={2} />
+          </div>
+        </div>
+
+        {/* Row 2: Two equal cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-5">
+          <VideoCard video={videos[3]} index={3} />
+          <VideoCard video={videos[4]} index={4} />
+        </div>
       </div>
     </section>
   );
-}
+};
 
 export default Work;
