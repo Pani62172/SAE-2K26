@@ -208,11 +208,11 @@ const Services = () => {
   }, { scope: sectionRef });
 
   return (
-    <section ref={sectionRef} className="bg-black relative z-20 py-20 lg:py-28">
+    <section ref={sectionRef} className="bg-black relative z-20 py-10 lg:py-14">
       {/* Section Header */}
-      <div className="main-container mb-14 lg:mb-20">
-        <div className="flex flex-col gap-4">
-          <span className="events-heading text-xs uppercase tracking-[0.35em] text-red-500 font-semibold">
+      <div className="main-container mb-7 lg:mb-10">
+        <div className="flex flex-col gap-2">
+          <span className="events-heading text-[24px] uppercase tracking-[0.25em] text-red-500 font-semibold">
             What We Do
           </span>
           <h3
