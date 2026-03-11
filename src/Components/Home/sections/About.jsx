@@ -44,11 +44,11 @@ const About = () => {
   return (
     <div
       ref={aboutRef}
-      className="bg-black rounded-tl-[20px] rounded-tr-[20px] relative z-10 py-16 lg:py-24"
+      className="bg-black rounded-tl-[20px] rounded-tr-[20px] relative z-10 py-8 lg:py-20"
     >
       {/* Section Label */}
       <div className="main-container mb-10 lg:mb-14">
-        <span className="about-heading inline-block text-xs uppercase tracking-[0.35em] font-semibold text-red-500 border border-red-500/40 rounded-full px-4 py-1.5">
+        <span className="about-heading inline-block text-xs uppercase tracking-[0.25em] font-semibold text-red-500 border border-red-500/40 rounded-full px-4 py-1.5">
           Who We Are
         </span>
       </div>
