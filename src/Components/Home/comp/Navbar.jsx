@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Link } from "react-router-dom";
@@ -8,9 +8,29 @@ import Logo from "../assets/images/saelogo.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false); // New state to track scrolling
+  
   const navbarRef = useRef(null);
   const menuRef = useRef(null);
   const linksRef = useRef([]);
+
+  // Scroll Event Listener
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    
+    // Cleanup the event listener on unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useGSAP(() => {
     // Initial Navbar Entry
@@ -52,7 +72,10 @@ const Navbar = () => {
     <>
       <nav
         ref={navbarRef}
-        className="fixed top-0 z-[100] w-full transition-colors duration-300"
+        // Dynamically add bg-black if scrolled, otherwise bg-transparent
+        className={`fixed top-0 z-[100] w-full transition-colors duration-300 ${
+          isScrolled ? "bg-black shadow-lg" : "bg-transparent"
+        }`}
       >
         <div className="w-full px-8 py-6 flex justify-between items-center">
           <Link to="/">
