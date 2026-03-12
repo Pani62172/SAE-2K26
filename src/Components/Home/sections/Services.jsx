@@ -30,7 +30,7 @@ const events = [
     bg: 'bg-black',
     text: 'text-white',
     accent: 'text-red-500',
-    border: 'border-black/10',
+    border: 'border-white/10',
     description:
       'BAJA SAEINDIA is a renowned national event challenging university students to design, build, and race off-road vehicles, promoting teamwork and engineering skills. NIT Durgapur\'s Team NDORS - 25 talented students - achieved 38th place nationwide and 7th among IITs and NITs.',
     image: baja,
@@ -42,7 +42,7 @@ const events = [
     bg: 'bg-black',
     text: 'text-white',
     accent: 'text-red-500',
-    border: 'border-black/10',
+    border: 'border-white/10',
     description:
       "SAE's self-driving vehicle workshop offers an in-depth experience in building a prototype autonomous vehicle, covering key principles of autonomous driving, robotics, and algorithm development. Participants gain insights into the innovations shaping tomorrow's mobility landscape.",
     image: sdv,
@@ -51,7 +51,7 @@ const events = [
   {
     id: '04',
     title: 'AI/ML WORKSHOP',
-    bg: 'bg-[#0f0f0f]',
+    bg: 'bg-black', // Changed to solid black
     text: 'text-white',
     accent: 'text-red-400',
     border: 'border-white/10',
@@ -97,7 +97,7 @@ const EventCard = ({ event, index }) => {
       '-=0.4'
     );
 
-    // Content stagger
+    // Content stagger (ID, Title, Description)
     tl.from(
       contentRef.current.querySelectorAll('.anim-child'),
       {
@@ -108,6 +108,14 @@ const EventCard = ({ event, index }) => {
         ease: 'power3.out',
       },
       '-=0.6'
+    );
+
+    // Line extension animation
+    tl.fromTo(
+      contentRef.current.querySelector('.line-anim'),
+      { scaleX: 0 },
+      { scaleX: 1, duration: 0.8, ease: 'power3.out' },
+      '-=0.4'
     );
 
     // Subtle image parallax on scroll
@@ -141,7 +149,7 @@ const EventCard = ({ event, index }) => {
             ref={imgRef}
             src={event.image}
             alt={event.title}
-            className="w-full h-full object-cover object-left "
+            className="w-full h-full object-cover object-left"
             style={{ clipPath: 'inset(0 0 0 0)' }}
           />
           {/* Gradient overlay */}
@@ -169,19 +177,29 @@ const EventCard = ({ event, index }) => {
           ref={contentRef}
           className="flex flex-col justify-center px-8 lg:px-14 lg:py-14 max-[800px]:gap-2 lg:gap-4"
         >
-          <span className={`anim-child text-sm font-mono tracking-[0.3em] ${event.accent} opacity-70`}>
+          {/* ID */}
+          <span className="anim-child text-sm font-mono tracking-[0.3em] text-white opacity-70">
             {event.id}
           </span>
 
-          <h4
-            className={`anim-child font-heading font-bold uppercase leading-[1] tracking-tight
-              text-4xl sm:text-5xl lg:text-[3.5vw] xl:text-[3vw]`}
-          >
-            {event.title}
-          </h4>
+          {/* --- NEW: Wrapper for Title and Line --- */}
+          <div className="flex flex-col w-fit max-[800px]:gap-2 lg:gap-4">
+            {/* Title */}
+            <h4
+              className={`anim-child font-bold uppercase leading-[1] tracking-tight
+                text-4xl sm:text-5xl lg:text-[3.5vw] xl:text-[3vw]
+                bg-gradient-to-b from-[rgb(255,46,46)] to-[rgb(114,5,5)] bg-clip-text text-transparent`}
+              style={{ fontFamily: "'Montserrat', 'Roboto', sans-serif" }}
+            >
+              {event.title}
+            </h4>
 
-          <div className={`anim-child w-12 h-[2px] ${event.bg === 'bg-red-600' ? 'bg-black' : 'bg-red-500'}`} />
+            {/* Line - w-full now perfectly matches the width of the title */}
+            <div className="line-anim w-full h-[2px] bg-red-500 origin-left" />
+          </div>
+          {/* --------------------------------------- */}
 
+          {/* Description */}
           <p
             className={`anim-child font-sans text-white/100 leading-[1.75] opacity-80
               text-sm sm:text-base lg:text-[1.0vw] xl:text-[1.0vw] max-w-[480px]`}
@@ -216,9 +234,6 @@ const Services = () => {
       {/* Section Header */}
       <div className="main-container mb-7 lg:mb-10">
         <div className="flex flex-col gap-2">
-          {/*<span className="events-heading text-[24px] uppercase tracking-[0.25em] text-red-500 font-semibold">
-            What We Do
-          </span>*/}
           <h3
             className="events-heading font-heading font-bold uppercase text-white
               text-[10vw] sm:text-[7vw] md:text-[5.5vw] lg:text-[4.5vw]
