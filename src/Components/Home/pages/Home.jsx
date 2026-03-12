@@ -8,6 +8,7 @@ import CTA from '../comp/CTA'
 //import Footer from '../comp/Footer'
 //import Navbar from '../comp/Navbar'
 import "./Home.css";
+import DarkVeil from '../../Events/DarkVeil/DarkVeil'
 
 const Home = () => {
   return (
@@ -17,7 +18,7 @@ const Home = () => {
       <Services />
       <Work />
       {/*<Marquee />*/}
-      <CTA />
+      {/*<CTA />*/}
     </>
   )
 }

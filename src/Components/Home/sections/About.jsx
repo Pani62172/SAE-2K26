@@ -8,9 +8,12 @@ gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
 
 const About = () => {
   const aboutRef = useRef(null);
+  
+  // We need a ref to store our SplitText instance so we can revert it later
+  const splitTextRef = useRef(null);
 
   useGSAP(() => {
-    // Heading fade-in from below
+    // 1. Heading fade-in from below
     gsap.from(".about-heading", {
       y: 40,
       opacity: 0,
@@ -22,25 +25,7 @@ const About = () => {
       },
     });
 
-    // Body text char-by-char opacity reveal
-    SplitText.create(".about-text", {
-      type: "lines, chars",
-      onSplit(self) {
-        gsap.set(self.chars, { opacity: 0.15 });
-        gsap.to(self.chars, {
-          opacity: 1,
-          stagger: 0.03,
-          scrollTrigger: {
-            trigger: aboutRef.current,
-            start: "top 60%",
-            end: "center 30%",
-            scrub: 1.5,
-          },
-        });
-      },
-    });
-
-    // Stats Counter Animation
+    // 2. Stats Counter Animation
     const statNumbers = gsap.utils.toArray('.stat-num');
     statNumbers.forEach((stat) => {
       const targetVal = stat.getAttribute('data-val');
@@ -59,6 +44,66 @@ const About = () => {
         }
       );
     });
+
+    // 3. Setup SplitText
+    // We wrap this in a function so we can call it on load AND on resize
+    const initSplitText = () => {
+      // If a previous instance exists, revert it first to clean up the DOM
+      if (splitTextRef.current) {
+        splitTextRef.current.revert();
+      }
+
+      // Create new SplitText instance
+      splitTextRef.current = new SplitText(".about-text", { 
+        type: "lines, chars" 
+      });
+
+      // Set initial opacity
+      gsap.set(splitTextRef.current.chars, { opacity: 0.15 });
+
+      // Animate
+      gsap.to(splitTextRef.current.chars, {
+        opacity: 1,
+        stagger: 0.03,
+        scrollTrigger: {
+          trigger: aboutRef.current,
+          start: "top 60%",
+          end: "center 30%",
+          scrub: 1.5,
+          // invalidateOnRefresh is crucial here! It forces ScrollTrigger to recalculate 
+          // its start/end points when the layout changes.
+          invalidateOnRefresh: true, 
+        },
+      });
+    };
+
+    // Wait for fonts to load before doing the initial split
+    document.fonts.ready.then(() => {
+      initSplitText();
+    });
+
+    // 4. Handle Window Resizing (The Fix for Inspect Tool / Device Rotation)
+    let resizeTimer;
+    const handleResize = () => {
+      clearTimeout(resizeTimer);
+      // Wait 250ms after the user stops resizing before recalculating
+      resizeTimer = setTimeout(() => {
+        initSplitText();
+        // Tell ScrollTrigger to recalculate positions based on the new layout
+        ScrollTrigger.refresh();
+      }, 250);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup function for when the component unmounts
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      if (splitTextRef.current) {
+        splitTextRef.current.revert();
+      }
+      clearTimeout(resizeTimer);
+    };
 
   }, { scope: aboutRef });
 
@@ -106,19 +151,19 @@ const About = () => {
       </div>
 
       {/* Stats Row */}
-      <div className="main-container stats-container mt-8 lg:mt-12 flex justify-center gap-12 border-t border-white/10 pt-10 lg:gap-24">
+      <div className="main-container stats-container mt-8 lg:mt-12 grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-4 lg:gap-x-12 border-t border-white/10 pt-10 justify-items-center">
         {[
-          // Separated the numerical value from the suffix
           { val: 100, suffix: "+", label: "Active Members" },
           { val: 25, suffix: "+", label: "Annual Events" },
-        ].map((stat) => (
-          <div key={stat.label} className="flex flex-col items-center gap-1 text-center">
+          { val: 38, suffix: "th", label: "BAJA Rank Nationwide" },
+          { val: 9, suffix: "th", label: "Among IITs & NITs" },
+        ].map((stat, index) => (
+          <div key={index} className="flex flex-col items-center gap-1 text-center">
             <span className="font-heading font-bold text-white text-4xl lg:text-5xl tracking-tight">
-              {/* Added a span specifically for the number to target with GSAP */}
               <span className="stat-num" data-val={stat.val}>0</span>
               {stat.suffix}
             </span>
-            <span className="text-white/50 text-sm uppercase tracking-widest">
+            <span className="text-white/50 text-xs sm:text-sm uppercase tracking-widest max-w-[140px] lg:max-w-none">
               {stat.label}
             </span>
           </div>

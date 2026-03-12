@@ -9,12 +9,12 @@ function Footer() {
       {/* Top Divider (Optional: retained from your current layout to keep spacing clean) */}
       <div className='max-w-[1500px] m-auto h-[1px] bg-white/10'></div>
 
-      <footer className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 py-20 items-start">
+      <footer className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 py-5 items-start">
         
         {/* Logo and Follow Us */}
         <div className="flex flex-col justify-start">
-          <img src="./saelogo.png" alt="Logo" className="w-[120px] mb-5" />
-          <h5 className="text-[#ca3435] text-2xl mb-5 relative after:content-[''] after:w-[50px] after:h-[2px] after:bg-[#ca3435] after:absolute after:-bottom-2.5 after:left-0">
+          <img src="./saelogo.png" alt="Logo" className="w-[120px] mb-2" />
+          <h5 className="text-[#ca3435] text-2xl mb-3 relative after:content-[''] after:w-[50px] after:h-[2px] after:bg-[#ca3435] after:absolute after:-bottom-2.5 after:left-0">
             Follow us
           </h5>
           <div className="flex gap-[15px]">
@@ -35,12 +35,12 @@ function Footer() {
 
         {/* Contact Us */}
         <div className="flex flex-col justify-start">
-          <h5 className="text-[#ca3435] text-2xl mb-5 relative after:content-[''] after:w-[50px] after:h-[2px] after:bg-[#ca3435] after:absolute after:-bottom-2.5 after:left-0">
+          <h5 className="text-[#ca3435] text-2xl mb-3 relative after:content-[''] after:w-[50px] after:h-[2px] after:bg-[#ca3435] after:absolute after:-bottom-2.5 after:left-0">
             Contact Us
           </h5>
-          <p className="mb-2.5 font-sans text-lg">Mahatma Gandhi Avenue, A-zone</p>
-          <p className="mb-2.5 font-sans text-lg">Durgapur, West Bengal, 713209</p>
-          <div className="mb-2.5 font-sans text-lg flex items-center gap-2">
+          <p className="mb-1 font-sans text-lg">Mahatma Gandhi Avenue, A-zone</p>
+          <p className="mb-1 font-sans text-lg">Durgapur, West Bengal, 713209</p>
+          <div className="mb-1 font-sans text-lg flex items-center gap-2">
             <FaEnvelope />
             <Link className="text-white no-underline font-serif text-base hover:text-[#ca3435] transition-colors" to="mailto:saeindia@nitdgp.ac.in">
               saeindia@nitdgp.ac.in
@@ -50,17 +50,17 @@ function Footer() {
 
         {/* Contact Info: President */}
         <div className="flex flex-col justify-start">
-          <h5 className="text-[#ca3435] text-2xl mb-5 relative after:content-[''] after:w-[50px] after:h-[2px] after:bg-[#ca3435] after:absolute after:-bottom-2.5 after:left-0">
+          <h5 className="text-[#ca3435] text-2xl mb-3 relative after:content-[''] after:w-[50px] after:h-[2px] after:bg-[#ca3435] after:absolute after:-bottom-2.5 after:left-0">
             Debjit Banerjee
           </h5>
-          <p className="mb-2.5 font-sans text-lg">President</p>
-          <div className="mb-2.5 font-sans text-lg flex items-center gap-2">
+          <p className="mb-1 font-sans text-lg">President</p>
+          <div className="mb-1 font-sans text-lg flex items-center gap-2">
             <FaEnvelope />
             <Link className="text-white no-underline font-serif text-base hover:text-[#ca3435] transition-colors" to="mailto:president.saeindia@nitdgp.ac.in">
               president.saeindia@nitdgp.ac.in
             </Link>
           </div>
-          <div className="mb-2.5 font-sans text-lg flex items-center gap-2">
+          <div className="mb-1 font-sans text-lg flex items-center gap-2">
             <FaPhoneAlt />
             <Link to="tel:+91 91430 34962" className="text-white no-underline font-serif text-base hover:text-[#ca3435] transition-colors">
               +91 91430 34962
@@ -70,11 +70,11 @@ function Footer() {
 
         {/* Contact Info: Corporate Communication */}
         <div className="flex flex-col justify-start">
-          <h5 className="text-[#ca3435] text-2xl mb-5 relative after:content-[''] after:w-[50px] after:h-[2px] after:bg-[#ca3435] after:absolute after:-bottom-2.5 after:left-0">
+          <h5 className="text-[#ca3435] text-2xl mb-3 relative after:content-[''] after:w-[50px] after:h-[2px] after:bg-[#ca3435] after:absolute after:-bottom-2.5 after:left-0">
             Chandan Kumar Roy
           </h5>
-          <p className="mb-2.5 font-sans text-lg">Head of Corporate Comm.</p>
-          <div className="mb-2.5 font-sans text-lg flex items-center gap-2">
+          <p className="mb-1 font-sans text-lg">Head of Corporate Communications</p>
+          <div className="mb-1 font-sans text-lg flex items-center gap-2">
             <FaEnvelope />
             <Link to="mailto:prasant999.sahu@gmail.com" className="text-white no-underline font-serif text-base hover:text-[#ca3435] transition-colors">
               prasant999.sahu@gmail.com
@@ -91,7 +91,7 @@ function Footer() {
       </footer>
 
       {/* Copyright Section */}
-      <section className="bg-[#000000] relative z-10 text-white text-center py-5">
+      <section className="bg-[#000000] relative z-10 text-white text-center pb-2 pt-0">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 font-medium">
           Made with ❤️ By SAE-Dev Team @ 2026 
           <Link to="/" className="text-[#ca3435] no-underline hover:underline ml-1"> SAE </Link>. © All rights reserved.
