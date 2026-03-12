@@ -73,7 +73,7 @@ const About = () => {
       <div className="main-container grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-start">
   {/* Left: Pull quote / highlight */}
     <p className="about-text font-heading text-white font-medium text-2xl sm:text-3xl md:text-3xl lg:text-[2.2vw] xl:text-[1.9vw] leading-[1.35] tracking-tight break-words hyphens-none">
-      The largest technical club of NIT Durgapur — building engineers, innovators, and leaders.
+      The largest technical club of NIT Durgapur - building engineers, innovators, and leaders.
     </p>
 
   {/* Right: Full description */}

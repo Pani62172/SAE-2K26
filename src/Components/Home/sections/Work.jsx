@@ -137,7 +137,7 @@ const Work = () => {
             Our <span className="text-red-500">Videos</span>
           </h3>
           <p className="mt-4 text-white/50 text-sm lg:text-base leading-relaxed max-w-sm">
-            A showcase of our work — designed to inspire, engage, and deliver real results.
+            A showcase of our work - designed to inspire, engage, and deliver real results.
           </p>
         </div>
 

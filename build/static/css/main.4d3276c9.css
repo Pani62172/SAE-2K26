@@ -1339,10 +1339,6 @@ video {
     padding-top: 2vh;
   }
 }
-
-/* ═══════════════════════════════════════════════════
-   WRAPPER — only sets perspective + dimensions
-   ═══════════════════════════════════════════════════ */
 .card-alumni-wrapper {
   position: relative;
   width: 20vw;
@@ -1353,11 +1349,6 @@ video {
   box-sizing: border-box;
   perspective: 800px;
 }
-
-/* ═══════════════════════════════════════════════════
-   MOTION DIV — tilts in 3D
-   overflow: visible so SVG strokes outside box render
-   ═══════════════════════════════════════════════════ */
 .card-alumni {
   position: relative;
   width: 100%;
@@ -1373,10 +1364,6 @@ video {
 .card-alumni-wrapper:hover .card-alumni {
   filter: brightness(1);
 }
-
-/* ═══════════════════════════════════════════════════
-   CARD-INNER — clips photo & overlay to rounded rect
-   ═══════════════════════════════════════════════════ */
 .card-inner {
   position: absolute;
   inset: 0;

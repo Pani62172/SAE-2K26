@@ -59,9 +59,6 @@
   transform: scale(1.06);
 }
 
-/* ═══════════════════════════════════════════════════
-   NAME LABEL — bottom-left, hidden until hover
-   ═══════════════════════════════════════════════════ */
 .alumni-name-label {
   position: absolute;
   bottom: 14px;

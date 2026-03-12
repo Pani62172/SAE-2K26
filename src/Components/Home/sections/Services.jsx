@@ -32,7 +32,7 @@ const events = [
     accent: 'text-red-500',
     border: 'border-black/10',
     description:
-      'BAJA SAEINDIA is a renowned national event challenging university students to design, build, and race off-road vehicles, promoting teamwork and engineering skills. NIT Durgapur\'s Team NDORS — 25 talented students — achieved 38th place nationwide and 7th among IITs and NITs.',
+      'BAJA SAEINDIA is a renowned national event challenging university students to design, build, and race off-road vehicles, promoting teamwork and engineering skills. NIT Durgapur\'s Team NDORS - 25 talented students - achieved 38th place nationwide and 7th among IITs and NITs.',
     image: baja,
     tag: 'National Competition',
   },
