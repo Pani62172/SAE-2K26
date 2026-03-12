@@ -76,8 +76,14 @@ const About = () => {
 
       {/* Heading */}
       <div className="main-container mb-5 lg:mb-8">
-        <h3 className="about-heading font-heading font-bold uppercase text-white text-[11vw] sm:text-[8vw] md:text-[6vw] lg:text-[5vw] xl:text-[4.5vw] leading-[1.05] tracking-tighter">
-          About <span className="text-red-500">SAE</span>
+        <h3
+          className="about-heading font-bold uppercase text-white text-[11vw] sm:text-[8vw] md:text-[6vw] lg:text-[5vw] xl:text-[4.5vw] leading-[1.05] tracking-tighter"
+          style={{ fontFamily: "'Montserrat', 'Roboto', sans-serif" }}
+        >
+          About{' '}
+          <span className="bg-gradient-to-b from-[rgb(255,46,46)] to-[rgb(114,5,5)] bg-clip-text text-transparent">
+            SAE
+          </span>
         </h3>
       </div>
 

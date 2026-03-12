@@ -132,10 +132,15 @@ const Work = () => {
           <span className="text-xs uppercase tracking-[0.35em] font-bold text-red-500 block mb-3">
             Media
           </span>
-          <h3 className="font-heading font-bold text-white leading-[1.05] tracking-tight
-            text-[9vw] sm:text-[6vw] md:text-[4.5vw] lg:text-[3.5vw]">
-            Our <span className="text-red-500">Videos</span>
-          </h3>
+          <h3
+          className="about-heading font-bold uppercase text-white text-[11vw] sm:text-[8vw] md:text-[6vw] lg:text-[5vw] xl:text-[4.5vw] leading-[1.05] tracking-tighter"
+          style={{ fontFamily: "'Montserrat', 'Roboto', sans-serif" }}
+        >
+          Our{' '}
+          <span className="bg-gradient-to-b from-[rgb(255,46,46)] to-[rgb(114,5,5)] bg-clip-text text-transparent">
+            Videos
+          </span>
+        </h3>
           <p className="mt-4 text-white/50 text-sm lg:text-base leading-relaxed max-w-sm">
             A showcase of our work - designed to inspire, engage, and deliver real results.
           </p>

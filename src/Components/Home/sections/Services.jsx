@@ -235,12 +235,14 @@ const Services = () => {
       <div className="main-container mb-7 lg:mb-10">
         <div className="flex flex-col gap-2">
           <h3
-            className="events-heading font-heading font-bold uppercase text-white
-              text-[10vw] sm:text-[7vw] md:text-[5.5vw] lg:text-[4.5vw]
-              leading-[1.05] tracking-tighter"
-          >
-            Our <span className="text-red-500">Events</span>
-          </h3>
+          className="about-heading font-bold uppercase text-white text-[11vw] sm:text-[8vw] md:text-[6vw] lg:text-[5vw] xl:text-[4.5vw] leading-[1.05] tracking-tighter"
+          style={{ fontFamily: "'Montserrat', 'Roboto', sans-serif" }}
+        >
+          Our{' '}
+          <span className="bg-gradient-to-b from-[rgb(255,46,46)] to-[rgb(114,5,5)] bg-clip-text text-transparent">
+            Events
+          </span>
+        </h3>
         </div>
       </div>
 
