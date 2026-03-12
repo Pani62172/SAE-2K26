@@ -121,7 +121,7 @@ const Work = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative z-30 bg-black text-white py-20 lg:py-32"
+      className="relative z-30 bg-black text-white py-5 lg:py-16"
     >
       {/* ── Header ── */}
       <div

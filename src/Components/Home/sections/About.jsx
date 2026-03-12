@@ -44,17 +44,17 @@ const About = () => {
   return (
     <div
       ref={aboutRef}
-      className="bg-black rounded-tl-[20px] rounded-tr-[20px] relative z-10 py-8 lg:py-20"
+      className="bg-black rounded-tl-[20px] rounded-tr-[20px] relative z-10 py-5 lg:py-13"
     >
       {/* Section Label */}
-      <div className="main-container mb-10 lg:mb-14">
+      <div className="main-container mb-4 lg:mb-6">
         <span className="about-heading inline-block text-xs uppercase tracking-[0.25em] font-semibold text-red-500 border border-red-500/40 rounded-full px-4 py-1.5">
           Who We Are
         </span>
       </div>
 
       {/* Heading */}
-      <div className="main-container mb-10 lg:mb-16">
+      <div className="main-container mb-5 lg:mb-8">
         <h2
           className="about-heading font-heading font-bold uppercase text-white
             text-[11vw] sm:text-[8vw] md:text-[6vw] lg:text-[5vw] xl:text-[4.5vw]
@@ -65,45 +65,40 @@ const About = () => {
       </div>
 
       {/* Divider */}
-      <div className="main-container mb-10 lg:mb-16">
+      <div className="main-container mb-5 lg:mb-8">
         <div className="w-full h-[1px] bg-white/10" />
       </div>
 
       {/* Body Text */}
       <div className="main-container grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-start">
-        {/* Left: Pull quote / highlight */}
-        <p className="about-text font-heading text-white font-medium
-          text-2xl sm:text-3xl md:text-3xl lg:text-[2.2vw] xl:text-[1.9vw]
-          leading-[1.35] tracking-tight">
-          The largest technical club of NIT Durgapur — building engineers, innovators, and leaders.
-        </p>
+  {/* Left: Pull quote / highlight */}
+    <p className="about-text font-heading text-white font-medium text-2xl sm:text-3xl md:text-3xl lg:text-[2.2vw] xl:text-[1.9vw] leading-[1.35] tracking-tight break-words hyphens-none">
+      The largest technical club of NIT Durgapur — building engineers, innovators, and leaders.
+    </p>
 
-        {/* Right: Full description */}
-        <p className="about-text text-white/100 font-sans
-          text-base sm:text-lg md:text-xl lg:text-[1.1vw] xl:text-[1vw]
-          leading-[1.75] tracking-normal">
-          The SAE Collegiate Club of NIT Durgapur organises a diverse range of innovative events, interactive workshops, and enlightening lectures throughout the year — including F.I.S.T, cryptech, SDV workshop, Drag &amp; Drift Competition, and TEDx Talks. As a pivotal force, SAE, being a part of Team Aavishkar, coordinates Aarohan, the second-largest techno-management festival in Eastern India. The club maintains a robust online presence through Instagram, LinkedIn, Facebook, and YouTube, regularly sharing technology-related content to engage automobile enthusiasts worldwide.
-        </p>
-      </div>
+  {/* Right: Full description */}
+    <p className="about-text text-white/100 font-sans text-base sm:text-lg md:text-xl lg:text-[1.1vw] xl:text-[1vw] leading-[1.75] tracking-normal break-words hyphens-none">
+      The SAE Collegiate Club of NIT Durgapur organises a diverse range of innovative events, interactive workshops, and enlightening lectures throughout the year - including F.I.S.T, cryptech, SDV workshop, Drag &amp; Drift Competition, and TEDx Talks. As a pivotal force, SAE, being a part of Team Aavishkar, coordinates Aarohan, the second-largest techno-management festival in Eastern India. The club maintains a robust online presence through Instagram, LinkedIn, Facebook, and YouTube, regularly sharing technology-related content to engage automobile enthusiasts worldwide.
+    </p>
+  </div>
+
 
       {/* Stats Row */}
-      <div className="main-container mt-16 lg:mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-12 lg:gap-12">
-        {[
-          { num: "100+", label: "Active Members" },
-          { num: "25+", label: "Annual Events" },
-          {/*{ num: "38th", label: "BAJA Rank Nationwide" },
-          { num: "7th", label: "Among IITs & NITs" },*/}
-        ].map((stat) => (
-          <div key={stat.label} className="flex flex-col gap-1">
-            <span className="font-heading font-bold text-white text-4xl lg:text-5xl tracking-tight">
-              {stat.num}
-            </span>
-            <span className="text-white/50 text-sm uppercase tracking-widest">
-              {stat.label}
-            </span>
-          </div>
-        ))}
-      </div>
+      <div className="main-container mt-8 lg:mt-12 flex justify-center gap-12 border-t border-white/10 pt-10 lg:gap-24">
+  {[
+    { num: "100+", label: "Active Members" },
+    { num: "25+", label: "Annual Events" },
+  ].map((stat) => (
+    <div key={stat.label} className="flex flex-col items-center gap-1 text-center">
+      <span className="font-heading font-bold text-white text-4xl lg:text-5xl tracking-tight">
+        {stat.num}
+      </span>
+      <span className="text-white/50 text-sm uppercase tracking-widest">
+        {stat.label}
+      </span>
+    </div>
+  ))}
+</div>
     </div>
   );
 };

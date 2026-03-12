@@ -128,7 +128,7 @@ const EventCard = ({ event, index }) => {
   return (
     <div
       ref={cardRef}
-      className={`${event.bg} ${event.text} rounded-2xl lg:rounded-3xl overflow-hidden border ${event.border} mb-6 lg:mb-8`}
+      className={`${event.bg} ${event.text} rounded-2xl lg:rounded-3xl overflow-hidden border ${event.border} mb-3 lg:mb-4`}
     >
       <div
         className={`grid grid-cols-1 lg:grid-cols-2 gap-0 ${
@@ -167,7 +167,7 @@ const EventCard = ({ event, index }) => {
         {/* Content Side */}
         <div
           ref={contentRef}
-          className="flex flex-col justify-center px-8 py-10 lg:px-14 lg:py-14 gap-5"
+          className="flex flex-col justify-center px-8 lg:px-14 lg:py-14 max-[800px]:gap-2 lg:gap-4"
         >
           <span className={`anim-child text-sm font-mono tracking-[0.3em] ${event.accent} opacity-70`}>
             {event.id}
