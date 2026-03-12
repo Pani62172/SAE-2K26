@@ -65,7 +65,8 @@ h3 {
 h1 {
   position: relative;
 }
-h1::before {
+
+/*h1::before {
   content: '';
   position: absolute;
   left: 0;
@@ -84,7 +85,7 @@ h1::after {
   height: 2px;
   background: var(--color-gradient);
   z-index: -1;
-}
+}*/
 
 .text-stroke {
   -webkit-text-stroke: 1px white;

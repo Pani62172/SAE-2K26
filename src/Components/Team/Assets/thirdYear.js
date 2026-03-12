@@ -102,7 +102,7 @@ export const thirdYear = [
         "linkedinLink": "https://www.linkedin.com/in/lakshay-attri-5a18b1307?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     {
-        "url": require('../Assets/3rdYearImg/Jayasree Maddu.png'),
+        "url": require('../Assets/3rdYearImg/Jayasree Maddu.jpeg'),
         "name": "Maddu Jayasree",
         "instaLink": "https://www.instagram.com/jayasreemaddu?r=nametag",
         "linkedinLink": "",
@@ -119,12 +119,12 @@ export const thirdYear = [
         "instaLink": "",
         "linkedinLink": "",
     },*/
-    /*{
+    {
         "url": require('../Assets/3rdYearImg/Regam Jeswanth Dora.jpg'),
         "name": "Jeswanth Regam",
         "instaLink": "https://www.instagram.com/jeswanth_r_j_22?utm_source=qr&igsh=MXI1b25yM213YXhubQ==",
         "linkedinLink": "https://www.linkedin.com/in/aman-singh-16273727a",
-    },*/
+    },
     {
         "url": require('../Assets/3rdYearImg/Rishi Singh .jpg'),
         "name": "Rishi Singh",

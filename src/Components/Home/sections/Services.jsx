@@ -2,6 +2,10 @@ import React, { useRef } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import sdv from '../../../assets/images/sdv.jpg';
+import fist from '../../../assets/images/fist.png';
+import baja from '../../../assets/images/baja.jpg';
+import aiml from '../../../assets/images/aiml.png';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -17,31 +21,31 @@ const events = [
     description:
       `Team SAE-NITD's "Forum for Ideas on Science and Technology" (F.I.S.T.) cultivates a research-focused environment through engaging webinars and hands-on workshops on cutting-edge topics like generative AI. By bringing in industry experts, F.I.S.T. bridges knowledge gaps, inspires innovation, and empowers students to explore technology-based solutions to real-world challenges.`,
 
-    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80',
+    image: fist,
     tag: 'Workshop & Webinar',
   },
   {
     id: '02',
     title: 'BAJA SAEINDIA',
-    bg: 'bg-red-600',
-    text: 'text-black',
-    accent: 'text-black',
+    bg: 'bg-black',
+    text: 'text-white',
+    accent: 'text-red-500',
     border: 'border-black/10',
     description:
       'BAJA SAEINDIA is a renowned national event challenging university students to design, build, and race off-road vehicles, promoting teamwork and engineering skills. NIT Durgapur\'s Team NDORS — 25 talented students — achieved 38th place nationwide and 7th among IITs and NITs.',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    image: baja,
     tag: 'National Competition',
   },
   {
     id: '03',
     title: 'SDV WORKSHOP',
-    bg: 'bg-white',
-    text: 'text-black',
-    accent: 'text-red-600',
+    bg: 'bg-black',
+    text: 'text-white',
+    accent: 'text-red-500',
     border: 'border-black/10',
     description:
       "SAE's self-driving vehicle workshop offers an in-depth experience in building a prototype autonomous vehicle, covering key principles of autonomous driving, robotics, and algorithm development. Participants gain insights into the innovations shaping tomorrow's mobility landscape.",
-    image: 'https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=800&q=80',
+    image: sdv,
     tag: 'Autonomous Tech',
   },
   {
@@ -53,7 +57,7 @@ const events = [
     border: 'border-white/10',
     description:
       'This workshop provides practical, in-depth experience in AI and ML, focusing on CNNs and deep learning models. Attendees tackle real-world challenges, designing neural network architectures and exploring applications in image recognition, autonomous systems, and data-driven decision-making.',
-    image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80',
+    image: aiml,
     tag: 'AI & Machine Learning',
   },
 ];
@@ -137,7 +141,7 @@ const EventCard = ({ event, index }) => {
             ref={imgRef}
             src={event.image}
             alt={event.title}
-            className="w-full h-full object-cover scale-110"
+            className="w-full h-full object-cover object-left "
             style={{ clipPath: 'inset(0 0 0 0)' }}
           />
           {/* Gradient overlay */}
@@ -179,8 +183,8 @@ const EventCard = ({ event, index }) => {
           <div className={`anim-child w-12 h-[2px] ${event.bg === 'bg-red-600' ? 'bg-black' : 'bg-red-500'}`} />
 
           <p
-            className={`anim-child font-sans leading-[1.7] opacity-80
-              text-sm sm:text-base lg:text-[0.95vw] xl:text-[0.9vw] max-w-[480px]`}
+            className={`anim-child font-sans text-white/100 leading-[1.75] opacity-80
+              text-sm sm:text-base lg:text-[1.0vw] xl:text-[1.0vw] max-w-[480px]`}
           >
             {event.description}
           </p>
@@ -212,9 +216,9 @@ const Services = () => {
       {/* Section Header */}
       <div className="main-container mb-7 lg:mb-10">
         <div className="flex flex-col gap-2">
-          <span className="events-heading text-[24px] uppercase tracking-[0.25em] text-red-500 font-semibold">
+          {/*<span className="events-heading text-[24px] uppercase tracking-[0.25em] text-red-500 font-semibold">
             What We Do
-          </span>
+          </span>*/}
           <h3
             className="events-heading font-heading font-bold uppercase text-white
               text-[10vw] sm:text-[7vw] md:text-[5.5vw] lg:text-[4.5vw]
