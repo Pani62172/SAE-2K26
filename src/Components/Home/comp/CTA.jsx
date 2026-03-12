@@ -66,7 +66,7 @@ const CTA = () => {
         
         {/* The relative z-10 ensures the button stays clickable over the blend mode */}
         <div className="relative z-10 scale-110 lg:scale-125">
-          <GradientButton text="Auditions Soon" link="/auditions" />
+          <GradientButton text="Auditions Soon" link="https://auditions.saenitd.in" />
         </div>
       </div>
 

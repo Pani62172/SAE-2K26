@@ -141,9 +141,9 @@ const Work = () => {
           </p>
         </div>
 
-        <div className="flex-shrink-0">
+        {/*<div className="flex-shrink-0">
           <GradientButton text="Explore All" link="/projects" />
-        </div>
+        </div>*/}
       </div>
 
       {/* ── Grid: 1 large + 2 small on first row, then 2 on second row ── */}

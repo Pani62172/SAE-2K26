@@ -41,7 +41,7 @@
   }
 }
 
-/* Gradient underline for h2 */
+/* Gradient underline for
 h2::before {
   content: '';
   position: absolute;
@@ -62,7 +62,7 @@ h2::after {
   height: 2px;
   background: var(--color-gradient);
   z-index: -1;
-}
+} */
 
 /* ================= COMPONENTS ================= */
 

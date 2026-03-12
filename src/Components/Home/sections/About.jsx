@@ -75,24 +75,24 @@ const About = () => {
         <p className="about-text font-heading text-white font-medium
           text-2xl sm:text-3xl md:text-3xl lg:text-[2.2vw] xl:text-[1.9vw]
           leading-[1.35] tracking-tight">
-          The only automotive club of its kind at NIT Durgapur — building engineers, innovators, and leaders.
+          The largest technical club of NIT Durgapur — building engineers, innovators, and leaders.
         </p>
 
         {/* Right: Full description */}
-        <p className="about-text text-white/70 font-sans
+        <p className="about-text text-white/100 font-sans
           text-base sm:text-lg md:text-xl lg:text-[1.1vw] xl:text-[1vw]
           leading-[1.75] tracking-normal">
-          The SAE Collegiate Club of NIT Durgapur organises a diverse range of innovative events, interactive workshops, and enlightening lectures throughout the year — including F.I.S.T., webinars, SDV workshops, Drag &amp; Drift Competition, and TEDx Talks. As a pivotal force, SAE, being a part of Team Aavishkar, coordinates Aarohan, the second-largest techno-management festival in Eastern India. The club maintains a robust online presence through Instagram, LinkedIn, Facebook, and YouTube, regularly sharing technology-related content to engage automobile enthusiasts worldwide.
+          The SAE Collegiate Club of NIT Durgapur organises a diverse range of innovative events, interactive workshops, and enlightening lectures throughout the year — including F.I.S.T, cryptech, SDV workshop, Drag &amp; Drift Competition, and TEDx Talks. As a pivotal force, SAE, being a part of Team Aavishkar, coordinates Aarohan, the second-largest techno-management festival in Eastern India. The club maintains a robust online presence through Instagram, LinkedIn, Facebook, and YouTube, regularly sharing technology-related content to engage automobile enthusiasts worldwide.
         </p>
       </div>
 
       {/* Stats Row */}
-      <div className="main-container mt-16 lg:mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-12">
+      <div className="main-container mt-16 lg:mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-12 lg:gap-12">
         {[
-          { num: "25+", label: "Active Members" },
-          { num: "10+", label: "Annual Events" },
-          { num: "38th", label: "BAJA Rank Nationwide" },
-          { num: "7th", label: "Among IITs & NITs" },
+          { num: "100+", label: "Active Members" },
+          { num: "25+", label: "Annual Events" },
+          {/*{ num: "38th", label: "BAJA Rank Nationwide" },
+          { num: "7th", label: "Among IITs & NITs" },*/}
         ].map((stat) => (
           <div key={stat.label} className="flex flex-col gap-1">
             <span className="font-heading font-bold text-white text-4xl lg:text-5xl tracking-tight">
