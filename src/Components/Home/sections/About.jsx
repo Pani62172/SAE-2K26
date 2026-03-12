@@ -156,7 +156,7 @@ const About = () => {
           { val: 100, suffix: "+", label: "Active Members" },
           { val: 25, suffix: "+", label: "Annual Events" },
           { val: 38, suffix: "th", label: "BAJA Rank Nationwide" },
-          { val: 9, suffix: "th", label: "Among IITs & NITs" },
+          { val: 7, suffix: "th", label: "Among IITs & NITs" },
         ].map((stat, index) => (
           <div key={index} className="flex flex-col items-center gap-1 text-center">
             <span className="font-heading font-bold text-white text-4xl lg:text-5xl tracking-tight">
