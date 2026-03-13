@@ -2,15 +2,27 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const ScrollToTop = () => {
-  // Extracts pathname property (key) from an object
   const { pathname } = useLocation();
 
-  // Automatically scrolls to top whenever pathname changes
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // 1. Disable browser's default scroll restoration memory
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+
+    // 2. Add a tiny delay to wait for React to finish rendering the new page
+    const timeoutId = setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant' // Snaps instantly to top
+      });
+    }, 10); // 10ms is completely unnoticeable to users but fixes the race condition
+
+    return () => clearTimeout(timeoutId);
   }, [pathname]);
 
-  return null; // This component doesn't render anything visually
+  return null;
 };
 
 export default ScrollToTop;

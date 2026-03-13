@@ -32,6 +32,21 @@ const Navbar = () => {
     };
   }, []);
 
+  // Lock background scroll when menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Use an empty string to cleanly remove the inline style
+      document.body.style.overflow = '';
+    }
+    
+    // Cleanup in case component unmounts while menu is open
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
+
   useGSAP(() => {
     // Initial Navbar Entry
     gsap.from(navbarRef.current, {
@@ -69,16 +84,19 @@ const Navbar = () => {
   const navLinks = ["HOME", "EVENTS", "TEAMS", "TEDX", "AAROHAN", "ALUMNI"];
 
   return (
-    <>
+    // Replaced the empty <> fragment with a stable <header> wrapper
+    <header className="relative z-[100]">
       <nav
         ref={navbarRef}
-        // Dynamically add bg-black if scrolled, otherwise bg-transparent
         className={`fixed top-0 z-[100] w-full transition-colors duration-300 ${
-          isScrolled ? "bg-black shadow-lg" : "bg-transparent"
+          isScrolled && !menuOpen ? "bg-black shadow-lg" : "bg-transparent"
         }`}
       >
-        <div className="w-full px-8 py-6 flex justify-between items-center">
-          <Link to="/">
+        <div className="w-full px-8 py-2.5 flex justify-between items-center">
+          <Link 
+            to="/" 
+            onClick={() => window.scrollTo(0, 0)}
+          >
             <img src={Logo} alt="SAE Logo" className="h-10 lg:h-12 w-auto object-contain" />
           </Link>
 
@@ -105,7 +123,10 @@ const Navbar = () => {
               key={item}
               ref={(el) => (linksRef.current[index] = el)}
               to={item === "HOME" ? "/" : `/${item.toLowerCase()}`}
-              onClick={() => setMenuOpen(false)}
+              onClick={() => {
+                setMenuOpen(false);
+                window.scrollTo(0, 0); // Force scroll to top here too!
+              }}
               className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tighter hover:text-red-600 transition-colors no-underline uppercase"
             >
               {item}
@@ -113,7 +134,7 @@ const Navbar = () => {
           ))}
         </div>
       </div>
-    </>
+    </header>
   );
 };
 
