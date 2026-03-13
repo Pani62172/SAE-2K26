@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./Aarohan.css";
 import CardCarousel from "./Carousel.jsx";
 import { events, arhn_gallary } from "./AarohanData.js";
@@ -12,7 +12,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Carousel } from "bootstrap";
 
 function Aarohan() {
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
   useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener("resize", handleResize);
     AOS.init({
       duration: 1200,
       easing: "ease-out-quart",
@@ -78,6 +85,37 @@ const handleCardMouseMove = (e) => {
   const handleCardMouseLeave = (e) => {
     e.currentTarget.style.transform = "perspective(1000px) rotateX(0) rotateY(0) scale(1)";
   };
+  const eventCards = events.map((event) => {
+    let imgSrc = "";
+    if (event.posters) {
+      if (typeof event.posters === "string") {
+        imgSrc = event.posters; 
+      } else if (event.posters.src) {
+        imgSrc = event.posters.src;
+      } else if (Array.isArray(event.posters) && event.posters.length > 0) {
+        imgSrc = event.posters[0].src;
+      }
+    } else {
+      imgSrc = event.image || ""; 
+    }
+    
+    return (
+      <div key={event.id} className="carousel-item-wrapper w-full flex justify-center">
+        <div 
+          className="arhn-card"
+          onMouseMove={handleCardMouseMove}
+          onMouseLeave={handleCardMouseLeave}
+        >
+          <img src={imgSrc} alt={event.name} className="w-full h-full object-cover" />
+          <div className="arhn-card-content">
+            <h2 className="absolute top-6 w-full px-4 z-20 text-2xl lg:text-3xl font-bold text-white text-center drop-shadow-xl break-words leading-tight">{event.name}</h2>
+            <div className="absolute top-25 left-1/2 -translate-x-1/2 h-1 w-12 bg-red-600 rounded-full z-20 drop-shadow-md"></div>
+            <p className="text-sm text-gray-300 px-4">{event.content}</p>
+          </div>
+        </div>
+      </div>
+    );
+  });
 
 return (
     <>
@@ -137,27 +175,20 @@ return (
               <h1 
   className="w-full text-center"
   style={{
-    /* --- THE CENTERING LOCKS --- */
     display: "block",
     margin: "0 auto",
     textAlign: "center",
-    
-    /* --- THE ARENA TYPOGRAPHY --- */
     fontFamily: '"Montserrat", "Roboto", sans-serif',
     fontWeight: 900,
     textTransform: "uppercase",
-    fontSize: "clamp(2.5rem, 8vw, 4rem)", /* Responsive so it doesn't break mobile! */
+    fontSize: "clamp(2.5rem, 8vw, 4rem)",
     lineHeight: 1.2,
     marginBottom: "1rem",
-    
-    /* --- THE RED GRADIENT MAGIC --- */
     backgroundImage: "linear-gradient(to bottom, rgb(255, 46, 46), rgb(114, 5, 5))",
     WebkitBackgroundClip: "text",
     backgroundClip: "text",
     WebkitTextFillColor: "transparent",
-    color: "rgb(202, 52, 53)", /* Fallback color */
-    
-    /* --- ANIMATION --- */
+    color: "rgb(202, 52, 53)", 
     animation: "fadeIn 2s ease-in-out"
   }}
 >
@@ -180,27 +211,21 @@ return (
              <h1 
   className="w-full text-center"
   style={{
-    /* --- THE CENTERING LOCKS --- */
+
     display: "block",
     margin: "0 auto",
     textAlign: "center",
-    
-    /* --- THE ARENA TYPOGRAPHY --- */
     fontFamily: '"Montserrat", "Roboto", sans-serif',
     fontWeight: 900,
     textTransform: "uppercase",
-    fontSize: "clamp(2.5rem, 8vw, 4rem)", /* Responsive so it doesn't break mobile! */
+    fontSize: "clamp(2.5rem, 8vw, 4rem)", 
     lineHeight: 1.2,
     marginBottom: "1rem",
-    
-    /* --- THE RED GRADIENT MAGIC --- */
     backgroundImage: "linear-gradient(to bottom, rgb(255, 46, 46), rgb(114, 5, 5))",
     WebkitBackgroundClip: "text",
     backgroundClip: "text",
     WebkitTextFillColor: "transparent",
-    color: "rgb(202, 52, 53)", /* Fallback color */
-    
-    /* --- ANIMATION --- */
+    color: "rgb(202, 52, 53)", 
     animation: "fadeIn 2s ease-in-out"
   }}
 >
@@ -224,7 +249,19 @@ return (
             </h1>
             <p className="text-gray-500 mt-4 tracking-widest uppercase text-lg">Our Events and Workshops in AAROHAN</p>
           </div>
+          {isMobile ? (
           <div style={{ height: '600px', width: '100%', position: 'relative' }}>
+            <CardCarousel baseWidth={350} autoplay={true} loop={true}>
+              {eventCards}
+            </CardCarousel>
+          </div>
+        ) : (
+          <div className="arhn-grid-container w-full max-w-7xl mx-auto">
+            {eventCards}
+          </div>
+        )}
+        </div>
+          {/* <div style={{ height: '600px', width: '100%', position: 'relative' }}>
           <CardCarousel baseWidth={350} autoplay={true} loop={true}>
               {events.map((event) => {
                 let imgSrc = "";
@@ -258,7 +295,7 @@ return (
               })}
             </CardCarousel>
               </div>
-        </div>
+        </div> */}
  
         <div className="px-6 lg:px-32 py-20">
           <div className="mb-16 text-center" data-aos="fade-up">
@@ -266,17 +303,34 @@ return (
               AAROHAN GALLERY
             </h1>
           </div>
+          {isMobile ? (
+          /* MOBILE VIEW: The infinite sliding track */
           <div className="arhn-slider">
             <div className="arhn-slide-track">
+              {/* Note: We double the array here so the infinite scroll doesn't glitch */}
               {[...arhn_gallary, ...arhn_gallary].map((arhn_img, idx) => (
-                <div key={`${arhn_img.id}-${idx}`} className="arhn-single-slide w-[300px] h-[200px] mx-4">
-                  <img src={arhn_img.posters} alt="gallery" className="w-full h-full object-cover rounded-xl" />
+                <div key={`mobile-gal-${idx}`} className="arhn-single-slide w-[300px] h-[200px] mx-4">
+                  <img src={arhn_img.posters} alt="gallery" className="w-full h-full object-cover rounded-xl shadow-md" />
                 </div>
               ))}
             </div>
           </div>
+        ) : (
+          /* DESKTOP VIEW: A sleek, responsive Tailwind Grid */
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-7xl mx-auto px-4">
+            {/* Note: We only map through the gallery once here! */}
+            {arhn_gallary.map((arhn_img, idx) => (
+              <div 
+                key={`desktop-gal-${idx}`} 
+                className="w-full h-[250px] rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              >
+                <img src={arhn_img.posters} alt="gallery" className="w-full h-full object-cover" />
+              </div>
+            ))}
+          </div>
+        )}
 
-        </div>
+      </div>
     </>
   );
 }
