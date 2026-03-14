@@ -251,7 +251,9 @@ return (
           </div>
           {isMobile ? (
           <div style={{ height: '600px', width: '100%', position: 'relative' }}>
-            <CardCarousel baseWidth={350} autoplay={true} loop={true}>
+            <CardCarousel baseWidth={window.innerWidth < 400 ? window.innerWidth - 60 : 350} 
+              autoplay={true} 
+              loop={true}>
               {eventCards}
             </CardCarousel>
           </div>
