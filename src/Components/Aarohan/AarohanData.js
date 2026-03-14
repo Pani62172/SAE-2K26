@@ -81,7 +81,7 @@ import { v4 as uuidv4} from 'uuid'
      content:
        "Speedcubing is an electrifying competition where participants race against time to solve a Rubik’s Cube as quickly as possible. Whether you’re a seasoned cuber or just beginning your journey, this is your chance to showcase your reflexes, focus, and problem-solving brilliance.",
       posters: 
-        {src: "/assets/speedcubing.png"}
+        {src: "/assets/SPEEDCUBING.png"}
       
    },
     {
