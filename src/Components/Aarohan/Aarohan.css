@@ -182,7 +182,7 @@ p {
 }
 
 .arhn-grid-container {
-  display: flex !important;
+  display: grid !important;
   flex-wrap: wrap !important;
   justify-content: center !important;
   align-items: center !important;
@@ -196,6 +196,7 @@ p {
   width: 350px !important;
   max-width: 100% !important;
   flex: 0 0 auto !important;
+  justify-content: center;
 }
 .arhn-card::before {
   content: "";
@@ -822,7 +823,7 @@ p {
     height: 400px;
   }
   .arhn-grid-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 4rem;
     justify-content: center;
     margin: 0 auto;
