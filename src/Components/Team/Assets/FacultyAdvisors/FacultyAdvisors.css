@@ -118,7 +118,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   line-height: 1.2;
-  padding-left: 22rem;
+  padding-left: 0rem;
   padding-top: 2rem;
   text-align: center;
   margin-bottom: 1rem;
@@ -152,7 +152,7 @@
     gap: 1rem;
   }
   .section-heading {
-    padding-left: 15rem;
+    padding-left: 0rem;
   }
 }
 @media (max-width: 1200px) {
@@ -161,7 +161,7 @@
     gap: 0.5rem;
   }
   .section-heading {
-    padding-left: 10rem;
+    padding-left: 0rem;
   }
 }
 
@@ -201,7 +201,7 @@
 
   .section-heading {
     font-size: 2.5rem;
-    padding-left: 9rem;
+    padding-left: 0rem;
   }
 }
 
@@ -234,7 +234,7 @@
 
   .section-heading {
     font-size: 2rem;
-    padding-left:9rem;
+    padding-left:0rem;
   }
 }
 
