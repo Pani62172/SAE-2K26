@@ -116,7 +116,7 @@ import { v4 as uuidv4} from 'uuid'
  export const arhn_gallary = [
    {
      id: uuidv4(),
-      posters: "/assets/6617e9667ea53b0c8bd3b345.jpg",
+      posters: "public/assets/img1.jpeg",
    },
    {
      id: uuidv4(),
