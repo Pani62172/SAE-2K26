@@ -13,10 +13,10 @@ const ImageCarousel = () => {
     'https://i.ibb.co/XkpQjnGQ/IMG-7455.jpg',
     'https://i.ibb.co/LPJNw6t/Screenshot-2024-08-22-100019.png',
     'https://i.ibb.co/Z2sSXr6/Screenshot-2024-08-22-095218.png',
-    'https://i.ibb.co/0r7cgnh/Screenshot-2024-08-22-102824.png',
+    'https://i.ibb.co/Dg1mH7ZD/Whats-App-Image-2026-03-14-at-8-12-16-PM.jpg',
     'https://i.ibb.co/gbHJFF4Y/IMG-7310.jpg',
     'https://i.ibb.co/pvWKyb6v/IMG-7648.jpg',
-    'https://i.ibb.co/R2PLhXY/Screenshot-2024-08-22-100914.png',
+    'https://i.ibb.co/tFVTZrr/Whats-App-Image-2026-03-14-at-8-12-15-PM.jpg',
     'https://i.ibb.co/gSy7yxR/Screenshot-2024-08-22-095423.png',
   ];
 
