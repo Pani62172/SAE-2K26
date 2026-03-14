@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./Aarohan.css";
 import CardCarousel from "./Carousel.jsx";
 import { events, arhn_gallary } from "./AarohanData.js";
@@ -12,7 +12,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Carousel } from "bootstrap";
 
 function Aarohan() {
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
   useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener("resize", handleResize);
     AOS.init({
       duration: 1200,
       easing: "ease-out-quart",
@@ -23,13 +30,6 @@ function Aarohan() {
       mirror: false,
       disable: window.innerWidth < 768? true : false,
 });
-const carouselElement = document.querySelector("#heroCarousel");
-    // const bootstrapCarousel = new Carousel(carouselElement, {
-    //   interval: 4000,
-    //   ride: "carousel",
-    //   pause: false, 
-    // });
-    // bootstrapCarousel.cycle();
 
     const heroCarouselElement = document.querySelector("#heroCarousel");
     let bootstrapCarouselInstance = null;
@@ -42,20 +42,10 @@ const carouselElement = document.querySelector("#heroCarousel");
     const cards = document.querySelectorAll(".arhn-card");
     
     const handleMouseMove = (e) => {
-      const card = e.currentTarget;
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const rotateX = ((y - centerY) / centerY) * -12; 
-      const rotateY = ((x - centerX) / centerX) * 12;
-
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+      
     };
     const handleMouseLeave = (e) => {
-      e.currentTarget.style.transform = "perspective(1000px) rotateX(0) rotateY(0) scale(1)";
+   
     };
     cards.forEach((card) => {
       card.addEventListener("mousemove", handleMouseMove);
@@ -72,11 +62,6 @@ const carouselElement = document.querySelector("#heroCarousel");
     window.addEventListener("mousemove", moveCursor);
 
     return () => {
-      // cards.forEach((card) => {
-      //   card.removeEventListener("mousemove", handleMouseMove);
-      //   card.removeEventListener("mouseleave", handleMouseLeave);
-      // });
-      // Fix: Use the instance we created earlier
       if (bootstrapCarouselInstance){ bootstrapCarouselInstance.dispose();
     }
       window.removeEventListener("mousemove", moveCursor);
@@ -100,6 +85,37 @@ const handleCardMouseMove = (e) => {
   const handleCardMouseLeave = (e) => {
     e.currentTarget.style.transform = "perspective(1000px) rotateX(0) rotateY(0) scale(1)";
   };
+  const eventCards = events.map((event) => {
+    let imgSrc = "";
+    if (event.posters) {
+      if (typeof event.posters === "string") {
+        imgSrc = event.posters; 
+      } else if (event.posters.src) {
+        imgSrc = event.posters.src;
+      } else if (Array.isArray(event.posters) && event.posters.length > 0) {
+        imgSrc = event.posters[0].src;
+      }
+    } else {
+      imgSrc = event.image || ""; 
+    }
+    
+    return (
+      <div key={event.id} className="carousel-item-wrapper w-full flex justify-center">
+        <div 
+          className="arhn-card"
+          onMouseMove={handleCardMouseMove}
+          onMouseLeave={handleCardMouseLeave}
+        >
+          <img src={imgSrc} alt={event.name} className="w-full h-full object-cover" />
+          <div className="arhn-card-content">
+            <h2 className="absolute top-6 w-full px-4 z-20 text-2xl lg:text-3xl font-bold text-white text-center drop-shadow-xl break-words leading-tight">{event.name}</h2>
+            <div className="absolute top-25 left-1/2 -translate-x-1/2 h-1 w-12 bg-red-600 rounded-full z-20 drop-shadow-md"></div>
+            <p className="text-sm text-gray-300 px-4">{event.content}</p>
+          </div>
+        </div>
+      </div>
+    );
+  });
 
 return (
     <>
@@ -116,10 +132,6 @@ return (
       </div>
     <div className="noise-overlay"></div>
     <div className="glow-cursor"></div>
-    {/* <div className="blob-container">
-  <div className="blob blob-1"></div>
-  <div className="blob blob-2"></div>
-</div> */}
       <div className="hero-section">
         <div
           id="heroCarousel"
@@ -148,68 +160,86 @@ return (
           <h1 className="main-title" data-aos="zoom-out" data-aos-duration="1500">
             AAROHAN
           </h1>
-
-          {/* Animated Scroll Indicator
-          <div className="scroll-indicator">
-            <div className="mouse">
-              <div className="wheel"></div>
-            </div>
-            <div className="arrow-scroll">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div> */}
         </div>
       </div>
 
       <div className="w-full relative z-10 bg-transparent">
         
-        <div className="flex max-w-full flex-col lg:flex-row mx-10 my-32 lg:mx-16 lg:my-32 lg:justify-between items-center">
-          <div className="w-full lg:w-[50%] relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-red-600 to-violet-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-            <img
-              src="./IMG_0406.JPG"
-              alt="Aarohan"
-              className="relative rounded-lg shadow-2xl w-full object-cover transform transition-transform duration-500 hover:scale-[1.01]"
-              data-aos="fade-right"
-            />
-          </div>
+        <main className="parallax-main">
+          
+          <section className="parallax-section">
+            <figure className="parallax-image-container">
+              <img src="./IMG_0406.JPG" alt="Aarohan Who We Are" />
+            </figure>
+            <article className="parallax-content">
+              <h1 
+  className="w-full text-center"
+  style={{
+    display: "block",
+    margin: "0 auto",
+    textAlign: "center",
+    fontFamily: '"Montserrat", "Roboto", sans-serif',
+    fontWeight: 900,
+    textTransform: "uppercase",
+    fontSize: "clamp(2.5rem, 8vw, 4rem)",
+    lineHeight: 1.2,
+    marginBottom: "1rem",
+    backgroundImage: "linear-gradient(to bottom, rgb(255, 46, 46), rgb(114, 5, 5))",
+    WebkitBackgroundClip: "text",
+    backgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    color: "rgb(202, 52, 53)", 
+    animation: "fadeIn 2s ease-in-out"
+  }}
+>
+  WHO WE ARE
+</h1>
+              <p className="text-lg text-gray-300 leading-relaxed text-center">
+                Aarohan is not just a fest; it is a legacy. As the second-largest techno-management 
+                fest in Eastern India, hosted by Team Aavishkar at NIT Durgapur, we have been 
+                curating the future for over 50 years. It is the convergence of code, creativity, 
+                and culture.
+              </p>
+            </article>
+          </section>
+         
+          <section className="parallax-section">
+            <figure className="parallax-image-container">
+              <img src="./Roboliga_Aarohan_25_verified.png" alt="SAE X Aarohan" />
+            </figure>
+            <article className="parallax-content">
+             <h1 
+  className="w-full text-center"
+  style={{
 
-          <div className="lg:w-[45%] mt-12 lg:mt-0 lg:pl-10 flex flex-col justify-center">
-            <h1 className="whoweare">
-              WHO WE ARE
-            </h1>
-            <p className="text-lg text-gray-400 leading-relaxed text-centre" data-aos="fade-up" data-aos-delay="200">
-              Aarohan is not just a fest; it is a legacy. As the second-largest techno-management 
-              fest in Eastern India, hosted by Team Aavishkar at NIT Durgapur, we have been 
-              curating the future for over 50 years. It is the convergence of code, creativity, 
-              and culture.
-            </p>
-          </div>
-        </div>
+    display: "block",
+    margin: "0 auto",
+    textAlign: "center",
+    fontFamily: '"Montserrat", "Roboto", sans-serif',
+    fontWeight: 900,
+    textTransform: "uppercase",
+    fontSize: "clamp(2.5rem, 8vw, 4rem)", 
+    lineHeight: 1.2,
+    marginBottom: "1rem",
+    backgroundImage: "linear-gradient(to bottom, rgb(255, 46, 46), rgb(114, 5, 5))",
+    WebkitBackgroundClip: "text",
+    backgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    color: "rgb(202, 52, 53)", 
+    animation: "fadeIn 2s ease-in-out"
+  }}
+>
+  SAE X AAROHAN
+</h1>
+              <p className="text-lg text-gray-300 leading-relaxed text-center">
+                The SAE India Collegiate Club of NIT Durgapur powers the mechanical heart of Aarohan. 
+                From the roar of engines in Car Auction to the precision of Flying UAVs, SAE brings 
+                engineering to life, transforming theoretical concepts into adrenaline-fueled reality.
+              </p>
+            </article>
+          </section>
+          </main>
 
-        <div className="flex max-w-full flex-col lg:flex-row-reverse mx-10 my-32 lg:mx-16 lg:my-50 lg:justify-between items-center">
-          <div className="w-full lg:w-[40%] relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-            <img
-              src="/assets/arhnFlying.jpg"
-              alt="SAE"
-              className="relative rounded-lg shadow-2xl w-full object-cover transform transition-transform duration-500 hover:scale-[1.01]"
-              data-aos="fade-left"
-            />
-          </div>
-
-          <div className="lg:w-[45%] mt-12 lg:mt-0 lg:pl-10 lg:text-left flex flex-col justify-center">
-            <h1 className="saexaarohan">
-              SAE x AAROHAN
-            </h1>
-            <p className="text-lg text-gray-400 leading-relaxed text-center" data-aos="fade-up" data-aos-delay="200">
-              The SAE India Collegiate Club of NIT Durgapur powers the mechanical heart of Aarohan. 
-              From the roar of engines in Car Auction to the precision of Flying UAVs, SAE brings 
-              engineering to life, transforming theoretical concepts into adrenaline-fueled reality.
-            </p>
-          </div>
         </div>
 
         <div className="px-6 lg:px-32 py-20">
@@ -217,9 +247,21 @@ return (
             <h1 className="thearena">
               The Arena
             </h1>
-            <p className="text-gray-500 mt-4 tracking-widest uppercase text-sm">Our Events and Workshops in AAROHAN</p>
+            <p className="text-gray-500 mt-4 tracking-widest uppercase text-lg">Our Events and Workshops in AAROHAN</p>
           </div>
+          {isMobile ? (
           <div style={{ height: '600px', width: '100%', position: 'relative' }}>
+            <CardCarousel baseWidth={350} autoplay={true} loop={true}>
+              {eventCards}
+            </CardCarousel>
+          </div>
+        ) : (
+          <div className="arhn-grid-container w-full max-w-7xl mx-auto">
+            {eventCards}
+          </div>
+        )}
+        </div>
+          {/* <div style={{ height: '600px', width: '100%', position: 'relative' }}>
           <CardCarousel baseWidth={350} autoplay={true} loop={true}>
               {events.map((event) => {
                 let imgSrc = "";
@@ -243,8 +285,8 @@ return (
                     >
                       <img src={imgSrc} alt={event.name} />
                       <div className="arhn-card-content">
-                        <h2 className="text-3xl font-bold text-white mb-2">{event.name}</h2>
-                        <div className="h-1 w-12 bg-red-600 mb-4 mx-auto rounded-full"></div>
+                        <h2 className="absolute top-6 w-full px-4 z-20 text-2xl lg:text-3xl font-bold text-white text-center drop-shadow-xl break-words leading-tight">{event.name}</h2>
+                        <div className="absolute top-25 left-1/2 -translate-x-1/2 h-1 w-12 bg-red-600 rounded-full z-20 drop-shadow-md"></div>
                         <p className="text-sm text-gray-300 px-4">{event.content}</p>
                       </div>
                     </div>
@@ -253,8 +295,7 @@ return (
               })}
             </CardCarousel>
               </div>
-        </div>
-        </div>
+        </div> */}
  
         <div className="px-6 lg:px-32 py-20">
           <div className="mb-16 text-center" data-aos="fade-up">
@@ -262,17 +303,34 @@ return (
               AAROHAN GALLERY
             </h1>
           </div>
+          {isMobile ? (
+          /* MOBILE VIEW: The infinite sliding track */
           <div className="arhn-slider">
             <div className="arhn-slide-track">
+              {/* Note: We double the array here so the infinite scroll doesn't glitch */}
               {[...arhn_gallary, ...arhn_gallary].map((arhn_img, idx) => (
-                <div key={`${arhn_img.id}-${idx}`} className="arhn-single-slide w-[300px] h-[200px] mx-4">
-                  <img src={arhn_img.posters} alt="gallery" className="w-full h-full object-cover rounded-xl" />
+                <div key={`mobile-gal-${idx}`} className="arhn-single-slide w-[300px] h-[200px] mx-4">
+                  <img src={arhn_img.posters} alt="gallery" className="w-full h-full object-cover rounded-xl shadow-md" />
                 </div>
               ))}
             </div>
           </div>
+        ) : (
+          /* DESKTOP VIEW: A sleek, responsive Tailwind Grid */
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-7xl mx-auto px-4">
+            {/* Note: We only map through the gallery once here! */}
+            {arhn_gallary.map((arhn_img, idx) => (
+              <div 
+                key={`desktop-gal-${idx}`} 
+                className="w-full h-[250px] rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              >
+                <img src={arhn_img.posters} alt="gallery" className="w-full h-full object-cover" />
+              </div>
+            ))}
+          </div>
+        )}
 
-        </div>
+      </div>
     </>
   );
 }

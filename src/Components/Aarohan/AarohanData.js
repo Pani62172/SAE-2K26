@@ -1,5 +1,3 @@
-
-
 import { v4 as uuidv4} from 'uuid'
 
  export const events = [
@@ -81,7 +79,7 @@ import { v4 as uuidv4} from 'uuid'
      id: uuidv4(),
      name: "SPEEDCUBING",
      content:
-       "In Crossword, participants united to tackle thrilling challenges, intricate puzzles, and quizzes, showcasing their skills. Running throughout AAROHAN, it was a dynamic experience filled with adrenaline-pumping puzzles and mind-bending riddles that tested wit and quick thinking at every turn.",
+       "Speedcubing is an electrifying competition where participants race against time to solve a Rubik’s Cube as quickly as possible. Whether you’re a seasoned cuber or just beginning your journey, this is your chance to showcase your reflexes, focus, and problem-solving brilliance.",
       posters: 
         {src: "/assets/speedcubing.png"}
       
@@ -90,7 +88,7 @@ import { v4 as uuidv4} from 'uuid'
      id: uuidv4(),
      name: "ROBOSUMO",
      content:
-       "In Crossword, participants united to tackle thrilling challenges, intricate puzzles, and quizzes, showcasing their skills. Running throughout AAROHAN, it was a dynamic experience filled with adrenaline-pumping puzzles and mind-bending riddles that tested wit and quick thinking at every turn.",
+       "In Robosumo, strength meets strategy and precision defines victory. Watch as two bots face off in a battle of skill, control, and power every move a test of engineering brilliance. Feel the adrenaline as innovation takes the spotlight and machines fight for glory. Sparks, strategy, and sheer determination only one bot will emerge supreme.",
       posters: 
         {src: "/assets/Robosumo_Aarohan.png"}
       
@@ -99,7 +97,7 @@ import { v4 as uuidv4} from 'uuid'
      id: uuidv4(),
      name: "IOT WORKSHOP",
      content:
-       "In Crossword, participants united to tackle thrilling challenges, intricate puzzles, and quizzes, showcasing their skills. Running throughout AAROHAN, it was a dynamic experience filled with adrenaline-pumping puzzles and mind-bending riddles that tested wit and quick thinking at every turn.",
+       "In the ethical hacking using IoT workshop, you will dive deep into the real-world world of connected devices, learn the tools of a hacker, and become the guardian of the Internet of Things. ",
       posters: 
         {src: "/assets/IoT Workshop Poster_Aarohan.png"}
       
@@ -108,7 +106,7 @@ import { v4 as uuidv4} from 'uuid'
      id: uuidv4(),
      name: "AQUA RACE",
      content:
-       "In Crossword, participants united to tackle thrilling challenges, intricate puzzles, and quizzes, showcasing their skills. Running throughout AAROHAN, it was a dynamic experience filled with adrenaline-pumping puzzles and mind-bending riddles that tested wit and quick thinking at every turn.",
+       "In Aqua Race, the  water gets wild and your bots come alive. Twist, turn, and zoom through the track in a high-speed face-off of skill, precision, and pure adrenaline.It is not just about speed - navigate tricky currents, dodge obstacles, and outsmart your competition to claim the ultimate victory. Every move counts, and every second could make the difference between glory and defeat.",
       posters: 
         {src: "/assets/AQUA RACE 1.png"}
       
@@ -118,7 +116,7 @@ import { v4 as uuidv4} from 'uuid'
  export const arhn_gallary = [
    {
      id: uuidv4(),
-      posters: "/assets/6617e9667ea53b0c8bd3b345.jpg",
+      posters: "public/assets/img1.jpeg",
    },
    {
      id: uuidv4(),
