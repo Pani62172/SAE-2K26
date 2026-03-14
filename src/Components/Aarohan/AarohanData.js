@@ -114,10 +114,10 @@ import { v4 as uuidv4} from 'uuid'
  ];
 
  export const arhn_gallary = [
-   {
-     id: uuidv4(),
-      posters: "public/assets/img1.jpeg",
-   },
+  //  {
+  //    id: uuidv4(),
+  //     posters: "public/assets/img1.jpeg",
+  //  },
    {
      id: uuidv4(),
       posters: "/assets/74256AE8-4932-4B9D-8F60-A571B7DF2963.jpg",
@@ -182,10 +182,10 @@ import { v4 as uuidv4} from 'uuid'
      id: uuidv4(),
       posters: "/assets/IMG-20240411-WA0079.jpg",
    },
-    {
-     id: uuidv4(),
-      posters: "/assets/IMG-20240411-WA0079.jpg",
-   },
+  //   {
+  //    id: uuidv4(),
+  //     posters: "/assets/IMG-20240411-WA0079.jpg",
+  //  },
  ];
  
 //  export const organizers = [

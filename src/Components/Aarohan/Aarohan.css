@@ -793,6 +793,8 @@ p {
   .arhn-grid-container {
     grid-template-columns: repeat(3, 1fr);
     gap: 4rem;
+    justify-content: center;
+    margin: 0 auto;
   }
 }
 
