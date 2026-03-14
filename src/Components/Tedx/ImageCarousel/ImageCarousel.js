@@ -15,7 +15,7 @@ const ImageCarousel = () => {
     'https://i.ibb.co/Z2sSXr6/Screenshot-2024-08-22-095218.png',
     'https://i.ibb.co/0r7cgnh/Screenshot-2024-08-22-102824.png',
     'https://i.ibb.co/gbHJFF4Y/IMG-7310.jpg',
-    'https://i.ibb.co/ySCDbNC/Screenshot-2024-08-22-095908.png',
+    'https://i.ibb.co/pvWKyb6v/IMG-7648.jpg',
     'https://i.ibb.co/R2PLhXY/Screenshot-2024-08-22-100914.png',
     'https://i.ibb.co/gSy7yxR/Screenshot-2024-08-22-095423.png',
   ];
@@ -30,7 +30,7 @@ const ImageCarousel = () => {
 
   return (
     <div>
-      <div className="px-5 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="px-5 grid grid-cols-1 md:grid-cols-3 gap-6 mb-5">
         {Array.from({ length: 3 }).map((_, colIndex) => (
           <div className="grid gap-4" key={colIndex}>
             {images.slice(colIndex * 4, colIndex * 4 + 4).map((imgSrc, imgIndex) => (
@@ -48,16 +48,26 @@ const ImageCarousel = () => {
       </div>
 
       {selectedImage && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
-          <div className="relative">
-            <button
-              className="ted-close-button"
-              onClick={handleClose}
-            >
-              &times;
-            </button>
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+          onClick={handleClose} // Closes modal when clicking the dark background
+        >
+          {/* Moved the close button outside the image wrapper and made it fixed 
+            so it stays perfectly in the top right corner of the screen.
+          */}
+          <button
+            className="fixed top-4 right-6 md:top-8 md:right-10 z-[100] text-white text-5xl hover:text-red-500 transition-colors focus:outline-none"
+            onClick={handleClose}
+          >
+            &times;
+          </button>
+
+          <div 
+            className="relative px-4"
+            onClick={(e) => e.stopPropagation()} // Prevents clicks on the actual image from closing the modal
+          >
             <img
-              className="max-w-full max-h-screen"
+              className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
               src={selectedImage}
               alt="Zoomed In"
             />

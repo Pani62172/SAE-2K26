@@ -4,6 +4,21 @@ import './Speakers.css';
 
 const speakers = [
   {
+    name: 'Jaskaran Singh',
+    role: 'ICPC World Finalist, Software Engineer at Google',
+    imgSrc: 'https://i.ibb.co/KBWFygJ/1741464949602-e-2147483647-v-beta-t-XUSFbl-K3b-HHs0i4-FLBg-KEFK2u-FYr-IRPudv-USOdg-l-I.jpg'
+  },
+  {
+    name: 'Preeti Sarkar',
+    role: 'Actor, Content Creator, Designer and Founder @ Preetizen',
+    imgSrc: 'https://i.ibb.co/9m51kw9b/202102181717-HRMFVbab-Wu-XPIXcb.jpg'
+  },
+  {
+    name: 'Sourav Sarkar',
+    role: 'Merchant Navy Officer,Naval Trainer,Marine Engineer and World Traveller',
+    imgSrc: 'https://i.ibb.co/sdpmqx2z/hq720.jpg'
+  },
+  {
     name: 'Prachi Tehlan',
     role: 'Actress, Style icon and Ngo Founder',
     imgSrc: "https://i.ibb.co/m5MrnHLz/prachitelhan.jpg"
@@ -47,21 +62,6 @@ const speakers = [
     name: 'Kenidra Woods',
     role: 'Mental Health and Social Justice Activist',
     imgSrc: 'https://i.postimg.cc/DwMJznVr/Screenshot-2024-08-22-022326.png'
-  },
-  {
-    name: 'Jaskaran Singh',
-    role: 'ICPC World Finalist, Software Engineer at Google',
-    imgSrc: 'https://i.ibb.co/KBWFygJ/1741464949602-e-2147483647-v-beta-t-XUSFbl-K3b-HHs0i4-FLBg-KEFK2u-FYr-IRPudv-USOdg-l-I.jpg'
-  },
-  {
-    name: 'Preeti Sarkar',
-    role: 'Actor, Content Creator, Designer and Founder @ Preetizen',
-    imgSrc: 'https://i.ibb.co/9m51kw9b/202102181717-HRMFVbab-Wu-XPIXcb.jpg'
-  },
-  {
-    name: 'Sourav Sarkar',
-    role: 'Merchant Navy Officer,Naval Trainer,Marine Engineer and World Traveller',
-    imgSrc: 'https://i.ibb.co/sdpmqx2z/hq720.jpg'
   },
 ];
 
