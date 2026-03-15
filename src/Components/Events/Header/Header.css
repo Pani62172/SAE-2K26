@@ -108,6 +108,14 @@ body, html {
   }
 }
 
+
+@media (min-width:1025px) and (max-width: 320px) {
+  .header {
+    background-image: url('./sae corner.png');
+   
+  }
+}
+
 /*
 body, html {
     margin: 0;

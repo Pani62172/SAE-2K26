@@ -116,7 +116,7 @@ export const secondYear = [
         "linkedinLink": "",
     },
     {
-        "url": require('../Assets/2ndYearImg/seepani.jpeg'),
+        "url": require('../Assets/2ndYearImg/Roshini2.jpeg'),
         "name": "Seepani Roshini",
         "instaLink": "",
         "linkedinLink": "",
