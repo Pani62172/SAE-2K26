@@ -63,7 +63,7 @@ function Aarohan() {
     }
 
     return (
-      <div key={event.id} className="carousel-item-wrapper">
+      <div key={event.id} className="carousel-item-wrapper w-full flex justify-center">
         <div className="arhn-card">
           <img
             src={imgSrc}
@@ -251,13 +251,9 @@ function Aarohan() {
         </div>
 
         {isMobile ? (
-          <div
-            style={{ height: "600px", width: "100%", position: "relative" }}
-          >
+          <div style={{ height: '520px', width: '100%', position: 'relative' }}>
             <CardCarousel
-              baseWidth={
-                window.innerWidth < 400 ? window.innerWidth - 60 : 350
-              }
+              baseWidth={Math.min(window.innerWidth - 40, 350)}
               autoplay={true}
               loop={true}
             >
@@ -265,7 +261,7 @@ function Aarohan() {
             </CardCarousel>
           </div>
         ) : (
-          <div className="arhn-grid-container">
+          <div className="arhn-grid-container w-full max-w-7xl mx-auto ">
             {eventCards}
           </div>
         )}
