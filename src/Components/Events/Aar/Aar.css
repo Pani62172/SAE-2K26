@@ -30,7 +30,7 @@
 .aar-paragraph {
     color: rgb(217, 210, 210);
     font-size: 1.2rem;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     text-align: center;
     max-width: 800px;
     opacity: 0;
@@ -62,7 +62,7 @@
 .aar-card {
     position: relative;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 18px;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.1);

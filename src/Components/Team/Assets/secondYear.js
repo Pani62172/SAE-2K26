@@ -110,7 +110,7 @@ export const secondYear = [
         "linkedinLink": "",
     },
     {
-        "url": require('../Assets/2ndYearImg/rikhil.jpeg'),
+        "url": require('../Assets/2ndYearImg/Rikhil.png'),
         "name": "Rikhil Kunta",
         "instaLink": "https://www.instagram.com/rikhil_06_08/?utm_source=ig_web_button_share_sheet",
         "linkedinLink": "",

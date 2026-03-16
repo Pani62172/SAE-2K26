@@ -307,14 +307,19 @@ p {
   display: grid;
   place-items: center;
   overflow: hidden;
-  mask-image: linear-gradient(
+  -webkit-mask-image: linear-gradient(
     to right,
     transparent,
     black 10%,
     black 90%,
     transparent
   );
+<<<<<<< Updated upstream
   -webkit-mask-image: linear-gradient(
+=======
+
+  mask-image: linear-gradient(
+>>>>>>> Stashed changes
     to right,
     transparent,
     black 10%,

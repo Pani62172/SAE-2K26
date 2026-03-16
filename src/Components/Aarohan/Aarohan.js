@@ -199,12 +199,18 @@ function Aarohan() {
           </section>
 
           <section className="parallax-section">
+<<<<<<< Updated upstream
             {/*<figure className="parallax-image-container">
               <img
                 src="./Roboliga_Aarohan_25_verified.png"
                 alt="SAE X Aarohan"
               />
             </figure>*/}
+=======
+           {/* <figure className="parallax-image-container">
+              <img src="./Roboliga_Aarohan_25_verified.png" alt="SAE X Aarohan" />
+              </figure>*/}
+>>>>>>> Stashed changes
             <article className="parallax-content">
               <h1
                 className="w-full text-center"
