@@ -18,6 +18,7 @@
     line-height: 1.2;
     margin-bottom: 1rem;
     color: rgb(202, 52, 53);
+    
     animation: fadeIn 2s ease-in-out;
     text-align: center;
 }
