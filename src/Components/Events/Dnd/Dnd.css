@@ -213,11 +213,17 @@
       padding: 0 15px;
     }
 
-    .Dnd-cards { gap: 20px; }
+    .Dnd-cards { 
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
     .Dnd-card {
-      width: 300px;
-      height: 400px;
+      width: 250px;
+      height: 300px;
     }
 
     .Dnd-cards.in-view .Dnd-card:hover {
@@ -231,13 +237,6 @@
   }
 
   @media (max-width: 480px) {
-
-    .Dnd-cards { gap: 15px; }
-
-    .Dnd-card {
-      width: 300px;
-      height: 400px;
-    }
 
     .animated-line {
       width: 90%;

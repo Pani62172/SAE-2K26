@@ -123,6 +123,15 @@
 
     .aar-cards {
         grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aar-card {
+        height: 300px;
+        width: 250px;
     }
 }
 
