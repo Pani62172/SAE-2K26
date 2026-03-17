@@ -40,13 +40,13 @@ export const thirdYear = [
         "name": "Dibyaranjan Das",
         "instaLink": "https://www.instagram.com/dibya.nitdgp4470?r=nametag",
         "linkedinLink": "https://www.linkedin.com/in/dibyaranjan-das-0622b42b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    },
+    },*/
     {
         "url": require('../Assets/3rdYearImg/Dibyaranjan Nayak .jpg'),
         "name": "Dibyaranjan Nayak",
         "instaLink": "https://www.instagram.com/dibya.9778?utm_source=qr&igsh=eXUzOGplM2ZuYjhl",
         "linkedinLink": "https://www.linkedin.com/in/dibya-ranjan-nayak-35a2b92b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    },*/
+    },
     {
         "url": require('../Assets/3rdYearImg/Shubham Roy.jpg'),
         "name": "Shubham Roy",
@@ -137,12 +137,12 @@ export const thirdYear = [
         "instaLink": "https://www.instagram.com/_rohandey78?r=nametag",
         "linkedinLink": "https://www.linkedin.com/in/rohan-dey-5a68b2307?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
-    /*{
+    {
         "url": require('../Assets/3rdYearImg/Rohit Singh .jpg'),
         "name": "Rohit Singh",
         "instaLink": "https://www.instagram.com/_.rohit_321?r=nametag",
         "linkedinLink": "https://www.linkedin.com/in/rohit-singh-6993b1277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    },*/
+    },
     {
         "url": require('../Assets/3rdYearImg/Sachin Kumar Yadav .jpg'),
         "name": "Sachin Kumar Yadav",
