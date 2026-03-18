@@ -8,16 +8,16 @@ const ImageCarousel = () => {
   const images = [
     'https://i.ibb.co/tTHc8cL1/IMG-7366.jpg',
     'https://i.ibb.co/d4K6n96h/IMG-7658.jpg',
-    'https://i.ibb.co/J7BmrG2/Screenshot-2024-08-22-102225.png',
-    'https://i.ibb.co/hHhmGZx/Screenshot-2024-08-22-095724.png',
+    'https://i.ibb.co/Kppsz5kM/IMG-7472.jpg',
+    'https://i.ibb.co/x81G9NyY/IMG-7524.jpg',
     'https://i.ibb.co/XkpQjnGQ/IMG-7455.jpg',
-    'https://i.ibb.co/LPJNw6t/Screenshot-2024-08-22-100019.png',
-    'https://i.ibb.co/Z2sSXr6/Screenshot-2024-08-22-095218.png',
+    'https://i.ibb.co/TBPJZvmD/IMG-7640-1.jpg',
+    'https://i.ibb.co/TDWzmXgz/IMG-7379.jpg',
     'https://i.ibb.co/Dg1mH7ZD/Whats-App-Image-2026-03-14-at-8-12-16-PM.jpg',
+    'https://i.ibb.co/TxqwbzNM/IMG-7333.jpg',
     'https://i.ibb.co/gbHJFF4Y/IMG-7310.jpg',
     'https://i.ibb.co/pvWKyb6v/IMG-7648.jpg',
     'https://i.ibb.co/tFVTZrr/Whats-App-Image-2026-03-14-at-8-12-15-PM.jpg',
-    'https://i.ibb.co/gSy7yxR/Screenshot-2024-08-22-095423.png',
   ];
 
   const handleClick = (imgSrc) => {

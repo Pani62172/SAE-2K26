@@ -57,7 +57,7 @@ const About = () => {
         </div>
         <div className="flex justify-center w-full md:w-auto order-2 md:order-2">
           <img
-            src="https://live.staticflickr.com/65535/52768700101_42d558203a_c.jpg"
+            src="https://i.ibb.co/d4K6n96h/IMG-7658.jpg"
             alt="SAE in Tedx"
             className="w-40 h-40 md:w-80 md:h-80 object-cover rounded-full shadow-md"
           />
