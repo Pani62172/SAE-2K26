@@ -81,7 +81,7 @@ export const thirdYear = [
 
 
     {
-        "url": require('../Assets/3rdYearImg/Kashish.png'),
+        "url": require('../Assets/3rdYearImg/Kashish.jpeg'),
         "name": "Kashish Sonkar",
         "instaLink": "https://www.instagram.com/_kashish_0603?r=nametag",
         "linkedinLink": "https://www.linkedin.com/in/kashish-sonkar-23950728a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -108,7 +108,7 @@ export const thirdYear = [
         "linkedinLink": "",
     },
     {
-        "url": require('../Assets/3rdYearImg/Monisha.jpg'),
+        "url": require('../Assets/3rdYearImg/Monisha.jpeg'),
         "name": "Monisha",
         "instaLink": "https://www.instagram.com/mon_._isha?r=nametag",
         "linkedinLink": "https://www.linkedin.com/in/monisha-b354b2308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",

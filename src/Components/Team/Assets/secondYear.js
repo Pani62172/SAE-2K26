@@ -2,6 +2,12 @@
 export const secondYear = [
     
     {
+        "url": require('../Assets/2ndYearImg/Abhay yadav.jpg'),
+        "name": "Abhay Yadav",
+        "instaLink": "",
+        "linkedinLink": "",
+    },
+    {
         "url": require('../Assets/2ndYearImg/Alok.jpeg'),
         "name": "Alok Das",
         "instaLink": "",

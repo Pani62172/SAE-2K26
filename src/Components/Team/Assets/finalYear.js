@@ -22,7 +22,7 @@ export const finalYear = [
         "linkedinLink": "https://www.linkedin.com/in/aryangupta2511/",
     },
     {
-        "url": require("./FinalYearImg/Nisarga Jana.png"),
+        "url": require("./FinalYearImg/Nisarga Jana.jpeg"),
         "name": "Nisarga Jana",
         "position": "Treasurer",
         "instaLink": "https://instagram.com/nj_0.0_?igshid=NGExMmI2YTkyZg==",
