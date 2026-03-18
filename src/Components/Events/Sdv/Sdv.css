@@ -122,14 +122,14 @@
 @media (max-width: 576px) {
     .Sdv-heading { font-size: 2.25rem; }
     .Sdv-paragraph { 
-        font-size: 0.75rem; 
+        font-size: 0.85rem; 
         text-align: centre;
     }
 }
 
 @media (max-width: 400px) {
     .Sdv-heading { font-size: 2.1rem; }
-    .Sdv-paragraph { font-size: 0.7rem; }
+    .Sdv-paragraph { font-size: 0.9rem; }
 }
 
 @media (max-width: 320px) {
