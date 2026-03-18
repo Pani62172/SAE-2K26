@@ -37,9 +37,9 @@ import { v4 as uuidv4} from 'uuid'
    },
    {
      id: uuidv4(),
-     name: "DATA SCIENCE WITH RASPBERRY PI",
+     name: "AI ML WORKSHOP",
      content:
-       "The workshop combined data science with Raspberry Pi, guided by experts. Participants learned data collection, processing, and analysis with Python, exploring IoT applications. They gained skills for impactful projects, suitable for all experience levels.",
+       "The workshop focused on building AI systems from the ground up, guided by industry experts. Participants learned the fundamentals of AI/ML, Python programming, and data handling while developing neural networks and CNN models using real-world datasets. Through hands-on sessions and practical implementation, they gained the skills to create intelligent systems, making it suitable for beginners and enthusiasts aiming to strengthen their technical and career prospects.",
       posters:
         // {src: "/assets/ArhnWorkshop.jpg", label: 2024},
         {src: "AI ML WORSKHOP.png"}
