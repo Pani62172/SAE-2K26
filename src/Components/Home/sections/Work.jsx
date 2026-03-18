@@ -80,7 +80,7 @@ const VideoCard = ({ video, index }) => {
         </div>
       </div>
 
-      {/* Label */}
+      {/* Label 
       <div className="absolute bottom-0 left-0 right-0 p-4 lg:p-5">
         <span className="text-white/50 text-xs uppercase tracking-[0.25em] font-semibold">
           {String(index + 1).padStart(2, '0')}
@@ -88,7 +88,7 @@ const VideoCard = ({ video, index }) => {
         <p className="text-white font-heading font-semibold text-base lg:text-lg leading-tight mt-0.5">
           {video.label}
         </p>
-      </div>
+      </div>*/}
 
       {/* Red border accent on hover */}
       <div
