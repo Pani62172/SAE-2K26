@@ -11,14 +11,7 @@ import { v4 as uuidv4} from 'uuid'
         {src: "/assets/Bidwit_aarohan_25_verified.jpg"}
       
    },
-   {
-     id: uuidv4(),
-     name: "ELECTRA",
-     content:
-       "In Electra, participants designed circuits using electronic devices and logic gates in simulation software. Electra offered hands-on training, combining practical instruction with interactive circuit creation for a dynamic experience. Participants used their knowledge and intuition to craft and test circuits effectively.",
-      posters: 
-        {src: "/assets/arhnElectra.jpg"}
-   },
+
    {
      id: uuidv4(),
      name: "DEATH NOTE",
@@ -27,23 +20,6 @@ import { v4 as uuidv4} from 'uuid'
       posters: 
         // {src: "/assets/arhnDeathNote.jpg", label: 2024},
         {src: "/assets/DEATHNOTE7.png"}
-   },
-   {
-     id: uuidv4(),
-     name: "FLYING UAV",
-     content:
-       "In Flying UAV, participants are trained to build and operate unmanned aerial vehicles (UAVs), transforming dreams of flight into reality. With hands-on experience, we explore the boundless possibilities of innovation, taking to the skies and pushing the limits of what's achievable with cutting-edge technology.",
-      posters:{src: "/assets/arhnFlying.jpg"}
-   },
-   {
-     id: uuidv4(),
-     name: "DATA SCIENCE WITH RASPBERRY PI",
-     content:
-       "The workshop combined data science with Raspberry Pi, guided by experts. Participants learned data collection, processing, and analysis with Python, exploring IoT applications. They gained skills for impactful projects, suitable for all experience levels.",
-      posters:
-        // {src: "/assets/ArhnWorkshop.jpg", label: 2024},
-        {src: "AI ML WORSKHOP.png"}
-      
    },
    {
      id: uuidv4(),
@@ -114,13 +90,13 @@ import { v4 as uuidv4} from 'uuid'
  ];
 
  export const arhn_gallary = [
-  //  {
-  //    id: uuidv4(),
-  //     posters: "public/assets/img1.jpeg",
-  //  },
    {
      id: uuidv4(),
-      posters: "/assets/74256AE8-4932-4B9D-8F60-A571B7DF2963.jpg",
+     posters: "/assets/img1.jpg",
+    },
+   {
+     id: uuidv4(),
+      posters: "/assets/img3.jpg",
    },
    {
      id: uuidv4(),
@@ -128,11 +104,11 @@ import { v4 as uuidv4} from 'uuid'
    },
    {
      id: uuidv4(),
-      posters: "/assets/e50cb462a23340408ac58b4a5057f3cf.jpg",
+      posters: "/assets/img2.jpg",
    },
    {
      id: uuidv4(),
-      posters: "/assets/arhnLogo2024.jpg",
+      posters: "/assets/img4.jpg",
    },
    {
      id: uuidv4(),
@@ -152,11 +128,11 @@ import { v4 as uuidv4} from 'uuid'
    },
    {
      id: uuidv4(),
-      posters: "/assets/IMG-20240411-WA0075.jpg",
+      posters: "/assets/img5.jpg",
    },
    {
      id: uuidv4(),
-      posters: "/assets/IMG_4717.jpg",
+      posters: "/assets/img6.jpg",
    },
    {
      id: uuidv4(),
@@ -173,10 +149,6 @@ import { v4 as uuidv4} from 'uuid'
    {
      id: uuidv4(),
       posters: "/assets/IMG_4764.jpg",
-   },
-   {
-     id: uuidv4(),
-      posters: "/assets/IMG-20240411-WA0133.jpg",
    },
    {
      id: uuidv4(),

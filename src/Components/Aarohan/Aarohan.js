@@ -106,7 +106,9 @@ const handleCardMouseMove = (e) => {
           onMouseMove={handleCardMouseMove}
           onMouseLeave={handleCardMouseLeave}
         >
-          <img src={imgSrc} alt={event.name} className="w-full h-full object-cover" />
+          <div className="w-full h-full p-4 flex items-center justify-center">
+          <img src={imgSrc} alt={event.name} className="w-full h-auto max-h-[600px] object-contain block rounded-lg shadow-lg" />
+          </div>
           <div className="arhn-card-content">
             <h2 className="absolute top-6 w-full px-4 z-20 text-2xl lg:text-3xl font-bold text-white text-center drop-shadow-xl break-words leading-tight">{event.name}</h2>
             <div className="absolute top-25 left-1/2 -translate-x-1/2 h-1 w-12 bg-red-600 rounded-full z-20 drop-shadow-md"></div>
@@ -249,55 +251,10 @@ return (
             </h1>
             <p className="text-gray-500 mt-4 tracking-widest uppercase text-lg">Our Events and Workshops in AAROHAN</p>
           </div>
-          {isMobile ? (
-          <div style={{ height: '600px', width: '100%', position: 'relative' }}>
-            <CardCarousel baseWidth={window.innerWidth < 400 ? window.innerWidth - 60 : 350} 
-              autoplay={true} 
-              loop={true}>
-              {eventCards}
-            </CardCarousel>
-          </div>
-        ) : (
-          <div className="arhn-grid-container w-full max-w-7xl mx-auto">
+          <div className="w-full max-w-12xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
             {eventCards}
           </div>
-        )}
         </div>
-          {/* <div style={{ height: '600px', width: '100%', position: 'relative' }}>
-          <CardCarousel baseWidth={350} autoplay={true} loop={true}>
-              {events.map((event) => {
-                let imgSrc = "";
-               if (event.posters) {
-    if (typeof event.posters === "string") {
-        imgSrc = event.posters; 
-    } else if (event.posters.src) {
-        imgSrc = event.posters.src;
-    } else if (Array.isArray(event.posters) && event.posters.length > 0) {
-        imgSrc = event.posters[0].src;
-    }
-} else {
-    imgSrc = event.image || ""; 
-}
-                return (
-                 <div key={event.id} className="carousel-item-wrapper">
-                    <div 
-                      className="arhn-card"
-                      onMouseMove={handleCardMouseMove}
-                      onMouseLeave={handleCardMouseLeave}
-                    >
-                      <img src={imgSrc} alt={event.name} />
-                      <div className="arhn-card-content">
-                        <h2 className="absolute top-6 w-full px-4 z-20 text-2xl lg:text-3xl font-bold text-white text-center drop-shadow-xl break-words leading-tight">{event.name}</h2>
-                        <div className="absolute top-25 left-1/2 -translate-x-1/2 h-1 w-12 bg-red-600 rounded-full z-20 drop-shadow-md"></div>
-                        <p className="text-sm text-gray-300 px-4">{event.content}</p>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </CardCarousel>
-              </div>
-        </div> */}
  
         <div className="px-6 lg:px-32 py-20">
           <div className="mb-16 text-center" data-aos="fade-up">
@@ -305,32 +262,16 @@ return (
               AAROHAN GALLERY
             </h1>
           </div>
-          {isMobile ? (
-          /* MOBILE VIEW: The infinite sliding track */
-          <div className="arhn-slider">
-            <div className="arhn-slide-track">
-              {/* Note: We double the array here so the infinite scroll doesn't glitch */}
-              {[...arhn_gallary, ...arhn_gallary].map((arhn_img, idx) => (
-                <div key={`mobile-gal-${idx}`} className="arhn-single-slide w-[300px] h-[200px] mx-4">
-                  <img src={arhn_img.posters} alt="gallery" className="w-full h-full object-cover rounded-xl shadow-md" />
-                </div>
-              ))}
-            </div>
-          </div>
-        ) : (
-          /* DESKTOP VIEW: A sleek, responsive Tailwind Grid */
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-7xl mx-auto px-4">
-            {/* Note: We only map through the gallery once here! */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-7xl mx-auto px-4">
             {arhn_gallary.map((arhn_img, idx) => (
               <div 
-                key={`desktop-gal-${idx}`} 
-                className="w-full h-[250px] rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+                key={`gallery-${idx}`} 
+                className="w-full h-[250px] sm:h-[300px] md:h-[350px] rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
               >
-                <img src={arhn_img.posters} alt="gallery" className="w-full h-full object-cover" />
+                <img src={arhn_img.posters} alt="gallery" className="w-full h-full object-cover block" />
               </div>
             ))}
           </div>
-        )}
 
       </div>
     </>

@@ -154,12 +154,13 @@ p {
 .arhn-card {
   position: relative;
   transform-style: preserve-3d;
-  width: 100%;
-  height: 450px;
-
+  /* width: 100%; */
+  /* max-width: 500px; */
+  height: auto !important;
+  /* margin: 0 auto !important; */
   border-radius: 24px;
   border: 1px solid rgb(21, 20, 20);
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -179,6 +180,10 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   will-change: transform;
+  margin: 0 auto 40px auto !important;
+  width: 90vw;
+  max-width: 400px;
+  height: auto !important;
 }
 
 .arhn-grid-container {
@@ -187,10 +192,30 @@ p {
   justify-content: center !important;
   align-items: center !important;
   gap: 3rem !important;
-
+  aspect-ratio: 1 / 1;
   max-width: 1300px !important;
   width: 100% !important;
   margin: 0 auto !important;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    rgba(26, 29, 36, 0.6),
+    rgba(21, 23, 26, 0.4)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 0.4s ease;
+  cursor: pointer;
+}
+.arhn-grid-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
 }
 .arhn-grid-container .carousel-item-wrapper {
   width: 350px !important;
@@ -320,38 +345,6 @@ p {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
-.arhn-slider {
-  height: auto;
-  min-height: 250px;
-  margin: 50px auto;
-  position: relative;
-  width: 95%;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 10%,
-    black 90%,
-    transparent
-  );
-
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 10%,
-    black 90%,
-    transparent
-  );
-}
-
-.arhn-slide-track {
-  display: flex;
-  width: max-content;
-  gap: 15px;
-  animation: scrollGallery 40s linear infinite;
-}
 @keyframes scrollGallery {
   0% {
     transform: translateX(0);
@@ -362,49 +355,6 @@ p {
 }
 .arhn-slider:hover .arhn-slide-track {
   animation-play-state: paused;
-}
-
-@keyframes scroll {
-  from {
-    transform: translateX(0%);
-  }
-
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-.arhn-single-slide {
-  width: clamp(300px, 35vw, 500px);
-  height: clamp(200px, 25vw, 350px);
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  perspective: 100px;
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  flex-shrink: 0;
-}
-
-.arhn-single-slide img {
-  width: 100%;
-  height: 150%;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  border-radius: 16px;
-  filter: greyscale(20%) brightness(0.9);
-}
-
-.arhn-single-slide:hover img {
-  transform: scale(1.05) translateZ(20px);
-  filter: grayscale(0%) brightness(1.1);
-  box-shadow: 0 16px 48px rgba(255, 0, 0, 0.3);
-  border: 1px solid rgba(255, 0, 0, 0.5);
-}
-.arhn-single-slide:hover img:hover {
-  transform: translateZ(10px);
-  border-radius: 5%;
 }
 
 .arhn-slider::before,
@@ -807,6 +757,8 @@ p {
 
   .arhn-card {
     height: 450px;
+    width: 100% !important;
+    justify-content: center;
   }
 
   .flex-col-mobile {
@@ -942,7 +894,7 @@ p {
   .carousel-item-wrapper {
     width: 100vw !important;
     max-width: 100vw !important;
-    height: 400px;
+    height: auto !important;
     padding: 0 !important;
     margin: 0 !important;
     display: flex !important;
@@ -967,10 +919,10 @@ p {
   }
 
   .arhn-card {
-    width: 70vw;
-    max-width: 340px;
-    height: 420px;
-    margin: 0 auto !important;
+    width: 90vw;
+    max-width: 400px;
+    height: auto !important;
+    margin: 0 40px auto !important;
   }
 
   .arhn-card-content {
