@@ -2,6 +2,12 @@
 export const secondYear = [
     
     {
+        "url": require('../Assets/2ndYearImg/Abhay yadav.jpg'),
+        "name": "Abhay Yadav",
+        "instaLink": "",
+        "linkedinLink": "",
+    },
+    {
         "url": require('../Assets/2ndYearImg/Alok.jpeg'),
         "name": "Alok Das",
         "instaLink": "",
@@ -98,19 +104,25 @@ export const secondYear = [
         "linkedinLink": "https://www.linkedin.com/in/praveen-kumar-vadlamuri-893989333?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     {
+        "url": require('../Assets/2ndYearImg/pruthi.jpeg'),
+        "name": "Pruthi Swarupa Nayak",
+        "instaLink": "https://www.instagram.com/pruthi._?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        "linkedinLink": "",
+    },
+    {
         "url": require('../Assets/2ndYearImg/Ravi.jpeg'),
         "name": "Ravi Shankar Mishra",
         "instaLink": "https://www.instagram.com/imravi_mishra16?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
         "linkedinLink": "",
     },
     {
-        "url": require('../Assets/2ndYearImg/rikhil.jpeg'),
+        "url": require('../Assets/2ndYearImg/Rikhil.png'),
         "name": "Rikhil Kunta",
         "instaLink": "https://www.instagram.com/rikhil_06_08/?utm_source=ig_web_button_share_sheet",
         "linkedinLink": "",
     },
     {
-        "url": require('../Assets/2ndYearImg/seepani.jpeg'),
+        "url": require('../Assets/2ndYearImg/Roshini2.jpeg'),
         "name": "Seepani Roshini",
         "instaLink": "",
         "linkedinLink": "",

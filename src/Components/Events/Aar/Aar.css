@@ -18,6 +18,7 @@
     line-height: 1.2;
     margin-bottom: 1rem;
     color: rgb(202, 52, 53);
+    
     animation: fadeIn 2s ease-in-out;
     text-align: center;
 }
@@ -30,7 +31,7 @@
 .aar-paragraph {
     color: rgb(217, 210, 210);
     font-size: 1.2rem;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     text-align: center;
     max-width: 800px;
     opacity: 0;
@@ -62,15 +63,15 @@
 .aar-card {
     position: relative;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 18px;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.1);
-    /* Glassmorphism effect */
+ 
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.5s ease, box-shadow 0.5s ease;
     cursor: pointer;
-    /* Pointer cursor for interactivity */
+
 }
 
 .aar-card:hover {
@@ -89,7 +90,7 @@
 .aar-card:hover .aar-card-image {
     transform: scale(1.1);
     filter: brightness(0.9);
-    /* Darken image on hover */
+  
 }
 
 .aar-animated-line {
@@ -122,6 +123,15 @@
 
     .aar-cards {
         grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aar-card {
+        height: 300px;
+        width: 250px;
     }
 }
 

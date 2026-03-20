@@ -19,7 +19,7 @@ body, html {
   min-height: 400px;
 
   /* Image responsiveness core */
-  background-image: url('./sae corner.png');
+  background-image: url('./sae3.jpeg');
   background-size: cover;          /* Always covers the container */
   background-position: center center;
   background-repeat: no-repeat;
@@ -105,6 +105,14 @@ body, html {
 @media (max-width: 360px) {
   .header {
     min-height: 240px;
+  }
+}
+
+
+@media (min-width:1025px) and (max-width: 320px) {
+  .header {
+    background-image: url('./sae corner.png');
+   
   }
 }
 
