@@ -96,7 +96,7 @@ export const thirdYear = [
 
 
     {
-        "url": require('../Assets/3rdYearImg/Lakshay Attri.jpg'),
+        "url": require('../Assets/3rdYearImg/Lakshay Attri.jpeg'),
         "name": "Lakshay Attri",
         "instaLink": "https://www.instagram.com/lakshay_attri_001?r=nametag",
         "linkedinLink": "https://www.linkedin.com/in/lakshay-attri-5a18b1307?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -162,7 +162,7 @@ export const thirdYear = [
         "linkedinLink": "https://https://www.linkedin.com/in/saransh-charchit-bb19a02ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },*/
     {
-        "url": require('../Assets/3rdYearImg/Shasvat Singh.jpg'),
+        "url": require('../Assets/3rdYearImg/Shasvat Singh.jpeg'),
         "name": "Shasvat Singh",
         "instaLink": "https://www.instagram.com/_.shasvat.__?igsh=Ynp4a3Vka2d3aDA0&utm_source=qr",
         "linkedinLink": "https://www.linkedin.com/in/shasvat-singh-0078b1307/",
