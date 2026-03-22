@@ -17,7 +17,7 @@ function Footer() {
           <h5 className="text-[#ca3435] text-2xl mb-3 relative after:content-[''] after:w-[50px] after:h-[2px] after:bg-[#ca3435] after:absolute after:-bottom-2.5 after:left-0">
             Follow us
           </h5>
-          <div className="flex gap-[15px]">
+          <div className="flex gap-[15px] mt-2">
             <Link target='_blank' to="https://www.facebook.com/SAENITD?mibextid=ZbWKwL" className="text-white text-2xl transition-colors duration-300 hover:text-[#ca3435]">
               <FaFacebook />
             </Link>

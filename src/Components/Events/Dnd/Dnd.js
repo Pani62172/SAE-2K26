@@ -77,7 +77,7 @@ const Dnd = () => {
         className={`Dnd-paragraph ${paragraphInView ? 'in-view' : ''}`}
         ref={paragraphRef}
       >
-        SAE presents an electrifying event 'Drag & Drift' where participants navigate intricate maze designs filled with challenging obstacles. This event not only tests your ability to skillfully dodge these pesky barriers but also deepens your understanding of the car's underlying mechanics.
+        SAE brings you the thrilling event “Drag & Drift,” where participants maneuver through complex maze layouts packed with challenging obstacles. The competition not only tests your precision and control in avoiding these barriers but also enhances your understanding of a vehicle’s core mechanics.
       </p>
       <div
         className={`Dnd-cards ${cardsInView ? 'in-view' : ''}`}

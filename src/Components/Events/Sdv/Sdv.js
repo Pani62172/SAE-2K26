@@ -61,7 +61,7 @@ const Sdv = () => {
         className={`Sdv-paragraph ${paragraphInView ? 'in-view' : ''}`}
         ref={paragraphRef}
       >
-       SAE hosts an exciting workshop focused on building a self-driving vehicle prototype. As autonomous vehicles gain traction and become increasingly prevalent, this workshop will delve into the essential aspects of autonomous driving, robotics, and algorithm development. Join us to explore and master the cutting-edge technologies shaping the future of transportation.
+       SAE organizes an engaging workshop centered on developing a self-driving vehicle prototype. As autonomous vehicles continue to gain momentum and become more widespread, this workshop explores the core principles of autonomous driving, robotics, and algorithm design. It offers participants an opportunity to understand and work with the advanced technologies driving the future of transportation.
       </p>
       <div
         className={`Sdv-gallery ${galleryInView ? 'in-view' : ''}`}

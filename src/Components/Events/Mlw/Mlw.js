@@ -68,7 +68,7 @@ const Mlw = () => {
           className={`Mlw-paragraph ${paragraphInView ? 'in-view' : ''}`}
           ref={paragraphRef}
         >
-          SAE hosts an exciting workshop focused on building a machine learning prototype. As AI and machine learning gain traction and become increasingly prevalent, this workshop will delve into the essential aspects of machine learning, data science, and algorithm development. Join us to explore and master the cutting-edge technologies shaping the future of automation.
+          SAE conducts an engaging workshop focused on building a machine learning prototype. As AI and machine learning continue to grow in importance and adoption, the workshop covers key concepts in machine learning, data science, and algorithm development. It provides participants with an opportunity to explore and gain hands-on experience with the advanced technologies shaping the future of automation.
         </p>
         <div
           className={`Mlw-gallery ${galleryInView ? 'in-view' : ''}`}

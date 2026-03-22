@@ -75,7 +75,7 @@ const Aar = () => {
         className={`aar-paragraph ${paragraphInView ? 'in-view' : ''}`}
         ref={paragraphRef}
       >
-        SAE in Aarohan: SAE contributes to Team Aavishkar in organizing Aarohan, NIT Durgapur's annual techno-management fest, blending technical rigor with festive excitement. SAE's role ensures a dynamic platform for innovation and technical skill development.
+        SAE plays a key role in supporting Team Aavishkar during Aarohan, the annual techno-management fest of NIT Durgapur. By combining strong technical expertise with the vibrant spirit of the fest, SAE helps create an engaging platform that promotes innovation and enhances technical skills.
       </p>
       <div
         className={`aar-cards ${cardsInView ? 'in-view' : ''}`}

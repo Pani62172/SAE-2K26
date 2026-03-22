@@ -18,7 +18,7 @@ const events = [
     accent: 'text-red-500',
     border: 'border-white/10',
     description:
-      `Team SAE-NITD's "Forum for Ideas on Science and Technology" (F.I.S.T.) cultivates a research-focused environment through engaging webinars and hands-on workshops on cutting-edge topics like generative AI. By bringing in industry experts, F.I.S.T. bridges knowledge gaps, inspires innovation, and empowers students to explore technology-based solutions to real-world challenges.`,
+      `Team SAE-NITD’s “Forum for Ideas on Science and Technology” (F.I.S.T.) fosters a research-driven environment through engaging webinars and hands-on workshops on advanced topics such as generative AI. By connecting students with industry experts, F.I.S.T. helps bridge knowledge gaps, encourages innovation, and empowers participants to develop technology-driven solutions to real-world challenges.`,
     image: fist,
     tag: 'Workshop & Webinar',
   },
@@ -29,7 +29,7 @@ const events = [
     accent: 'text-red-500',
     border: 'border-white/10',
     description:
-      'BAJA SAEINDIA is a renowned national event challenging university students to design, build, and race off-road vehicles, promoting teamwork and engineering skills. NIT Durgapur\'s Team NDORS - 25 talented students - achieved 38th place nationwide and 7th among IITs and NITs.',
+      'BAJA SAEINDIA is a prestigious national competition that challenges university students to design, build, and race off-road vehicles, fostering teamwork and engineering excellence. Representing NIT Durgapur, Team NDORS—a group of 25 talented students—secured an impressive 38th position nationwide and ranked 7th among IITs and NITs.',
     image: baja,
     tag: 'National Competition',
   },
@@ -51,7 +51,7 @@ const events = [
     accent: 'text-red-400',
     border: 'border-white/10',
     description:
-      'This workshop provides practical, in-depth experience in AI and ML, focusing on CNNs and deep learning models. Attendees tackle real-world challenges, designing neural network architectures and exploring applications in image recognition, autonomous systems, and data-driven decision-making.',
+      'This workshop offers hands-on, in-depth experience in AI and machine learning, with a focus on CNNs and deep learning models. Participants engage with real-world problems, designing neural network architectures and exploring applications in image recognition, autonomous systems, and data-driven decision-making.',
     image: aiml,
     tag: 'AI & Machine Learning',
   },
