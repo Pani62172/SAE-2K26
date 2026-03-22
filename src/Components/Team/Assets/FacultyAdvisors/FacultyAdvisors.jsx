@@ -5,7 +5,7 @@ import JD from "./images/JD.jpeg";
 
 const cards = [
   {
-    name: "Prof. Sandeep Kumar Lahiri",
+    name: "Prof. Sandip Kumar Lahiri",
     department: "Department of Chemical Engineering",
     image: SKL,
     //aos: "fade-right",
