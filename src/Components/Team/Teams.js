@@ -12,15 +12,30 @@ const Card = ({ member }) => (
   <div className="grid-item">
     <div className="card">
       <img className="card-image" src={member.url} alt={member.name} />
+      
       <div className="card-text">
         <h3 className="card-name">{member.name}</h3>
         <p className="card-designation">{member.position}</p>
       </div>
+
       <div className="social-icons">
-        <a href={member.instaLink} target="_blank" rel="noopener noreferrer" className="social-icon">
+        <a
+          href={member.instaLink || "#"}
+          target={member.instaLink ? "_blank" : "_self"}
+          rel="noopener noreferrer"
+          className="social-icon"
+          onClick={!member.instaLink ? (e) => e.preventDefault() : undefined}
+        >
           <i className="fab fa-instagram"></i>
         </a>
-        <a href={member.linkedinLink} target="_blank" rel="noopener noreferrer" className="social-icon">
+
+        <a
+          href={member.linkedinLink || "#"}
+          target={member.linkedinLink ? "_blank" : "_self"}
+          rel="noopener noreferrer"
+          className="social-icon"
+          onClick={!member.linkedinLink ? (e) => e.preventDefault() : undefined}
+        >
           <i className="fab fa-linkedin-in"></i>
         </a>
       </div>

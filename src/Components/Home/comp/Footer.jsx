@@ -17,7 +17,7 @@ function Footer() {
           <h5 className="text-[#ca3435] text-2xl mb-3 relative after:content-[''] after:w-[50px] after:h-[2px] after:bg-[#ca3435] after:absolute after:-bottom-2.5 after:left-0">
             Follow us
           </h5>
-          <div className="flex gap-[15px]">
+          <div className="flex gap-[15px] mt-2">
             <Link target='_blank' to="https://www.facebook.com/SAENITD?mibextid=ZbWKwL" className="text-white text-2xl transition-colors duration-300 hover:text-[#ca3435]">
               <FaFacebook />
             </Link>
@@ -76,8 +76,8 @@ function Footer() {
           <p className="mb-1 font-sans text-lg">Head of Corporate Communications</p>
           <div className="mb-1 font-sans text-lg flex items-center gap-2">
             <FaEnvelope />
-            <Link to="mailto:prasant999.sahu@gmail.com" className="text-white no-underline font-serif text-base hover:text-[#ca3435] transition-colors">
-              prasant999.sahu@gmail.com
+            <Link to="mailto:chandankrroy9775@gmail.com" className="text-white no-underline font-serif text-base hover:text-[#ca3435] transition-colors">
+              chandankrroy9775@gmail.com
             </Link>
           </div>
           <div className="mb-2.5 font-sans text-lg flex items-center gap-2">

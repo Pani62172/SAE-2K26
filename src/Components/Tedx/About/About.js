@@ -34,7 +34,7 @@ const About = () => {
         <div className="flex flex-col w-full md:w-1/2 p-4 order-2 md:order-1">
         <h1 className="tedx-heading">About Tedx</h1>
           <p className="text-paragraph mb-8">
-            TEDx is the independently organized counterpart to the global TED conference. Sharing TED's commitment to spreading "ideas worth spreading," TEDx provides a credible platform for emerging talent at the local level, encouraging thoughtful discussions within communities. These events are driven by passionate individuals who seek to discover new ideas and inspire conversations in their own areas.
+            TEDx is an independently organized extension of the global TED conference. Upholding TED’s mission of sharing “ideas worth spreading,” TEDx offers a credible platform for local talent, fostering meaningful discussions within communities. These events are led by passionate individuals dedicated to uncovering fresh ideas and sparking inspiring conversations in their regions.
           </p>
         </div>
         <div className="flex justify-center w-full md:w-auto order-1 md:order-2">
@@ -52,7 +52,7 @@ const About = () => {
         <div className="flex flex-col w-full md:w-1/2 p-4 order-1 md:order-1">
           <h1 className="tedx-heading">SAE in Tedx</h1>
           <p className="text-paragraph mb-8">
-            SAE, in collaboration with the Literary Circle, proudly organizes TEDxNITDurgapur as part of the global TED initiative. This significant grassroots effort aims to establish a dynamic platform that unites diverse voices from various fields, fostering the exchange of innovative ideas and perspectives. By bringing together thought leaders, creators, and visionaries, TEDxNITDurgapur aspires to inspire change, spark conversations, and contribute meaningfully to the global dialogue on cutting-edge topics and transformative ideas.
+            SAE, in collaboration with the Literary Circle, proudly organizes TEDxNITDurgapur as part of the global TED initiative. This impactful grassroots endeavor aims to create a dynamic platform that brings together diverse voices from multiple fields, encouraging the exchange of innovative ideas and perspectives. By uniting thought leaders, creators, and visionaries, TEDxNITDurgapur seeks to inspire change, ignite meaningful conversations, and contribute to the global dialogue on transformative and forward-thinking ideas.
           </p>
         </div>
         <div className="flex justify-center w-full md:w-auto order-2 md:order-2">

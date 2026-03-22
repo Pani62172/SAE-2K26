@@ -5,7 +5,7 @@ import './HeaderImg.css';
 const images = [
   // 'https://www.pittstate.edu/news/2019/images/tedx-logo-1680x680.jpg',
   'https://i.ibb.co/7CK09nR/Whats-App-Image-2024-08-21-at-23-50-49-9d4f2cd5.jpg',
-  'https://www.whiteclouds.com/wp-content/uploads/2021/10/tedx-030-letters3-600w-1.jpeg',
+  'https://i.ibb.co/LDTsKdZt/IMG-7319.jpg',
   'https://i.ibb.co/LH4qZHC/IMG-7279.jpg'
 ];
 

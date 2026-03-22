@@ -65,7 +65,7 @@ const Fist = () => {
         className={`Fist-paragraph ${paragraphInView ? 'in-view' : ''}`}
         ref={paragraphRef}
       >
-        FIST Seminar: Technological innovations are designed to shift cognitive tasks from humans to machines, enabling people to focus on more complex thinking and decision-making. Under the F.I.S.T. (Forum of Ideas on Science and Technology) initiative, SAE conducts seminars exploring these technical advancements.
+        FIST Seminar: Modern technological innovations aim to transfer routine cognitive tasks from humans to machines, allowing individuals to concentrate on higher-level thinking and decision-making. Through the F.I.S.T. (Forum of Ideas on Science and Technology) initiative, SAE organizes seminars that explore these evolving technological developments.
       </p>
       <div
         className={`Fist-cards ${cardsInView ? 'in-view' : ''}`}
