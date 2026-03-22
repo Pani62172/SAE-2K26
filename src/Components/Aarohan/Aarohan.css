@@ -522,7 +522,7 @@ p {
   width: 100vw !important;
   height: 100% !important;
   object-fit: cover !important;
-  filter: brightness(0.75) contrast(1.1);
+  filter: brightness(0.95) contrast(1.1);
   transform: scale(1.1);
   animation: breathe 10s infinite alternate ease-in-out;
 }
