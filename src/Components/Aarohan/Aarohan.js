@@ -128,19 +128,19 @@ return (
         >
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img src="./assets/IMG_4746.jpg" className="d-block w-100" alt="Hero 1" />
+              <img src="./assets/img1.jpg" className="d-block w-100" alt="Hero 1" />
             </div>
             <div className="carousel-item">
-              <img src="./6617e9667ea53b0c8bd3b345.jpg" className="d-block w-100" alt="Hero 2" />
+              <img src="./assets/img2.jpg" className="d-block w-100" alt="Hero 2" />
             </div>
             <div className="carousel-item">
-              <img src="./Electra.jpg" className="d-block w-100" alt="Hero 3" />
+              <img src="./assets/img3.jpg" className="d-block w-100" alt="Hero 3" />
             </div>
             <div className="carousel-item">
-              <img src="./CarAuction.jpg" className="d-block w-100" alt="Hero 4" />
+              <img src="./assets/img4.jpg" className="d-block w-100" alt="Hero 4" />
             </div>
             <div className="carousel-item">
-              <img src="./IMG_4570.jpg" className="d-block w-100" alt="Hero 5" />
+              <img src="./assets/img5.jpg" className="d-block w-100" alt="Hero 5" />
             </div>
           </div>
         </div>
@@ -158,7 +158,7 @@ return (
           
           <section className="parallax-section">
             <figure className="parallax-image-container">
-              <img src="./IMG_0406.JPG" alt="Aarohan Who We Are" />
+              {/* <img src="./IMG_0406.JPG" alt="Aarohan Who We Are" /> */}
             </figure>
             <article className="parallax-content">
               <h1 
@@ -194,7 +194,7 @@ return (
          
           <section className="parallax-section">
             <figure className="parallax-image-container">
-              <img src="./Roboliga_Aarohan_25_verified.png" alt="SAE X Aarohan" />
+              {/* <img src="./Roboliga_Aarohan_25_verified.png" alt="SAE X Aarohan" /> */}
             </figure>
             <article className="parallax-content">
              <h1 
