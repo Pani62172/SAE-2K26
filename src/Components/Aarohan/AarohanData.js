@@ -43,9 +43,9 @@ import { v4 as uuidv4} from 'uuid'
    },
    {
      id: uuidv4(),
-     name: "CROSSWORD",
+     name: "CROSSVERSE",
      content:
-       "In Crossword, participants united to tackle thrilling challenges, intricate puzzles, and quizzes, showcasing their skills. Running throughout AAROHAN, it was a dynamic experience filled with adrenaline-pumping puzzles and mind-bending riddles that tested wit and quick thinking at every turn.",
+       "In Crossverse, participants united to tackle thrilling challenges, intricate puzzles, and quizzes, showcasing their skills. Running throughout AAROHAN, it was a dynamic experience filled with adrenaline-pumping puzzles and mind-bending riddles that tested wit and quick thinking at every turn.",
       posters: 
         // {src: "/assets/crossword.jpg", label: 2024},
         {src: "/assets/Crossverse_Aarohan1.png"}
