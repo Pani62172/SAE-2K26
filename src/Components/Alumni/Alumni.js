@@ -384,7 +384,7 @@ const Alumni = () => {
         <div class="container-alumni mt-4">
             <h1>Meet Our <span>Alumni</span></h1>
             <div className="content-alumni mt-6">
-                <p id='alumni-content'>The alumni of 2023 and 2024 have played a pivotal role in building the club’s esteemed reputation through their dedicated efforts in organizing a wide range of successful events, including SDV, TEDx, Aarohan, Drag & Drift, F.I.S.T., webinars, and various interactive workshops. Their contributions to the club’s Annual Magazine, Autopia, along with creating content on emerging technologies for Cryptech, have been truly commendable.
+                <p id='alumni-content'>The alumni of 2024 and 2025 have played a pivotal role in building the club’s esteemed reputation through their dedicated efforts in organizing a wide range of successful events, including SDV, TEDx, Aarohan, Drag & Drift, F.I.S.T., webinars, and various interactive workshops. Their contributions to the club’s Annual Magazine, Autopia, along with creating content on emerging technologies for Cryptech, have been truly commendable.
 
 In addition, their active participation in national-level competitions such as Baja India has been noteworthy. Overall, their commitment and contributions have been instrumental in the club’s achievements during their tenure, helping to uphold and carry forward its legacy.</p>
             </div>

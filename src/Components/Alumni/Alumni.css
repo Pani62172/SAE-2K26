@@ -150,8 +150,11 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   #alumni-content {
     font-size: 0.95em;
+  }
+  .content-alumni {
+    padding: 5px;
   }
 }
