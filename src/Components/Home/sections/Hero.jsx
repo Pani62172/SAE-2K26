@@ -69,7 +69,7 @@ const Hero = () => {
       <div className="relative z-10 h-full flex flex-col justify-center items-start px-8 lg:px-12">
         {/* Added py-2 to prevent clipping and leading-tight to fix line overlap */}
         <h2 className="text-5xl lg:text-[5vw] uppercase font-bold text-white tracking-tighter leading-tight py-2">
-          <span className="text-red-600">SAE</span>-NITD
+          <span className="text-red-600">SAE </span>- NITD
         </h2>
 
         <h6 className="max-w-5xl text-2xl lg:text-[2.8vw] font-light leading-[1.2] mt-2 text-white">

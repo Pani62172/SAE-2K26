@@ -1,24 +1,23 @@
 
 import React, { useState } from 'react';
 import './ImageCarousel.css'; // Ensure this line imports your CSS file
+import img1 from './images/IMG-7366.jpg';
+import img2 from './images/IMG-7658.jpg';
+import img3 from './images/IMG-7472.jpg';
+import img4 from './images/IMG-7524.jpg';
+import img5 from './images/IMG-7455.jpg';
+import img6 from './images/IMG-7640-1.jpg';
+import img7 from './images/IMG-7379.jpg';
+import img8 from './images/Whats-App-Image-2026-03-14-at-8-12-15-PM.jpg';
+import img9 from './images/IMG-7333.jpg';
+import img10 from './images/IMG-7310.jpg';
+import img11 from './images/IMG-7648.jpg';
+import img12 from './images/Whats-App-Image-2026-03-14-at-8-12-16-PM.jpg';
 
 const ImageCarousel = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const images = [
-    'https://i.ibb.co/tTHc8cL1/IMG-7366.jpg',
-    'https://i.ibb.co/d4K6n96h/IMG-7658.jpg',
-    'https://i.ibb.co/Kppsz5kM/IMG-7472.jpg',
-    'https://i.ibb.co/x81G9NyY/IMG-7524.jpg',
-    'https://i.ibb.co/XkpQjnGQ/IMG-7455.jpg',
-    'https://i.ibb.co/TBPJZvmD/IMG-7640-1.jpg',
-    'https://i.ibb.co/TDWzmXgz/IMG-7379.jpg',
-    'https://i.ibb.co/Dg1mH7ZD/Whats-App-Image-2026-03-14-at-8-12-16-PM.jpg',
-    'https://i.ibb.co/TxqwbzNM/IMG-7333.jpg',
-    'https://i.ibb.co/gbHJFF4Y/IMG-7310.jpg',
-    'https://i.ibb.co/pvWKyb6v/IMG-7648.jpg',
-    'https://i.ibb.co/tFVTZrr/Whats-App-Image-2026-03-14-at-8-12-15-PM.jpg',
-  ];
+  const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12];
 
   const handleClick = (imgSrc) => {
     setSelectedImage(imgSrc);

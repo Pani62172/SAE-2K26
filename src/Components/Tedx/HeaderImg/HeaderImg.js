@@ -1,12 +1,11 @@
 
 import React, { useState, useEffect } from 'react';
 import './HeaderImg.css';
+import img1 from './images/IMG-7279.jpg';
+import img2 from './images/IMG-7319.jpg';
+import img3 from './images/Whats-App-Image-2024-08-21-at-23-50-49-9d4f2cd5.jpg';
 
-const images = [
-  // 'https://www.pittstate.edu/news/2019/images/tedx-logo-1680x680.jpg',
-  'https://i.ibb.co/7CK09nR/Whats-App-Image-2024-08-21-at-23-50-49-9d4f2cd5.jpg',
-  'https://i.ibb.co/LDTsKdZt/IMG-7319.jpg',
-  'https://i.ibb.co/LH4qZHC/IMG-7279.jpg'
+const images = [img1, img2, img3
 ];
 
 const clipPaths = [
