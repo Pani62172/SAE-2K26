@@ -74,7 +74,7 @@ const Hero = () => {
 
         <h6 className="max-w-5xl text-2xl lg:text-[2.8vw] font-light leading-[1.2] mt-2 text-white">
           We are the Society of <br />
-          Automotive Engineers Collegiate Club of <br />
+          Automotive Engineers India Collegiate Club of <br />
           <span className="font-semibold text-white/90">
             National Institute of Technology Durgapur
           </span>
