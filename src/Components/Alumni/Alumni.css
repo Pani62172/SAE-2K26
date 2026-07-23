@@ -109,7 +109,8 @@
 }
 
 .year-buttons {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
   gap: 20px;
   justify-content: center;
   margin-top: 20px;
@@ -127,6 +128,7 @@
   font-weight: 600;
   margin-bottom: 2rem;
   z-index: 1;
+  white-space: nowrap;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -156,5 +158,17 @@
   }
   .content-alumni {
     padding: 5px;
+  }
+}
+
+@media (max-width: 720px) {
+  .year-buttons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .year-buttons button {
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    margin-bottom: 0.6rem;
   }
 }
