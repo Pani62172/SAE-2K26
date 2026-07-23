@@ -1,264 +1,317 @@
 
 export const finalYear = [
+
     {
-        "url": "https://live.staticflickr.com/65535/52966207158_d929d620a0_n.jpg",
-        "name": "Debjit Banerjee",
+        "url": require('../Assets/3rdYearImg/heeth.jpeg'),
+        "name": "Heeth Bhandari",
         "position": "President",
-        "instaLink": "https://instagram.com/dev_b0073?igshid=NGExMmI2YTkyZg==",
-        "linkedinLink": "https://www.linkedin.com/in/debjit-banerjee-88b49526b",
+        "instaLink": "https://www.instagram.com/heethbhandari_20?r=nametag",
+        "linkedinLink": "https://www.linkedin.com/in/heeth-b-13405922a",
     },
     {
-        "url": "https://live.staticflickr.com/65535/52966124605_06b5472610_w.jpg",
-        "name": "Namrata Gupta",
-        "position": "Joint Secretary",
-        "instaLink": "https://www.instagram.com/me_namrataax?igsh=NzRiNDB5N2VvaWUz",
-        "linkedinLink": "https://www.linkedin.com/in/namrata-gupta-b22b74259/",
+        "url": require('../Assets/3rdYearImg/Shubham Roy.jpg'),
+        "name": "Shubham Roy",
+        "position": "General Secretary",
+        "instaLink": "https://www.instagram.com/shubhamaaay1?r=nametag",
+        "linkedinLink": "https://www.linkedin.com/in/shubham-roy-428080273",
     },
     {
-        "url": require('../Assets/FinalYearImg/Aryan Gupta.png'),
-        "name": "Aryan Gupta",
-        "position": "Joint Secretary",
-        "instaLink": "https://www.instagram.com/aryangupta_25?igsh=OGU2b3RsOWdxbTkw",
-        "linkedinLink": "https://www.linkedin.com/in/aryangupta2511/",
+        "url": require('../Assets/3rdYearImg/BINAYAK DEY.jpg'),
+        "name": "Binayak Dey",
+        "position": "Assistant General Secretary",
+        "instaLink": "",
+        "linkedinLink": "https://www.linkedin.com/in/binayak-dey-a4b36828a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     {
-        "url": require("./FinalYearImg/Nisarga Jana.jpeg"),
-        "name": "Nisarga Jana",
+        "url": require('../Assets/3rdYearImg/Swaraj Jaiswal.jpeg'),
+        "name": "Swaraj Jaiswal",
         "position": "Treasurer",
-        "instaLink": "https://instagram.com/nj_0.0_?igshid=NGExMmI2YTkyZg==",
-        "linkedinLink": "https://www.linkedin.com/in/nisarga-jana-634400259",
+        "instaLink": "https://www.instagram.com/_swaraj_jaiswal_?igsh=OXZ0a3Vtb20wZ2di",
+        "linkedinLink": "https://www.linkedin.com/in/swaraj-jaiswal-0b5304283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     {
-        "url": "https://live.staticflickr.com/65535/52966207018_ea112ec72c_n.jpg",
-        "name": "Souryadipta Khan",
+        "url": require('../Assets/3rdYearImg/Sudeep Routray.jpg'),
+        "name": "Sudeep Routray",
         "position": "Vice President",
+        "instaLink": "https://www.instagram.com/sudeep_ra4?igsh=YWE2YnlzaWFsbjJ2",
+        "linkedinLink": "https://www.linkedin.com/in/sudeep-kumar-routray-53a86527b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    {
+        "url": require('../Assets/3rdYearImg/Anuj kardam.jpg'),
+        "name": "Anuj Kardam",
+        "position": "Vice President",
+        "instaLink": "https://www.instagram.com/_anuj__007_?r=nametag",
+        "linkedinLink": "https://www.linkedin.com/in/anuj-kardam-156b15203?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    {
+        "url": require('../Assets/3rdYearImg/Sai Rohan2.jpeg'),
+        "name": "Durga Sai Rohan",
+        "position": "Convenor",
+        "instaLink": "https://www.instagram.com/sairohan_22?r=nametag",
+        "linkedinLink": "https://www.linkedin.com/in/b-durga-sai-rohan-94334a291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    {
+        "url": require('../Assets/3rdYearImg/Aubanti2.jpg'),
+        "name": "Aubanti Boshu",
+        "position": "Convenor",
+        "instaLink": "https://www.instagram.com/diya0111?r=nametag",
+        "linkedinLink": "https://www.linkedin.com/in/aubanti-boshu-5a0b612b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    },
+    {
+        "url": require('../Assets/3rdYearImg/Sachin Kumar Yadav .jpg'),
+        "name": "Sachin Kumar Yadav",
+        "position": "Head of Coorporate Communications",
+        "instaLink": "https://www.instagram.com/s.achi.n__?r=nametag",
+        "linkedinLink": "https://www.linkedin.com/in/sachin-kumar-yadav-10b3b8298",
+    },
+    {
+        "url": require('../Assets/3rdYearImg/Monisha.jpeg'),
+        "name": "Monisha",
+        "position": "Head of Operations",
+        "instaLink": "https://www.instagram.com/mon_._isha?r=nametag",
+        "linkedinLink": "https://www.linkedin.com/in/monisha-b354b2308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    {
+        "url": require('../Assets/3rdYearImg/Shikhar Gupta .jpg'),
+        "name": "Shikhar Gupta",
+        "position": "Head of Operations",
+        "instaLink": "https://www.instagram.com/shikhargt03?r=nametag",
+        "linkedinLink": "https://www.linkedin.com/in/shikhar-gupta-a251a5294",
+    },
+    {
+        "url": require('../Assets/3rdYearImg/Durga Sagar.jpg'),
+        "name": "Durga Sagar",
+        "position": "Visual Media Head",
         "instaLink": "",
         "linkedinLink": "",
     },
     {
-        "url": require("./FinalYearImg/Tanmay Bandhu Jaiswal.png"),
-        "name": "Tanmay Bandhu Jaiswal",
-        "position": "Vice President, BAJA Head",
-        "instaLink": "https://instagram.com/t.a.n.m.a.y._.j.a.i.s.w.a.l?igshid=MzNlNGNkZWQ4Mg==",
-        "linkedinLink": "https://www.linkedin.com/in/tanmay-bandhu-jaiswal-552b31229",
+        "url": require('../Assets/3rdYearImg/Shasvat Singh.jpeg'),
+        "name": "Shasvat Singh",
+        "position": "Design Head",
+        "instaLink": "https://www.instagram.com/_.shasvat.__?igsh=Ynp4a3Vka2d3aDA0&utm_source=qr",
+        "linkedinLink": "https://www.linkedin.com/in/shasvat-singh-0078b1307/",
     },
     {
-        "url": require('../Assets/FinalYearImg/Rituparna Pradhan.png'),
-        "name": "Rituparna Pradhan",
-        "position": "Convenor",
-        "instaLink": "https://instagram.com/ritu_parna8?igshid=MzNlNGNkZWQ4Mg==",
-        "linkedinLink": "https://www.linkedin.com/in/rituparna-pradhan-96774a26a",
+        "url": require('../Assets/3rdYearImg/Dibyaranjan Nayak .jpg'),
+        "name": "Dibyaranjan Nayak",
+        "position": "Technical Head",
+        "instaLink": "https://www.instagram.com/dibya.9778?utm_source=qr&igsh=eXUzOGplM2ZuYjhl",
+        "linkedinLink": "https://www.linkedin.com/in/dibya-ranjan-nayak-35a2b92b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     {
-        "url": require('../Assets/FinalYearImg/Devansh Dubey.png'),
-        "name": "Devansh Dubey",
-        "position": "Convenor",
+        "url": require('../Assets/3rdYearImg/Rishi Singh .jpg'),
+        "name": "Rishi Singh",
+        "position": "Technical Head",
+        "instaLink": "https://www.instagram.com/rishisingh6146?r=nametag",
+        "linkedinLink": "https://www.linkedin.com/in/rishi-singh-3baa99306",
+    },
+    {
+        "url": require('../Assets/3rdYearImg/Kritanu.jpeg'),
+        "name": "Kritanu Chattopadhyay",
+        "position": "BAJA Head",
         "instaLink": "",
         "linkedinLink": "",
     },
     {
-        "url": require('../Assets/FinalYearImg/Chandan Kumar Roy.png'),
-        "name": "Chandan Roy",
-        "position": "Head of Corporate Communication",
-        "instaLink": "https://www.instagram.com/prash_482/",
-        "linkedinLink": "https://www.linkedin.com/in/prasant-sahu-0b236923a",
-    },
-    {
-        "url": "https://live.staticflickr.com/65535/52965888754_4f08ca4c58_w.jpg",
-        "name": "Samaseen Prabhat",
-        "position": "Head of Operations",
-        "instaLink": "https://instagram.com/ritu_parna8?igshid=MzNlNGNkZWQ4Mg==",
-        "linkedinLink": "https://www.linkedin.com/in/samaseen-prabhat-b90909262",
-    },
-    {
-        "url": require("./FinalYearImg/Kiranmai Perada.png"),
-        "name": "Perada Kiranmai",
-        "position": "Head of Operations",
-        "instaLink": "https://instagram.com/__.k.i.r.a.n.m.a.i.__?igshid=NGExMmI2YTkyZg==",
-        "linkedinLink": "https://www.linkedin.com/in/kiranmai-perada-a606b226a",
-    },
-    {
-        "url": "https://live.staticflickr.com/65535/52966124380_bbb90e0987_w.jpg",
-        "name": "Yashasree",
-        "position": "Design Head",
-        "instaLink": "https://instagram.com/_yashasree_?igshid=ZDc4ODBmNjlmNQ==",
-        "linkedinLink": "https://www.linkedin.com/in/yashasree-appikonda-26125127b",
-    },
-    {
-        "url": "https://live.staticflickr.com/65535/52966207433_cb91a81c21_n.jpg",
-        "name": "Doki Manoj Kumar",
-        "position": "Design Head",
-        "instaLink": "https://instagram.com/manoj_doki?igshid=ZDc4ODBmNjlmNQ==",
-        "linkedinLink": "https://www.linkedin.com/in/manoj-kumar-doki-796549250/",
-    },
-    {
-        "url": require("./FinalYearImg/Mayank Mani Singh.png"),
-        "name": "Mayank Mani Singh",
-        "position": "Technical Head",
-        "instaLink": "https://instagram.com/singhmayankmani?igshid=ZDc4ODBmNjlmNQ==",
-        "linkedinLink": "https://www.linkedin.com/in/mayank-mani-singh-aa133526a",
-    },
-    {
-        "url": "https://live.staticflickr.com/65535/52966361968_cbdb745c7f_n.jpg",
-        "name": "Pothina Divya Venkata Durga Naga Sai",
-        "position": "Technical Head",
-        "instaLink": "",
-        "linkedinLink": "https://www.linkedin.com/in/pothina-divya-venkata-durga-naga-sai-45610625a",
-    },
-    {
-        "url": require("../Assets/FinalYearImg/Aniruddha.jpg"),
-        "name": "Aniruddha Roy",
+        "url": require('../Assets/3rdYearImg/Alok.jpeg'),
+        "name": "Alok Kumar",
         "position": "Automobile Head",
         "instaLink": "",
-        "linkedinLink": "https://www.linkedin.com/in/aniruddha-roy-b3b233261",
-    },
-    {
-        "url": require("../Assets/FinalYearImg/Raman Patel.png"),
-        "name": "Raman Patel",
-        "position": "Automobile Head",
-        "instaLink": "",
-        "linkedinLink": "https://www.linkedin.com/in/raman-patel-4a333926a",
-    },
-    {
-        "url": require("./FinalYearImg/Charan Teja.png"),
-        "name": "Pochepalli Charan Teja",
-        "position": "WEBD Head",
-        "instaLink": "https://www.instagram.com/urstrulycharanteja/",
-        "linkedinLink": "https://www.linkedin.com/in/charanteja-pochepalli-274856257/",
-    },
-    {
-        "url": "https://live.staticflickr.com/65535/52965888629_b33d98f268_n.jpg",
-        "name": "Suresh Chandra Adhikari",
-        "position": "WEBD Head",
-        "instaLink": "https://www.instagram.com/suresh2441?igsh=MWZ2djNqbG5ra2g0bQ==",
-        "linkedinLink": "https://www.linkedin.com/in/suresh-adhikari-69b129269",
-    },
-    {
-        "url": "https://live.staticflickr.com/65535/53126313107_106838b187_t.jpg",
-        "name": "Tarak Suhas Abhiram",
-        "position": "Creative Head",
-        "instaLink": "",
-        "linkedinLink": "https://in.linkedin.com/in/tarak-suhas-abhiram-puppala-418b25268",
-    },
-    {
-        "url": "https://live.staticflickr.com/65535/52966124395_f2a5cccfe8_n.jpg",
-        "name": "Snehashish Sha",
-        "position": "Creative Head",
-        "instaLink": "",
-        "linkedinLink": "https://www.linkedin.com/in/snehashis-sha-06833726a",
-    },
-    {
-        "url": "https://live.staticflickr.com/65535/52965889164_af7b692f0f_n.jpg",
-        "name": "Anubhav Mondal",
-        "position": "Head ATH",
-        "instaLink": "https://instagram.com/anubhav.mondal.315?igshid=MzNlNGNkZWQ4Mg==",
-        "linkedinLink": "https://www.linkedin.com/in/anubhav-mondal-61b963255",
-    },
-    {
-        "url": require("../Assets/FinalYearImg/Sarvapalli Arya.png"),
-        "name": "Sarvpalli Arya",
-        "position": "Head ATH",
-        "instaLink": "https://instagram.com/shivangi_._queen?igshid=NGExMmI2YTkyZg==",
-        "linkedinLink": "https://www.linkedin.com/in/sarvpalli-arya-0034a9261",
-    },
-    {
-        "url": require("./FinalYearImg/Soumya Raj.png"),
-        "name": "Soumya Raj",
-        "position": "PR & Outreach Head",
-        "instaLink": "https://instagram.com/_sxumyaa?igshid=MzNlNGNkZWQ4Mg==",
-        "linkedinLink": "https://www.linkedin.com/in/soumya-raj-78685727a",
-    },
-    {
-        "url": "https://live.staticflickr.com/65535/52966206483_caf3d8fbc0_w.jpg",
-        "name": "Vishnu Vardhan",
-    "position": "PR & Outreach Head",
-        "instaLink": "",
         "linkedinLink": "",
     },
     {
-        "url": "https://live.staticflickr.com/65535/52966124400_54e6aa06f2_n.jpg",
-        "name": "Sumantha Baskey",
+        "url": require('../Assets/3rdYearImg/Lakshay Attri.jpeg'),
+        "name": "Lakshay Attri",
+        "position": "Automobile Head",
+        "instaLink": "https://www.instagram.com/lakshay_attri_001?r=nametag",
+        "linkedinLink": "https://www.linkedin.com/in/lakshay-attri-5a18b1307?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    {
+        "url": require('../Assets/3rdYearImg/Jayasree Maddu.jpeg'),
+        "name": "Maddu Jayasree",
+        "position": "Web Development Head",
+        "instaLink": "https://www.instagram.com/jayasreemaddu?r=nametag",
+        "linkedinLink": "",
+    },
+    {
+        "url": require('../Assets/3rdYearImg/Aashish Patel.jpg'),
+        "name": "Aashish Patel",
+        "position": "Web Development Head",
+        "instaLink": "https://www.instagram.com/_aa_ss_hh_ii_ss_hh_?r=nametag",
+        "linkedinLink": "https://www.linkedin.com/in/ashish-patel-79aa90281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    {
+        "url": require('../Assets/3rdYearImg/Lakshanyaa B .jpg'),
+        "name": "Lakshanyaa B",
+        "position": "Creative Head",
+        "instaLink": "https://www.instagram.com/lakshanyaab?r=nametag",
+        "linkedinLink": "",
+    },
+    {
+        "url": require('../Assets/3rdYearImg/Rohan Dey .jpg'),
+        "name": "Rohan Dey",
+        "position": "Creative Head",
+        "instaLink": "https://www.instagram.com/_rohandey78?r=nametag",
+        "linkedinLink": "https://www.linkedin.com/in/rohan-dey-5a68b2307?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    {
+        "url": require('../Assets/3rdYearImg/Kashish.jpeg'),
+        "name": "Kashish Sonkar",
+        "position": "Head ATH",
+        "instaLink": "https://www.instagram.com/_kashish_0603?r=nametag",
+        "linkedinLink": "https://www.linkedin.com/in/kashish-sonkar-23950728a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    {
+        "url": require('../Assets/3rdYearImg/Sonu Mahata.png'),
+        "name": "Sonu Mahata",
+        "position": "Head ATH",
+        "instaLink": "https://www.instagram.com/_sm. stark_?r=nametag",
+        "linkedinLink": "",
+    },
+    {
+        "url": require('../Assets/3rdYearImg/Govardhan Reddy.png'),
+        "name": "Govardhan Reddy",
+        "position": "PR and Outreach Head",
+        "instaLink": "https://www.instagram.com/govardhan__023?r=nametag",
+        "linkedinLink": "",
+    },
+    {
+        "url": require('../Assets/3rdYearImg/Rohit Singh .jpg'),
+        "name": "Rohit Singh",
         "position": "Workshop Head",
-        "instaLink": "https://www.instagram.com/sumantabaskeybabu?r=nametag",
-        "linkedinLink": "https://www.linkedin.com/in/sumanta-baskey-967093278",
+        "instaLink": "https://www.instagram.com/_.rohit_321?r=nametag",
+        "linkedinLink": "https://www.linkedin.com/in/rohit-singh-6993b1277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     {
-        "url": "https://live.staticflickr.com/65535/52965821941_f27650736c_n.jpg",
-        "name": "Aman Singh",
-        "position": "Event Head",
-        "instaLink": "https://www.instagram.com/_amansingh1007_?r=nametag",
+        "url": require('../Assets/3rdYearImg/Regam Jeswanth Dora.jpg'),
+        "name": "Jeswanth Regam",
+        "position": "Events Head",
+        "instaLink": "https://www.instagram.com/jeswanth_r_j_22?utm_source=qr&igsh=MXI1b25yM213YXhubQ==",
         "linkedinLink": "https://www.linkedin.com/in/aman-singh-16273727a",
     },
     {
-        "url": require("../Assets/FinalYearImg/Arjya Dutta.jpg"),
-        "name": "Arjya Dutta",
-        "position": "Event Head",
-        "instaLink": "https://www.instagram.com/10_arjya_d?igsh=MWtpZW5vNmN6bDNkdw==",
-        "linkedinLink": "https://www.linkedin.com/in/arjya-dutta-356449275/",
-    },
-    {
-        "url": require("../Assets/FinalYearImg/Indrajit Das.jpg"),
-        "name": "Indrajit Das",
-        "position": "Final year Coordinator",
-        "instaLink": "https://www.instagram.com/__dreeze?igsh=MWZzbzVmMWhkbms1bA==",
-        "linkedinLink": "https://www.linkedin.com/in/indrajit-das-321440245/",
-    },
-    {
-        "url": "https://live.staticflickr.com/65535/52966124710_7974bb9c26_w.jpg",
-        "name": "Manish Kumar Yadav",
-        "position": "Final year Coordinator",
+        "url": require('../Assets/3rdYearImg/Shagupta-Paul.jpeg'),
+        "name": "Shagupta Paul",
+        "position": "Events Head",
         "instaLink": "",
         "linkedinLink": "",
     },
-    // {
-    //     "url": "https://live.staticflickr.com/65535/52965150222_77d6eca948_w.jpg",
-    //     "name": "Harshit Shukla",
-    //     "position": "Senior Coordinator",
-    //     "instaLink": "",
-    //     "linkedinLink": "",
-    // },
-    // {
-    //     "url":"https://live.staticflickr.com/65535/52965744206_776ec301a1_n.jpg",
-    //     "name":"Lochan Vaishnav",
-    //     "position":"Senior Coordinator",
-    //     "instaLink":"",
-    //     "linkedinLink":"",
-    // },
-    {
-        "url": "https://live.staticflickr.com/65535/52966124865_83437e845b_w.jpg",
-        "name": "Nishkarsh Chowdary",
-        "position": "Final year Coordinator",
-        "instaLink": "https://instagram.com/nishkarsh_choudhary_3604?igshid=MzNlNGNkZWQ4Mg==",
-        "linkedinLink": "",
-    },
-    {
-        "url": "https://live.staticflickr.com/65535/52966206688_b6a6bbbc7d_w.jpg",
-        "name": "Rigden Bhutia",
-        "position": "Final year Coordinator",
-        "instaLink": "https://instagram.com/rigden._bhutia?igshid=NTc4MTIwNjQ2YQ==",
-        "linkedinLink": "https://www.linkedin.com/in/rigden-bhutia-6596ba250",
-    },
     
-    {
-        "url": "https://live.staticflickr.com/65535/52965149777_eae9508a6d_w.jpg",
-        "name": "Susmitha Khatun",
-        "position": "Final year Coordinator",
-        "instaLink": "https://instagram.com/susmitakhatun192?igshid=MzNlNGNkZWQ4Mg==",
-        "linkedinLink": "https://www.linkedin.com/in/susmita-khatun-b48a6b251",
-    },
-    {
-        "url": "https://live.staticflickr.com/65535/52965149787_0bdfa960f6_n.jpg",
-        "name": "Sunil Kumawat",
-        "position": "Final year Coordinator",
+
+    
+    
+
+    /*{
+        "url": require('../Assets/3rdYearImg/Dibyaranjan Das.jpg'),
+        "name": "Dibyaranjan Das",
+        "position": "Junior Coordinator",
+        "instaLink": "https://www.instagram.com/dibya.nitdgp4470?r=nametag",
+        "linkedinLink": "https://www.linkedin.com/in/dibyaranjan-das-0622b42b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },*/
+    
+    
+    /*{
+        "url": require('../Assets/3rdYearImg/Dibyendu Majhi .jpg'),
+        "name": "Dibyendu Majhi",
+        "position": "Junior Coordinator",
+        "instaLink": "https://www.instagram.com/dibyendu_itsme?r=nametag",
+        "linkedinLink": "h",
+    },*/
+    
+    
+
+    /*{
+        "url": require('../Assets/3rdYearImg/Abdus Sayeed.jpg'),
+        "name": "Abdus Sayeed",
+        "position": "Junior Coordinator",
+        "instaLink": "https://www.instagram.com/shehryaar_123?r=nametag",
+        "linkedinLink": "https://www.linkedin.com/in/abdus-sayeed-087671308",
+    },*/
+
+
+    
+
+    
+
+
+    
+    
+    
+    /*{
+        "url": require('../Assets/3rdYearImg/Nivedita Kesh.jpg'),
+        "name": "Nivedita Kesh",
+        "position": "Junior Coordinator",
         "instaLink": "",
         "linkedinLink": "",
-    },
-    // {
-    //     "url": require("../Assets/FinalYearImg/Uday Bhaskar.png"),
-    //     "name": "Uday Bhaskar",
-    //     "position": "Senior Coordinator",
-    //     "instaLink": "",
-    //     "linkedinLink": "https://www.linkedin.com/in/uday-bhaskar-478392264",
-    // },
+    },*/
     
+    
+    
+    
+    
+    /*{
+        "url": require('../Assets/3rdYearImg/Saloni Singh .jpg'),
+        "name": "Saloni Singh",
+        "position": "Junior Coordinator",
+        "instaLink": "https://www.instagram.com/_saloni_2807_?r=nametag",
+        "linkedinLink": "https://www.linkedin.com/in/saloni-singh-08955a2b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },*/
+    /*{
+        "url": require('../Assets/3rdYearImg/Saransh Charchit.jpeg'),
+        "name": "Saransh Charchit",
+        "position": "Junior Coordinator",
+        "instaLink": "https://www.instagram.com/sarans.h40?r=nametag",
+        "linkedinLink": "https://https://www.linkedin.com/in/saransh-charchit-bb19a02ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },*/
+    
+    
+    /*{
+        "url": require('../Assets/3rdYearImg/Shresth Kamal Jha .jpg'),
+        "name": "Shresth Kamal Jha",
+        "position": "Junior Coordinator",
+        "instaLink": "https://www.instagram.com/shresth_jha_815?r=nametag",
+        "linkedinLink": "https://www.linkedin.com/in/shresth-kamal-jha-74b893281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },*/
+
+
+    
+    /*{
+        "url": require('../Assets/3rdYearImg/Suyash.png'),
+        "name": "Suyash",
+        "position": "Junior Coordinator",
+        "instaLink": "",
+        "linkedinLink": "https://www.linkedin.com/in/suyash-kumar-09ab83232",
+    },*/
+
+    /*{
+        "url": require('../Assets/3rdYearImg/Akshit Kumar Jha.png'),
+        "name": "Akshit Kumar Jha",
+        "position": "Junior Coordinator",
+        "instaLink": "https://www.instagram.com/_amansingh1007_?r=nametag",
+        "linkedinLink": "https://www.linkedin.com/in/akshit-jha-23a0841a0",
+    },
+
+
+    {
+        "url": require('../Assets/3rdYearImg/Vivek Dinkar.jpg'),
+        "name": "Vivek Dinkar",
+        "position": "Junior Coordinator",
+        "instaLink": "https://www.instagram.com/dinkarvivek.nitd__0112?r=nametag",
+        "linkedinLink": "",
+    },*/
+    /*{
+        "url": require('../Assets/3rdYearImg/Priya Saroj.png'),
+        "name": "Priya Saroj",
+        "position": "Junior Coordinator",
+        "instaLink": "https://www.instagram.com/priya_saroj2203?r=nametag",
+        "linkedinLink": "",
+    },*/
+    
+    
+    
+    
+    
+    
+
 ]
