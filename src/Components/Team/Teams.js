@@ -3,7 +3,7 @@ import FacultyAdvisors from "./Assets/FacultyAdvisors/FacultyAdvisors.jsx";
 import "./Teams.css";
 import { finalYear } from "./Assets/finalYear.js";
 import { thirdYear } from "./Assets/thirdYear.js";
-// import { secondYear } from "./Assets/secondYear.js";
+import { secondYear } from "./Assets/secondYear.js";
 //import BeamsDemo from "./Assets/Beams.jsx";
 import DarkVeil from "../Events/DarkVeil/DarkVeil.js";
 
@@ -140,11 +140,11 @@ const Teams = () => {
           <GridLayout members={thirdYear} />
         </section>
 
-        {/* <section className="section">
+        <section className="section">
           <h1 className="sub-heading">Junior Coordinators</h1>
           <hr className="section-divider" />
           <GridLayout members={secondYear} />
-        </section> */}
+        </section>
       </div>
     </>
   );

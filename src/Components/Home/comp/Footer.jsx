@@ -51,7 +51,7 @@ function Footer() {
         {/* Contact Info: President */}
         <div className="flex flex-col justify-start">
           <h5 className="text-[#ca3435] text-2xl mb-3 relative after:content-[''] after:w-[50px] after:h-[2px] after:bg-[#ca3435] after:absolute after:-bottom-2.5 after:left-0">
-            Debjit Banerjee
+            Heeth Bhandari
           </h5>
           <p className="mb-1 font-sans text-lg">President</p>
           <div className="mb-1 font-sans text-lg flex items-center gap-2">
@@ -62,8 +62,8 @@ function Footer() {
           </div>
           <div className="mb-1 font-sans text-lg flex items-center gap-2">
             <FaPhoneAlt />
-            <Link to="tel:+91 91430 34962" className="text-white no-underline font-serif text-base hover:text-[#ca3435] transition-colors">
-              +91 91430 34962
+            <Link to="tel:+91 9607691523" className="text-white no-underline font-serif text-base hover:text-[#ca3435] transition-colors">
+              +91 9607691523
             </Link>
           </div>
         </div>
@@ -71,19 +71,19 @@ function Footer() {
         {/* Contact Info: Corporate Communication */}
         <div className="flex flex-col justify-start">
           <h5 className="text-[#ca3435] text-2xl mb-3 relative after:content-[''] after:w-[50px] after:h-[2px] after:bg-[#ca3435] after:absolute after:-bottom-2.5 after:left-0">
-            Chandan Kumar Roy
+            Sachin Kumar Yadav
           </h5>
           <p className="mb-1 font-sans text-lg">Head of Corporate Communications</p>
           <div className="mb-1 font-sans text-lg flex items-center gap-2">
             <FaEnvelope />
-            <Link to="mailto:chandankrroy9775@gmail.com" className="text-white no-underline font-serif text-base hover:text-[#ca3435] transition-colors">
-              chandankrroy9775@gmail.com
+            <Link to="mailto:sachinky.018@gmail.com" className="text-white no-underline font-serif text-base hover:text-[#ca3435] transition-colors">
+              sachinky.018@gmail.com
             </Link>
           </div>
           <div className="mb-2.5 font-sans text-lg flex items-center gap-2">
             <FaPhoneAlt />
-            <Link to="tel:+91 7439778324" className="text-white no-underline font-serif text-base hover:text-[#ca3435] transition-colors">
-              +91 7439778324
+            <Link to="tel:+91 9831773804" className="text-white no-underline font-serif text-base hover:text-[#ca3435] transition-colors">
+              +91 9831773804
             </Link>
           </div>
         </div>
